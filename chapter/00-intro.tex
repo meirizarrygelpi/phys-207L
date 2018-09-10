@@ -159,6 +159,7 @@ The steps in this section apply to each of the three segments in the weight data
 Since the weight values are spread over a region, it is useful to known what is the smallest weight measurement in the segment. This value is known as the \textbf{minimum}. One way to find this value is to literally scan the weight column and keep track of the smallest value. That is not a good idea when you have hundreds of values. A more efficient way is to have Google Sheets do this for you. The minimum can be found by using the \texttt{MIN} function via
 \begin{equation}
     \texttt{=MIN(WeightB)}
+    \label{eq:00.min}
 \end{equation}
 Note the equal sign in the beginning.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -167,6 +168,7 @@ Note the equal sign in the beginning.
 The \textbf{25th percentile} is the weight measurement that is larger than one quarter of all of the weight values in the data. This can be computed using the \texttt{PERCENTILE} function via
 \begin{equation}
     \texttt{=PERCENTILE(WeightB, 0.25)}
+    \label{eq:00.percentile.25}
 \end{equation}
 Equivalently, this can be computed using the \texttt{QUARTILE} function via
 \begin{equation}
@@ -179,6 +181,7 @@ The \texttt{1} here indicates the \textbf{first quartile}, which is another name
 The \textbf{50th percentile} (also known as the \textbf{median}) is the weight measurement that is larger than one half of all the weight values in the data. This can be computed using the \texttt{PERCENTILE} function via
 \begin{equation}
     \texttt{=PERCENTILE(WeightB, 0.50)}
+    \label{eq:00.percentile.50}
 \end{equation}
 Equivalently, this can be computed using the \texttt{QUARTILE} function via
 \begin{equation}
@@ -187,6 +190,7 @@ Equivalently, this can be computed using the \texttt{QUARTILE} function via
 The \texttt{2} here indicates the \textbf{second quartile}. You can also use the \texttt{MEDIAN} function via
 \begin{equation}
     \texttt{=MEDIAN(WeightB)}
+    \label{eq:00.median}
 \end{equation}
 All three functions will return the same value.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -195,6 +199,7 @@ All three functions will return the same value.
 The \textbf{75th percentile} is the weight measurement that is larger than three quarters of all of the weight values in the data. This can be computed using the \texttt{PERCENTILE} function via
 \begin{equation}
     \texttt{=PERCENTILE(WeightB, 0.75)}
+    \label{eq:00.percentile.75}
 \end{equation}
 Equivalently, this can be computed using the \texttt{QUARTILE} function via
 \begin{equation}
@@ -218,6 +223,7 @@ In order to plot horizontal lines like the ones that appear in Figure \ref{figur
 The \textbf{maximum} is the largest weight measurement recorded. You can find this by using the \texttt{MAX} function:
 \begin{equation}
     \texttt{=MAX(WeightB)}
+    \label{eq:00.max}
 \end{equation}
 It is good to tabulate the results obtained so far. In Table \ref{table:00.baseline.descriptive} you can find the minimum, the three percentiles, and the maximum. In my case, the median is close to 5 lb.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -232,6 +238,7 @@ It is good to tabulate the results obtained so far. In Table \ref{table:00.basel
 So far we have identified particular points in the data that have special significance: the minimum, the quartiles, and the maximum (see Table \ref{table:00.baseline.descriptive}). The \textbf{average}, also known as the \textbf{arithmetic mean}, or just THE \textbf{mean}, is another value that can be calculated from the data, but that in general does not correspond to any point in the data. The average can be interpreted as a sort of ``middle'' or ``typical'' value. You can calculate this with the \texttt{AVERAGE} function:
 \begin{equation}
     \texttt{=AVERAGE(WeightB)}
+    \label{eq:00.average}
 \end{equation}
 Mathematically, given $N$ values of weight $w_{1}$, $w_{2}$, ..., $w_{N}$, the arithmetic mean weight $w_{A}$ is
 \begin{equation}
@@ -322,6 +329,7 @@ Note that this is different from the average or the median. You can visualize th
 Error is a very broad concept. For practical purposes, we are going to define the \textbf{central error} as half of the range:
 \begin{equation}
     \texttt{=(MAX(WeightB) - MIN(WeightB))/2}
+    \label{eq:00.error}
 \end{equation}
 The meaning of the central error is the distance from the center to either end of the range window.
 
@@ -510,7 +518,8 @@ Your data also consist of two files:
 \end{itemize}
 Although these have the same names as my files, they have different values. Also, the ``theoretical'' values for each section are different. See Tables \ref{table:00.theoretical.demo}, \ref{table:00.theoretical.v01} and \ref{table:00.theoretical.v02} for specific details.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Your Lab Report}
+\newpage
+\section{Your Laboratory Report}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 There is no written lab report submission for this activity. However, you have to \textbf{submit a spreadsheet file} with your work, which \textbf{will be graded}. Submissions are done via Canvas.
 
@@ -545,7 +554,8 @@ The spreadsheet is due on \textbf{Monday, September 10}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[ht]
     \centering
-	\begin{tabular}{|l|r|} \hline
+    \begin{tabular}{|l|r|}
+        \hline
         \textbf{Name} & \textbf{Value (lb)} \\
         \hline
 		Minimum & 3.468206 \\
@@ -561,7 +571,8 @@ The spreadsheet is due on \textbf{Monday, September 10}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[ht]
     \centering
-	\begin{tabular}{|l|r|} \hline
+    \begin{tabular}{|l|r|}
+        \hline
 		\textbf{Name} & \textbf{Value (lb)} \\
         \hline
 		Arithmetic Mean & 5.042546 \\
@@ -676,7 +687,7 @@ The spreadsheet is due on \textbf{Monday, September 10}.
     \label{table:00.final}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}
+\begin{table}[ht]
     \centering
     \begin{tabular}{|l|r|}
         \hline
@@ -693,7 +704,7 @@ The spreadsheet is due on \textbf{Monday, September 10}.
     \label{table:00.theoretical.demo}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}
+\begin{table}[ht]
     \centering
     \begin{tabular}{|l|r|}
         \hline
@@ -710,7 +721,7 @@ The spreadsheet is due on \textbf{Monday, September 10}.
     \label{table:00.theoretical.v01}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}
+\begin{table}[ht]
     \centering
     \begin{tabular}{|l|r|}
         \hline
