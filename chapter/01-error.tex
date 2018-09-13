@@ -35,7 +35,7 @@ For the first 5 runs, you recorded \textbf{both the slope and the intercept} val
     \item What is the \textbf{median} slope value? Use the \texttt{MEDIAN} function (see Equation \ref{eq:00.median}).
     \item What is the largest slope value (i.e. the \textbf{maximum}) recorded? Use the \texttt{MAX} function (see Equation \ref{eq:00.max}).
     \item What is the \textbf{average} slope value? Use the \texttt{AVERAGE} function (see Equation \ref{eq:00.average}).
-    \item What is the percent difference between the expected value for the slope (9.80 m/s$^{2}$) and the 5-run average?
+    \item What is the \textbf{percent difference} between the expected value for the slope (9.80 m/s$^{2}$) and the 5-run average? See Equation \ref{eq:00.percent.diff}.
 \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Latter 25 Runs} \label{sec:01.latter.25}
@@ -59,8 +59,8 @@ You can combine the first 5 runs with the latter 25 runs and make a 30-run aggre
     \item What is the \textbf{50th percentile} slope value? Use the \texttt{PERCENTILE} function (see Equation \ref{eq:00.percentile.50}).
     \item What is the \textbf{75th percentile} slope value? Use the \texttt{PERCENTILE} function (see Equation \ref{eq:00.percentile.75}).
     \item What is the maximum slope value recorded?
-    \item What is the average slope?
     \item What is the \textbf{error} (see Equation \ref{eq:00.error})?
+    \item What is the average slope?
     \item What are the boundaries of the \textbf{error interval} (i.e. \texttt{AVERAGE} $\pm$ \texttt{ERROR})?
     \item What is the percent difference between the expected value for the slope (9.80 m/s$^{2}$) and the 30-run average?
 \end{enumerate}
@@ -69,11 +69,11 @@ You can combine the first 5 runs with the latter 25 runs and make a 30-run aggre
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 You can take the 30-run aggregate, sort the values in either increasing or decreasing order, and then drop the \textbf{smallest} 5 values, and also the \textbf{largest} 5 values. After doing this you remain with \textbf{20 values}, corresponding to the 20 runs that are most ``central''. That is, the 20 values that are neither the smallest nor the largest. Note that 20 out of 30 is the same as 2/3 of the data set (66\%).
 
-In order to sort a column with Google Sheets, highlight the column, then go to
+Here is how to sort a column with Google Sheets. If \texttt{Aggregate30} is the name of the named range with the 30 slope values, then, in a separate sheet use
 \begin{equation}
-    \texttt{Data > Sort range...}
+    \texttt{=SORT(Aggregate30, 1, TRUE)}
 \end{equation}
-and click on \texttt{Sort}. By default, Google Sheets will sort from smallest to largest (ascending order).
+If there is enough space, you should see the 30 slope values appear but in ascending order (smallest to largest). Using \texttt{FALSE} instead of \texttt{TRUE} will give you the slopes in descending order (largest to smallest).
 
 After dropping the bottom 5 and top 5, you can answer the following questions:
 \begin{enumerate}
@@ -86,22 +86,53 @@ After dropping the bottom 5 and top 5, you can answer the following questions:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Closest 20 Runs} \label{sec:01.closest.20}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Instead of looking at the central 2/3 of the data, you can look at the 2/3 of the data that is \textbf{closest} to the average. Proximity requires a notion of distance. In our case we can define the distance between the slope value $g_{j}$ and the average slope $g_{A}$ as
+Instead of looking at the central 2/3 of the data, you can look at the 2/3 of the data that is \textbf{closest} to the 30-run average. Proximity requires a notion of distance. In our case we can define the distance between the slope value $g_{j}$ and the 30-run average slope $g_{A}$ as
 \begin{equation}
     \text{distance} = \vert g_{j} - g_{A} \vert
 \end{equation}
-The absolute value will remove the signs in the difference and account for the slope being less or greater than the average. Keeping the closest 20 values amounts to dropping the 10 values that are farthest away (i.e. with the largest amount of distance from the average). Thus, you compute the distance from average in a column, then sort this column, then drop the 10 values farthest away from the average. After doing this, you can answer the following questions:
+The absolute value will remove the signs in the difference and account for the slope being less or greater than the average. Keeping the closest 20 values amounts to dropping the 10 values that are farthest away (i.e. with the largest amount of distance from the average). Thus, you compute the distance from average in a column, then sort this column, then drop the 10 values farthest away from the average.
+
+Here is a more detailed list of steps to follow:
+\begin{enumerate}
+    \item Copy and paste the slopes for the 30-run aggregate. The slope values should be in \texttt{column A}, from \texttt{row 2} to \texttt{row 31}.
+    \item Copy and paste the average slope value for the 30-run aggregate. In my case, I pasted it on cell \texttt{E15} (i.e. \texttt{column E} and \texttt{row 15}).
+    \item In \texttt{column B}, compute the distance from the first slope value to the 30-run average with the following equation:
+    \begin{equation}
+        \texttt{=ABS(A2 - E\$15)}
+    \end{equation}
+    Note the \textbf{dollar sign} in the second term, which is needed.
+    \item Click on cell \texttt{B2}, hold \texttt{Shift} down and select the rest of the column values down until \texttt{row 31}. Press both \texttt{Ctrl} and \texttt{D} keys (or both \texttt{Cmd} and \texttt{D} keys in Mac OSX). This should apply the distance equation to the entire column. You should have the slope values on \texttt{column A}, and the distance values on \texttt{column B}.
+    \item Make a named range with the distance values. I used \texttt{DistanceToAverage30}.
+    \item Now you want to sort the distance column, but you also want the sorting to be applied to the slope column. In order to do this, find a region in a sheet with enough space for two columns of 30 values each. Click on the top left cell of this region and use
+    \begin{equation}
+        \texttt{=SORT({Aggregate30,DistanceToAverage30}, 2, FALSE)}
+    \end{equation}
+    You should see the 30 slope values appear in one column, and the 30 distance values appear in the second column, but the distance column will be sorted in descending order. The top 10 values correspond to the 10 values that are farthest away from the 30-run average. The other 20 values constitute the closest 20 runs.
+\end{enumerate}
+After doing this, you can answer the following questions:
 \begin{enumerate}
     \item What is the minimum slope value for these 20 runs?
-    \item What is the average slope value for these 20 runs?
     \item What is the maximum slope value for these 20 runs?
     \item What is the error?
+    \item What is the average slope value for these 20 runs?
     \item What is the percent difference between the expected value for the slope (9.80 m/s$^{2}$) and the (closest) 20-run average?
 \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{My Data}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 The data for my first 5 runs are in Table \ref{table:01.first.5}. The data for my latter 25 runs are in Table \ref{table:01.latter.25}.
+
+In Table \ref{table:01.describe.5} and Table \ref{table:01.describe.25}, I describe the raw data. Note that, in my case, the average slope is much larger, and also much closer to the actual value, for the 25 runs.
+
+After combining all the runs into the 30-run aggregate, you can consider other quantities like the percentiles. In Table \ref{table:01.describe.30} you can find the three percentiles, as well as the previous quantities that were also found in the first two parts. The boundaries of the error interval for the 30-run aggregate are found in Table \ref{table:01.error.30}. Note that the established value for the slope, 9.80 m/s$^{2}$ is inside of the error interval.
+
+The minimum slope for the 30-run aggregate is quite small and could be an outlier. One way to deal with outliers is to restrict to a subset of the data. To be clear: You do not get to choose which values to keep or which values to drop based on their proximity to the expected value. That would be cheating. It would introduce bias to your data. Besides, in most experiments, you do not know the expected value. Instead you can restrict to a subset of the data by following an explicit rule intrinsic to the data.
+
+In Table \ref{table:01.describe.20.center} you can find the statistics for the subset of the data that correspond to the 2/3 that is in the middle: neither the smallest nor the largest. To keep this fair, you need to drop the same amount of small values as you drop large values. In my case I calculated again the same quantities in Table \ref{table:01.describe.30} for the 30-run aggregate, but you do not have to find everything. Just the minimum, maximum, average, and error. Note that the error value for the central 20 runs is smaller than the error for the 30-run average. For the central 20 runs, the expected value still falls inside the error interval.
+
+Instead of the central 2/3, you can keep the 2/3 that is closest to the 30-run average. In Table \ref{table:01.describe.20.close} and Table \ref{table:01.error.20.close} you can find the analogous results for this case. Note that for my data, the error happens to be smaller for the closest 20 runs than for the central 20 runs.
+
+Finally, Table \ref{table:01.summary} has the comparisons of the different averages to the expected value, in the form of percent difference. In my case, the least error was found for the closest 20 runs. Your results might be different.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Your Data}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -113,19 +144,20 @@ Your data should consist of 5 initial pairs of slope and intercept values, plus 
 Your laboratory report should include the following:
 \begin{itemize}
     \item Tables like Table \ref{table:01.first.5} and \ref{table:01.latter.25} with your raw data. This is one of the few experiments where you can include the raw data in your report.
-    \item Answers to all the questions in Section \ref{sec:01.first.5} (some in a table like Table \ref{table:01.m.a.m.5}).
-    \item Answers to all the questions in Section \ref{sec:01.latter.25} (some in a table like Table \ref{table:01.m.a.m.25}).
-    \item Answers to all the questions in Section \ref{sec:01.all.30} (some in tables like Tables \ref{table:01.m.a.m.30} and \ref{table:01.error}).
-    \item Answers to all the questions in Section \ref{sec:01.central.20} (use similar tables as before).
-    \item Answers to all the questions in Section \ref{sec:01.closest.20} (use similar tables as before).
+    \item Answers to all the questions in Section \ref{sec:01.first.5} (some in a table like Table \ref{table:01.describe.5}).
+    \item Answers to all the questions in Section \ref{sec:01.latter.25} (some in a table like Table \ref{table:01.describe.25}).
+    \item Answers to all the questions in Section \ref{sec:01.all.30} (some in tables like Tables \ref{table:01.describe.30} and \ref{table:01.error.30}).
+    \item Answers to all the questions in Section \ref{sec:01.central.20} (some in tables like Tables \ref{table:01.describe.20.center} and \ref{table:01.error.20.center}).
+    \item Answers to all the questions in Section \ref{sec:01.closest.20} (some in tables like Tables \ref{table:01.describe.20.close} and \ref{table:01.error.20.close}).
+    \item Compare your average slope values to the expected value by calculating percent differences as in Table \ref{table:01.summary}.
 \end{itemize}
 You should answer the following questions:
 \begin{enumerate}
     \item Given two ways to keep 2/3 of the data (central 20 runs or closest 20 runs), which approach do you think yields the most confident or robust result? Why?
     \item Out of Sections \ref{sec:01.all.30}, \ref{sec:01.central.20}, and \ref{sec:01.closest.20}, which part had the largest/smallest amount of error?
-    \item The accepted value for the acceleration due to gravity near the surface of Earth is 9.80 m/s$^{2}$. Compute the percent difference between this expected value and the averages you obtained in Sections \ref{sec:01.all.30}, \ref{sec:01.central.20}, and \ref{sec:01.closest.20}.
     \item Which of your estimates is closest to the expected value?
 \end{enumerate}
+The laboratory report is \textbf{due Monday, September 17}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \FloatBarrier
 \newpage
@@ -137,11 +169,11 @@ You should answer the following questions:
         \hline
         \textbf{Slope} (m/s$^{2}$) & \textbf{Intercept} (m/s) \\
         \hline
-        9.6963 & 0.84052 \\
-        9.6095 & 1.3903 \\
-        9.7603 & 1.7282 \\
-        9.6826 & 2.2388 \\
-        9.7575 & 2.7986 \\
+        9.4265 & 0.8407 \\
+        9.7359 & 1.2777 \\
+        9.2793 & 1.9661 \\
+        9.7066 & 2.6893 \\
+        9.7122 & 3.1737 \\
         \hline
     \end{tabular}
     \caption{First 5 runs}
@@ -152,15 +184,15 @@ You should answer the following questions:
     \centering
     \begin{tabular}{|r|r|r|r|r|}
         \hline
-        9.7361 & 9.7532 & 9.757 & 9.7287 & 9.7455 \\
+        9.7839 & 9.586 & 9.5585 & 9.5695 & 9.8151 \\
         \hline
-        9.7336 & 9.7798 & 9.7143 & 9.7736 & 9.7102 \\
+        9.779 & 9.7948 & 9.7412 & 9.7468 & 9.7604 \\
         \hline
-        9.7709 & 9.7851 & 9.723 & 9.7581 & 9.7137 \\
+        9.7961 & 9.5095 & 9.628 & 9.7107 & 9.7363 \\
         \hline
-        9.624 & 9.6606 & 9.7407 & 9.7561 & 9.7492 \\
+        9.7065 & 9.6901 & 9.8093 & 9.8058 & 9.7818 \\
         \hline
-        9.7116 & 9.7083 & 9.7508 & 9.7654 & 9.7669 \\
+        9.7677 & 9.7252 & 9.7621 & 9.7566 & 9.6849 \\
         \hline
     \end{tabular}
     \caption{Slope values for latter 25 runs, in units of m/s$^{2}$}
@@ -173,14 +205,14 @@ You should answer the following questions:
         \hline
         \textbf{Name} & \textbf{Value} (m/s$^{2}$) \\
         \hline
-        Minimum & 9.6095 \\
-        Median & 9.6963 \\
-        Maximum & 9.7603 \\
-        Average & 9.7012 \\
+        Minimum & 9.2793 \\
+        Median & 9.7066 \\
+        Maximum & 9.7359 \\
+        Average & 9.5721 \\
         \hline
     \end{tabular}
     \caption{Min, average, and max for first 5 runs}
-    \label{table:01.m.a.m.5}
+    \label{table:01.describe.5}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[ht]
@@ -189,14 +221,14 @@ You should answer the following questions:
         \hline
         \textbf{Name} & \textbf{Value} (m/s$^{2}$) \\
         \hline
-        Minimum & 9.6240 \\
-        Median & 9.7455 \\
-        Maximum & 9.7851 \\
-        Average & 9.7367 \\
+        Minimum & 9.5095 \\
+        Median & 9.7468 \\
+        Maximum & 9.8151 \\
+        Average & 9.7202 \\
         \hline
     \end{tabular}
     \caption{Min, average, and max for latter 25 runs}
-    \label{table:01.m.a.m.25}
+    \label{table:01.describe.25}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[ht]
@@ -205,16 +237,16 @@ You should answer the following questions:
         \hline
         \textbf{Name} & \textbf{Value} (m/s$^{2}$) \\
         \hline
-        Minimum & 9.6095 \\
-        25th Percentile & 9.7121 \\
-        50th Percentile & 9.7431 \\
-        75th Percentile & 9.7580 \\
-        Maximum & 9.7851 \\
-        Error & 0.0878 \\
+        Minimum & 9.2793 \\
+        25th Percentile & 9.6862 \\
+        50th Percentile & 9.7361 \\
+        75th Percentile & 9.7762 \\
+        Maximum & 9.8151 \\
+        Error & 0.2679 \\
         \hline
     \end{tabular}
     \caption{Min, quartiles, max, and error for 30-run aggregate}
-    \label{table:01.m.a.m.30}
+    \label{table:01.describe.30}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[ht]
@@ -223,17 +255,95 @@ You should answer the following questions:
         \hline
         \textbf{Name} & \textbf{Value} (m/s$^{2}$) \\
         \hline
-        Average - Error & 9.6430 \\
-        Average & 9.7308 \\
-        Average + Error & 9.8186 \\
+        Average - Error & 9.4276 \\
+        Average & 9.6955 \\
+        Average + Error & 9.9634 \\
         \hline
     \end{tabular}
     \caption{Error interval for 30-run aggregate}
-    \label{table:01.error}
+    \label{table:01.error.30}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \FloatBarrier
-% \newpage
-% \section{Figures}
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% ...
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|l|r|}
+        \hline
+        \textbf{Name} & \textbf{Value} (m/s$^{2}$) \\
+        \hline
+        Minimum & 9.586 \\
+        25th Percentile & 9.7066 \\
+        50th Percentile & 9.7361 \\
+        75th Percentile & 9.7608 \\
+        Maximum & 9.7839 \\
+        Error & 0.0989 \\
+        \hline
+    \end{tabular}
+    \caption{Min, quartiles, max, and error for central 20 runs}
+    \label{table:01.describe.20.center}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|l|r|}
+        \hline
+        \textbf{Name} & \textbf{Value} (m/s$^{2}$) \\
+        \hline
+        Average - Error & 9.6261 \\
+        Average & 9.7251 \\
+        Average + Error & 9.8240 \\
+        \hline
+    \end{tabular}
+    \caption{Error interval for central 20 runs}
+    \label{table:01.error.20.center}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|l|r|}
+        \hline
+        \textbf{Name} & \textbf{Value} (m/s$^{2}$) \\
+        \hline
+        Minimum & 9.628 \\
+        25th Percentile & 9.7097 \\
+        50th Percentile & 9.7388 \\
+        75th Percentile & 9.7635 \\
+        Maximum & 9.7948 \\
+        Error & 0.0834 \\
+        \hline
+    \end{tabular}
+    \caption{Min, quartiles, max, and error for closest 20 runs}
+    \label{table:01.describe.20.close}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|l|r|}
+        \hline
+        \textbf{Name} & \textbf{Value} (m/s$^{2}$) \\
+        \hline
+        Average - Error & 9.6521 \\
+        Average & 9.7355 \\
+        Average + Error & 9.8189 \\
+        \hline
+    \end{tabular}
+    \caption{Error interval for closest 20 runs}
+    \label{table:01.error.20.close}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|l|r|r|r|r|}
+        \hline
+        \textbf{Name} & \textbf{Error} (m/s$^{2}$) & \textbf{Experimental} (m/s$^{2}$) & \textbf{Theoretical} (m/s$^{2}$) & \textbf{P.D.} \\
+        \hline
+        First 5 & 0.2283 & 9.5721 & 9.8 & -2.33\% \\
+        Latter 25 & 0.1528 & 9.7202 & 9.8 & -0.81\% \\
+        Aggregate 30 & 0.2679 & 9.6955 & 9.8 & -1.07\% \\
+        Center 20 & 0.0989 & 9.7251 & 9.8 & -0.76\% \\
+        Closest 20 & 0.0834 & 9.7355 & 9.8 & -0.66\% \\
+        \hline
+    \end{tabular}
+    \caption{Summary of results and percent differences}
+    \label{table:01.summary}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
