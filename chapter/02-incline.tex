@@ -1,7 +1,7 @@
 % Copyright 2018 Melvin Eloy Irizarry-Gelpí
 \chapter{Motion on an Incline}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-In this experiment you will study motion on an incline plane and confirm that the mathematical descriptions introduced in class for motion with constant acceleration apply to this case.
+In this experiment you will study motion on an incline plane and confirm that the mathematical descriptions introduced in class for motion with constant acceleration also applies to this case.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Preliminary}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -27,7 +27,7 @@ and $B$ in Equation \ref{eq:02.d.quadratic} must be related to the intercept $b$
 \end{equation}
 That is, the parameters determining $d$ in Equation \ref{eq:02.d.quadratic} determine the parameters in Equation \ref{eq:02.v.linear}. The interpretation of $C$ in Equation \ref{eq:02.d.quadratic} is as the value that $d$ takes when $t = 0$ (the initial distance).
 
-Motion with \textbf{constant acceleration} is not only restricted to free-fall. As you will observe from the data, it also describes motion along an incline plane. However, the value of the constant acceleration is not the acceleration due to gravity, but a fraction of it.
+Motion with \textbf{constant acceleration} is not only restricted to free-fall. As you will observe from the data, it also describes motion along an inclined track. However, the value of the constant acceleration is not the acceleration due to gravity, but a fraction of it.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Experiment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -35,13 +35,11 @@ You used a motion sensor to measure the position, velocity, and acceleration of 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Analysis}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The goal is to describe the motion along the inclined track. Preliminary observations suggest constant acceleration. In order to confirm this, you should check that the behavior of position, velocity, and acceleration are consistent with this.
-
-Here are the steps to follow.
+The goal is to describe the motion along the inclined track. Preliminary observations suggest constant acceleration. In order to confirm this, you should check that the behavior of position, velocity, and acceleration are consistent. Here are the steps to follow.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Find the Sine of the Angles of Inclination}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The inclined track is characterized by the \textbf{angle of inclination}. The larger the angle, the more inclined the track is. You do not need to find the actual angle, only the \textbf{sine of the angle} (sine as in trigonometry). Here is how to find that sine for each of the two cases (one-box and two-box).
+The inclined track is characterized by the \textbf{angle of inclination}. The larger the angle, the more inclined the track is. You do not need to find the actual angle, only the \textbf{sine of the angle} (sine as in trigonometry). Here is how to find that sine for each of the two cases (one-box height and two-box height).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Measure the heights of points along incline}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -49,7 +47,7 @@ You choose about \textbf{four points along the incline} and use a ruler to measu
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Calculate the differences in position}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-You can take adjacent positions and calculate the differences. For example, consider the two-box case and the first two measurements (label 1 and 2) in Table \ref{table:02.height.2}. The first two heights are $h_{1} = 8.9$ cm and $h_{2} = 11.7$ cm. The \textbf{difference} is
+You can take distinct positions and calculate the differences. For example, consider the two-box case and the first two measurements (label 1 and 2) in Table \ref{table:02.height.2}. The first two heights are $h_{1} = 8.9$ cm and $h_{2} = 11.7$ cm. The \textbf{difference} is
 \begin{equation}
     \Delta h = h_{2} - h_{1} = 2.8 \text{ cm}
 \end{equation}
@@ -57,7 +55,7 @@ Similarly, the first two positions along the incline are $d_{1} = 25$ cm and $d_
 \begin{equation}
     \Delta d = d_{2} - d_{1} = 25 \text{ cm}
 \end{equation}
-If you have four pairs of positions (as in Table \ref{table:02.height.2} and Table \ref{table:02.height.1}), then you should be able to calculate three distinct differences for each dimension. In Table \ref{table:02.sine.2} and Table \ref{table:02.sine.1} you can find the values of my differences.
+If you have four pairs of positions (as in Table \ref{table:02.height.2} and Table \ref{table:02.height.1}), then you should be able to calculate six distinct differences for each dimension. In Table \ref{table:02.sine.2} and Table \ref{table:02.sine.1} you can find the values of my differences.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Calculate the ratios of differences}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -75,11 +73,19 @@ The sine values for the one-box and two-box cases are in Table \ref{table:02.sin
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 You can plot the position column versus the time column. One of my runs is in Figure \ref{figure:02.raw.d}. As you can see, there is a region that looks like a parabola. Before attempting to fit the data, you need to truncate the part of the data before and after the parabola. This step is highly subjective: it depends on your judgement. Note that the parabola begins to smoothly ramp-up: I chose to not include this ramping-up and instead decided to cut the parabola around just when the position is close to 0.2 m.
 
-After isolating the parabola segment, you can add the best fit.
+After isolating the parabola segment, you can add the best fit curve. Instead of using a linear fit, you need to use a polynomial fit. First, go to
+\begin{equation}
+    \texttt{Chart editor > CUSTOMIZE > Series}
+\end{equation}
+and check on \texttt{Trendline}. Under \texttt{Type} select \texttt{Polynomial}. Under \texttt{Line color} change from blue to red or something else that is easier to distinguish from the data. Make sure that under \texttt{Polynomial Degree} the value is \texttt{2}. Finally, under \texttt{Label} select \texttt{Use Equation}. You should see the legend with the data and the equation for the best-fit quadratic function of the form:
+\begin{equation}
+    \texttt{CCC + BBBx + AAAx\^{}2}
+\end{equation}
+The value in \texttt{CCC} corresponds to $C$ in Equation \ref{eq:02.d.quadratic} and so on.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Fit Velocity Data}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-...
+You can plot the velocity column versus the time column. One of my runs is in Figure \ref{figure:02.raw.v}. As you can see, there is a region that looks like a diagonal line. Just like for the position data, before attempting to fit the data you need to truncate the non-linear parts. Once you have restricted to a subset that keeps the parabolic segment only, you can look at the velocity data inside this same time segment.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Average Acceleration Data}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -124,7 +130,7 @@ You are free to choose which runs to use for each chart. But in order to obtain 
     \centering
     \begin{tabular}{|l|r|r|}
         \hline
-        Label & $d$ (cm) & $y$ (cm) \\
+        Label & $d$ (cm) & $h$ (cm) \\
         \hline
         1 & 25 & 8.9 \\
         2 & 50 & 11.7 \\
@@ -140,7 +146,7 @@ You are free to choose which runs to use for each chart. But in order to obtain 
     \centering
     \begin{tabular}{|l|r|r|}
         \hline
-        Label & $d$ (cm) & $y$ (cm) \\
+        Label & $d$ (cm) & $h$ (cm) \\
         \hline
         1 & 25 & 8.2 \\
         2 & 50 & 9.4 \\
@@ -160,10 +166,13 @@ You are free to choose which runs to use for each chart. But in order to obtain 
         \hline
         2 and 1 & 25 & 2.8 & 0.112 \\
         3 and 2 & 25 & 2.9 & 0.116 \\
+        3 and 1 & 50 & 5.7 & 0.114 \\
         4 and 3 & 25 & 2.9 & 0.116 \\
+        4 and 2 & 50 & 5.8 & 0.116 \\
+        4 and 1 & 75 & 8.6 & 0.115 \\
         \hline
     \end{tabular}
-    \caption{Sine for angle of inclination for two-box case}
+    \caption{Sine for angle of inclination for two-box case. Average is 0.115.}
     \label{table:02.sine.2}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -175,10 +184,13 @@ You are free to choose which runs to use for each chart. But in order to obtain 
         \hline
         2 and 1 & 25 & 1.2 & 0.048 \\
         3 and 2 & 25 & 1.4 & 0.056 \\
-        4 and 3 & 25 & 1.5 & 0.06 \\
+        3 and 1 & 50 & 2.6 & 0.052 \\
+        4 and 3 & 25 & 1.5 & 0.060 \\
+        4 and 2 & 50 & 2.9 & 0.058 \\
+        4 and 1 & 75 & 4.1 & 0.055 \\
         \hline
     \end{tabular}
-    \caption{Sine for angle of inclination for one-box case}
+    \caption{Sine for angle of inclination for one-box case. Average is 0.055.}
     \label{table:02.sine.1}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
