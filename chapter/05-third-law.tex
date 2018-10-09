@@ -9,16 +9,16 @@ In this experiment you will check the validity of Newton's third law of motion.
 The \textbf{third law of motion} can be stated as follows:
 \begin{itemize}
     \item Whenever A exerts a force $\vec{F}_{AB}$ on B, B exerts a force $\vec{F}_{BA}$ on A.
-    \item The \textbf{magnitude} of $\vec{F}_{BA}$ and $\vec{F}_{AB}$ are equal.
-    \item The \textbf{direction} of $\vec{F}_{BA}$ is the exact opposite of the direction of $\vec{F}_{AB}$.
+    \item The \textbf{magnitude} of the forces $\vec{F}_{BA}$ and $\vec{F}_{AB}$ are equal.
+    \item The \textbf{direction} of the force $\vec{F}_{BA}$ is the exact opposite of the direction of the force $\vec{F}_{AB}$.
 \end{itemize}
 In more mathematical terms,
 \begin{align}
     F_{BA} &= F_{AB} & \vec{F}_{BA} &= - \vec{F}_{AB}
 \end{align}
-One way to test the third law would be to measure the force acting on two bodies and verify that the magnitudes are the same, but that the direction are opposite.
+One way to test the third law would be to measure the force acting on two bodies and verify that the magnitudes are the same, but that the directions are opposite.
 
-There is a common misconception about the third law. Sometimes, it is stated as
+There is a \textbf{common misconception} about the third law. Sometimes, it is stated as
 \begin{itemize}
     \item For every action, there is an equal and opposite \textbf{reaction}.
 \end{itemize}
@@ -26,7 +26,7 @@ This wording leads to an \textbf{incorrect} picture because it introduces an ord
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Experiment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-You used two force sensors to measure the amount of force acting on each other. To check different aspects of the third law, you perform three kinds of experiments:
+You used two force sensors to measure the amount of force acting on each other. To check different aspects of the third law, you performed three kinds of experiments:
 \begin{itemize}
     \item Sensor A pulls/pushes on sensor B.
     \item Sensor B pulls/pushes on sensor A.
@@ -35,33 +35,150 @@ You used two force sensors to measure the amount of force acting on each other. 
 Furthermore, you tried different attachments on the force sensors:
 \begin{itemize}
     \item String (pulling)
-    \item Rubber band (pulling)
+    \item Elastic Band (pulling)
     \item Bumpers (pushing)
     \item Magnets (pushing)
 \end{itemize}
-The force sensors give you force values over time.
+The force sensors give you force values (in N) over time (in s).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Analysis}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Here is what to do. I will work with the magnet runs.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Plot Both Forces Versus Time}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+With the force values from each sensor you can make line charts. Figures \ref{figure:05.ff.L}, \ref{figure:05.ff.R}, and \ref{figure:05.ff.B} display the three runs with magnets. As you can see, the three charts are very symmetric about the horizontal axis, supporting the notion that each force sensor measures about the same amount of force at the same amount of time, but with different signs.
+
+Another thing to notice, is that the three charts mentioned above are very similar and without any labels one could not tell if either sensor is doing the pushing, or both. For example, there is nothing special about Figure \ref{figure:05.ff.L} that distinctively indicates that the left sensor is pushing on the right sensor.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Plot Sum of Forces Versus Time}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Besides visually examining the charts with the two force columns, you can calculate and also visualize the sum of the two force columns. Figures \ref{figure:05.sf.L}, \ref{figure:05.sf.R}, and \ref{figure:05.sf.B} display the three runs with magnets. As you can see the sum of the forces takes on very small values with no clear pattern. Indeed, the values are comparable to the starting values before any pushing is done. This indicates that, for practical purposes, the sum of the two forces amounts to noise.
+
+Again, all three charts here are very similar, so without labels you could not tell which chart corresponds to which run.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Find the Time-Averaged Force}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 ...
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{My Data}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-...
+Here is a breakdown of my runs:
+\begin{enumerate}
+    \item String (left pulling)
+    \item String (right pulling)
+    \item String (both pulling)
+    \item String (left pulling)
+    \item String (right pulling)
+    \item String (both pulling)
+    \item Elastic band (left pulling)
+    \item Elastic band (right pulling)
+    \item Elastic band (both pulling)
+    \item Bumpers (left pushing)
+    \item Bumpers (right pushing)
+    \item Bumpers (both pushing)
+    \item Magnets (left pushing)
+    \item Magnets (right pushing)
+    \item Magnets (both pushing)
+\end{enumerate}
+I got distracted and accidentally forgot to replace the string with the elastic band, so collected double the amount of data for the string.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Your Data}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-...
+You should have three runs of data for each of the four attachments for the force sensor (total number of runs should be twelve). For each run, you should have a time column, and two force columns. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \section{Your Laboratory Report}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-...
+Your laboratory report should include the following:
+\begin{enumerate}
+    \item Choose \textbf{one} of the four attachments (string, elastic band, bumper, magnet). For that choice, make the following \textbf{line charts}:
+    \begin{enumerate}
+        \item One chart with force in the vertical axis and time in the horizontal axis, showing \textbf{both} force columns, for each of the three runs.
+        \item One chart with force in the vertical axis and time in the horizontal axis, showing the sum of the two forces, for each of the three runs.
+    \end{enumerate}
+\end{enumerate}
+It should also include answers to the following questions:
+\begin{enumerate}
+    \item Consider the three experimental runs associated to a given attachment (string, elastic band, bumpers, magnets). If you look at unlabeled charts, could you tell which run corresponds to 
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \section{Tables}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|l|r|r|r|}
+        \hline
+        Run & Force on L (N) & Force on R (N) & Sum of Forces (N) \\
+        \hline
+        1 & 3.980 & -4.053 & -0.073 \\
+        2 & 1.499 & -1.571 & -0.071 \\
+        3 & 1.948 & -1.976 & -0.028 \\
+        4 & 2.167 & -2.225 & -0.058 \\
+        5 & 2.248 & -2.335 & -0.086 \\
+        6 & 3.653 & -3.771 & -0.119 \\
+        \hline
+        7 & 1.673 & -1.772 & -0.098 \\
+        8 & 2.002 & -2.049 & -0.047 \\
+        9 & 2.362 & -2.420 & -0.059 \\
+        \hline
+        10 & -3.913 & 3.945 & 0.033 \\
+        11 & -3.670 & 3.692 & 0.022 \\
+        12 & -4.638 & 4.627 & -0.012 \\
+        \hline
+        13 & -2.121 & 2.089 & -0.032 \\
+        14 & -3.008 & 2.968 & -0.040 \\
+        15 & -4.064 & 4.025 & -0.039 \\
+        \hline
+    \end{tabular}
+    \caption{Time-Averaged Values}
+    \label{table:05.results}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \FloatBarrier
 \newpage
 \section{Figures}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.71]{image/05-third-law/Run-13-Both.png}
+    \caption{Both Forces versus Time; Left Pushing}
+    \label{figure:05.ff.L}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.71]{image/05-third-law/Run-14-Both.png}
+    \caption{Both Forces versus Time; Right Pushing}
+    \label{figure:05.ff.R}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.71]{image/05-third-law/Run-15-Both.png}
+    \caption{Both Forces versus Time; Both Pushing}
+    \label{figure:05.ff.B}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.71]{image/05-third-law/Run-13-Left-Pushing.png}
+    \caption{Sum of Forces versus Time; Left Pushing}
+    \label{figure:05.sf.L}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.71]{image/05-third-law/Run-14-Right-Pushing.png}
+    \caption{Sum of Forces versus Time; Right Pushing}
+    \label{figure:05.sf.R}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.71]{image/05-third-law/Run-15-Both-Pushing.png}
+    \caption{Sum of Forces versus Time; Both Pushing}
+    \label{figure:05.sf.B}
+\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
