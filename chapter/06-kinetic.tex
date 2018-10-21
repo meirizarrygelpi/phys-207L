@@ -1,12 +1,12 @@
 % Copyright 2018 Melvin Eloy Irizarry-Gelpí
 \setcounter{chapter}{6}
-\chapter{Kinetic Energy}
+\chapter{Kinetic and Elastic Energy}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 In this experiment you will check that kinetic energy depends on speed in a quadratic way.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Preliminary}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Energy is a fundamental concept in physics. Unlike force, which is a vector quantity, energy has no intrinsic direction. The SI unit for energy is the joule (J). One joule of energy is equivalent to 1 newton-meter:
+Energy is a fundamental concept in physics. Unlike force, which is a vector quantity, energy has no intrinsic direction. The \textbf{SI unit} for energy is the joule (J). One joule of energy is equivalent to 1 newton-meter:
 \begin{equation}
     1 \text{ J} = 1 \text{ N m}
 \end{equation}
@@ -14,31 +14,89 @@ There are many forms of energy. \textbf{Kinetic energy} is the energy associated
 \begin{equation}
     K = \frac{1}{2} m v^{2}
 \end{equation}
-Note that kinetic energy cannot be negative.
+Note that kinetic energy cannot be negative, because mass and square speed are always non-negative.
 
-When you compress or stretch a spring, you are storing a form of energy known as \textbf{elastic energy}. The amount of elastic energy $U$ stored in a spring with spring constant $k$ and compressed/stretched $x$ distance from equilibrium is given by
+A simple direct experiment to test that kinetic energy depends on speed as stated above would involve measuring the speed $v$ and the energy $K$ of a moving object, and checking that the chart with speed and kinetic energy is quadratic. However, kinetic energy cannot be measured directly.
+
+When you compress or stretch a spring, you are storing a form of energy known as \textbf{elastic energy}. The amount of elastic energy $U$ stored in a spring with spring constant $k$ and compressed/stretched distance from equilibrium $x$ is given by
 \begin{equation}
     U = \frac{1}{2} k x^{2}
 \end{equation}
-Note that elastic energy cannot be negative also. The mathematical form of $U$ is very similar to the mathematical form of $K$.
+Note that elastic energy cannot be negative also, since $k$ and $x^{2}$ are non-negative. The mathematical form of $U$ is very similar to the mathematical form of $K$.
 
 Elastic energy is an example of energy that can be stored over time and used later. Such kinds of energy are known as potential energy. Another important form of energy is \textbf{mechanical energy}, which is just the sum of kinetic energy and any form of potential energy available.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Experiment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-You have a cart with a picket fence. The cart can move along a flat track. You can use a photogate to measure the speed of the cart at a given point along the track. You have a spring loop attached to one end of the track. When you compress the spring loop, you do work and this work is stored on the spring as elastic potential energy. If you put the cart in front of the compress
+You have a cart with a picket fence. The cart can move along a flat track. You can use a photogate to measure the speed of the cart at a given point along the track. You have a spring loop attached to one end of the track. When you push the cart against the spring loop, you compress the spring loop, and you do work. This work is stored on the spring as elastic potential energy. While holding the cart against the spring, the cart is not moving, so the speed of the cart is zero. Thus, at this stage, the cart has zero kinetic energy. As stated above, the amount of elastic energy depends on how much the spring is compressed. The mechanical energy, the sum of the kinetic and elastic energy, is just purely elastic:
+\begin{equation}
+    E_{1} = K + U = \frac{1}{2} m v^{2} + \frac{1}{2} k x^{2} = \frac{1}{2} k x^{2}
+\end{equation}
+Then you release the cart. The spring now expands to its equilibrium shape ($x = 0$). As the spring expands, it pushes the cart forward, transferring the elastic energy to the cart. The cart is now moving, so it has kinetic energy. This energy came from the elastic energy of the spring. At this moment, the mechanical energy is just purely kinetic:
+\begin{equation}
+    E_{2} = K + U = \frac{1}{2} m v^{2} + \frac{1}{2} k x^{2} = \frac{1}{2} m v^{2}
+\end{equation}
+One of the most important properties of energy is that it is conserved. Specifically, energy cannot be created from nothing, or destroyed into nothing: you can only convert one form of energy into another. Furthermore, in some cases, like this experiment with the cart and the spring loop, the mechanical energy does not change with time. That means that the value of the mechanical energy when the spring is compressed and there is no motion, $E_{1}$, should be equal to the value of the mechanical energy when the spring is not compressed and there is motion, $E_{2}$. That is,
+\begin{equation}
+    E_{1} = E_{2}
+\end{equation}
+This means that
+\begin{equation}
+    \frac{1}{2} m v^{2} = \frac{1}{2} k x^{2}
+\end{equation}
+Simplifying a bit, you get a relation between the square of speed, and the square of the distance from equilibrium:
+\begin{equation}
+    v^{2} = \left( \frac{k}{m} \right) x^{2}
+\end{equation}
+You can experimentally check this relation by measuring the speed of a cart just after being launched by a spring from a certain amount of distance from equilibrium.
+
+For future reference, you can introduce
+\begin{equation}
+    \omega = \sqrt{\frac{k}{m}}
+\end{equation}
+Here $\omega$, the Greek lowercase letter omega, is known as the angular frequency. The above relation between $v$ and $x$ is given by
+\begin{equation}
+    v^{2} = \omega^{2} x^{2}
+\end{equation}
+So a chart with $v$ in the vertical axis, and $x$ in the horizontal axis should have a linear shape with slope being close to $\omega^{2}$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Analysis}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-...
+Here are the steps to follow:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Measure the position of the equilibrium shape}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+You can use the marking on the track to measure the position of the cart when the cart is just touching the spring loop and the spring loop is not compressed. This position will be called $d_{0}$ and will be used next to find the distance from equilibrium.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Calculate the distance from equilibrium}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+You recorded the launch position $d$ of the cart. Together with the equilibrium position $d_{0}$, you can calculate the distance from equilibrium $x$:
+\begin{equation}
+    x = d_{0} - d
+\end{equation}
+This definition of $x$ guarantees that $x$ will be positive.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Find the 3-run average speed}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+It is good practice to repeat a launch and record at least three consistent values of the speed of the cart for a given launch position. Then you can find the 3-run average speed.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Visualize $v$ versus $x$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+You can make a chart with speed in the vertical axis and distance from equilibrium in the horizontal axis. According to the expected model, the chart should have a linear shape and the slope should be related to $\omega$. However, since you do not know the value of the spring constant $k$, you cannot determine the expected value of $\omega$. Indeed, you can use this experiment to measure $\omega$.
+
+In my case, Figure \ref{figure:06.v} shows the relation between $v$ and $x$. As you can see, the relation is very linear.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Visualize $v^{2}$ versus $x^{2}$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The relation between $v$ and $x$ from energy conservation involves the square quantities. It does not hurt to check the linear quantities, but a real test should involve the squares. In new columns you can calculate the square speed and the square of the distance from equilibrium. Then you can make a chart with $v^{2}$ in the vertical axis and $x^{2}$ in the horizontal axis. The expectation is that this chart should also have a linear shape, with a very small intercept, and a slope related to $\omega^{2}$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{My Data}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-...
+My raw data is in Table \ref{table:06.data}. The first column has the position of launch. The second column has the corresponding distance from equilibrium. The third column has the speed of the cart measured by the photogate. The last column has the 3-run average speed. I considered seven compressed distances, plus the first row that corresponds to an uncompressed spring.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Your Data}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-...
+Your data should be very similar to mine, but the actual launch positions might be different due to the varying shapes of the spring loops. You should have a total of eight data points.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \section{Your Laboratory Report}
@@ -50,7 +108,22 @@ You have a cart with a picket fence. The cart can move along a flat track. You c
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}
     \centering
-    \begin{tabular}{|c|c|c|c|}
+    \begin{tabular}{|l|r|}
+        \hline
+        Name & Value (kg) \\
+        \hline
+        Mass of cart & 0.5088 \\
+        Mass of picket fence & 0.013 \\
+        Total mass & 0.5218 \\
+        \hline
+    \end{tabular}
+    \caption{Mass measurements}
+    \label{table:06.mass}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}
+    \centering
+    \begin{tabular}{|l|r|r|r|}
         \hline
         $d$ (cm) & $x$ (cm) & $v$ (m/s) & Average $v$ (m/s) \\
         \hline
