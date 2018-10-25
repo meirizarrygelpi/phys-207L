@@ -1,24 +1,24 @@
 % Copyright 2018 Melvin Eloy Irizarry-Gelpí
 \setcounter{chapter}{7}
-\chapter{Mechanic Energy}
+\chapter{Kinetic and Gravitational Energy}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-...
+In this experiment you will check that gravitational energy depends on height in a linear way.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Preliminary}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-There are many kinds of energy. You have \textbf{kinetic energy}, which is associated with motion. The amount of kinetic energy $K$ depends on the amount of mass $m$ and the amount of speed $v$:
+There are many kinds of energy. You have \textbf{kinetic energy}, which is associated with motion. The amount of kinetic energy $K$ depends on the amount of mass $m$ and speed $v$:
 \begin{equation}
     K = \frac{1}{2} m v^{2}
 \end{equation}
-Note that kinetic energy changes if the velocity of the object changes.
+Note that kinetic energy changes if the speed of the object changes.
 
-You have \textbf{gravitational energy} (a form of potential energy), which is associated to being in a region with a gravitational field. The amount of gravitational energy $U_{g}$ depends on the amount of mass $m$, the amount of gravitational acceleration $g$, and the amount of height $h$ measured from a reference point:
+You have \textbf{gravitational energy} (a form of \textbf{potential energy}), which is associated to being in a region with a gravitational field. The amount of gravitational energy $U_{g}$ depends on the amount of mass $m$, the amount of gravitational acceleration $g$, and the amount of height $h$ measured from a reference point:
 \begin{equation}
     U_{g} = m g h
 \end{equation}
 Note that the gravitational energy changes if the height of the object changes.
 
-Finally, you have \textbf{mechanic energy}. The amount of mechanic energy $E$ is just the sum of kinetic energy $K$ and potential energy. In the case when the potential energy is only gravitational in nature, then the mechanic energy is
+Finally, you have \textbf{mechanic energy}. The amount of mechanic energy $E$ is the sum of kinetic energy $K$ and potential energy. In the case when the potential energy is only gravitational in nature, the mechanic energy is
 \begin{equation}
     E = K + U_{g}
 \end{equation}
@@ -36,16 +36,16 @@ This relation predicts that $v^{2}$ is a \textbf{linear function} of $h$ with th
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Experiment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-In order to study a system where there is gravitational energy, and also that that gravitational changes with time, we used an object moving along an incline. With a motion sensor, we recorded the \textbf{position} $d$ and \textbf{velocity} $v$ along the incline as they changed with time. You also recorded some height measurements to determine the sine of the angle of inclination $\theta$ of the incline. Also, you recorded the mass $m$ of the cart.
+In order to study a system where there is gravitational energy, and also that that gravitational changes with time, you used an object moving along an incline. With a motion sensor, you recorded the \textbf{position} $d$ and \textbf{velocity} $v$ along the incline as they changed with time. You also recorded some height measurements to determine the sine of the angle of inclination $\theta$ of the incline. Also, you recorded the mass $m$ of the cart.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Analysis}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-We would like to test two predictions:
+You would like to test two predictions:
 \begin{enumerate}
     \item Mechanic energy does not change with time.
     \item There is a linear relation between $v^{2}$ and $h$ given by equation (\ref{eq.07.vv}).
 \end{enumerate}
-To test the first prediction, we need to compute the mechanic energy with the data that we collected. To test the second prediction, we need to make a graph with $v^{2}$ in the vertical axis and $h$ in the horizontal axis.
+To test the first prediction, you need to compute the mechanic energy with the data that you collected. To test the second prediction, you need to make a graph with $v^{2}$ in the vertical axis and $h$ in the horizontal axis.
 
 Here are some steps to complete the analysis.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -65,7 +65,7 @@ You can think of each of these as an independent measurement, so take the averag
 \end{equation}
 You need this sine because the height $h$ at the incline is related to the position $d$ along the incline by the relation
 \begin{equation}
-    h = d \sin{(\theta)}
+    h = d \sin(\theta)
 \end{equation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Truncate the Data}
@@ -82,7 +82,7 @@ Once you know the initial time and the final time of the motion, just delete the
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 In a separate column, you should compute the value of the height on the incline using the values in the position column. If $d$ is a position value, then the corresponding height is given by
 \begin{equation}
-    h = d \sin{(\theta)}
+    h = d \sin(\theta)
 \end{equation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Calculate Kinetic Energy}
@@ -111,35 +111,7 @@ Make sure that you add values that are evaluated at the same time.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 One of the goals of this experiment is to verify that mechanic energy is constant in time. To check this, you can make a scatter plot with time in the horizontal axis and mechanic energy in the vertical axis. In principle, you should see that the values of mechanic energy do not change with time. In practice, we see that in general the mechanic energy decreases as time passes. This is actually true, since in this experiment we could not completely remove friction and this force leads to a dissipation of energy. However, the amount of change in energy over time is very small, so effectively and approximately mechanic energy is constant.
 
-In particular, note that the energy values in my run 6 (figure \ref{figure.07.run.6.e}) appear to be random. This strongly suggest that the variations are more related to noise than anything physical.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}
-    \centering
-    \includegraphics[scale=0.71]{image/07-mechanic/run-1-energy.png}
-    \caption{}
-    \label{figure.07.run.1.e}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}
-    \centering
-    \includegraphics[scale=0.71]{image/07-mechanic/run-2-energy.png}
-    \caption{}
-    \label{figure.07.run.2.e}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}
-    \centering
-    \includegraphics[scale=0.71]{image/07-mechanic/run-5-energy.png}
-    \caption{}
-    \label{figure.07.run.5.e}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}
-    \centering
-    \includegraphics[scale=0.71]{image/07-mechanic/run-6-energy.png}
-    \caption{}
-    \label{figure.07.run.6.e}
-\end{figure}
+In particular, note that the energy values in my run 6 (Figure \ref{figure.07.run.6.e}) appear to be random. This strongly suggest that the variations are more related to noise than anything physical.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Calculate Velocity Squared}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -162,34 +134,6 @@ The slope is negative, so we should see a diagonal line that is downward as heig
     E = \frac{m \times \text{ intercept}}{2}
 \end{equation}
 You can also compare this value with the average of the mechanic energy column (use the \texttt{AVERAGE} function to compute this). Note that this is an average over time.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}
-    \centering
-    \includegraphics[scale=0.71]{image/07-mechanic/run-1-fit.png}
-    \caption{}
-    \label{figure.07.run.1.fit}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}
-    \centering
-    \includegraphics[scale=0.71]{image/07-mechanic/run-2-fit.png}
-    \caption{}
-    \label{figure.07.run.2.fit}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}
-    \centering
-    \includegraphics[scale=0.71]{image/07-mechanic/run-5-fit.png}
-    \caption{}
-    \label{figure.07.run.5.fit}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}
-    \centering
-    \includegraphics[scale=0.71]{image/07-mechanic/run-6-fit.png}
-    \caption{}
-    \label{figure.07.run.6.fit}
-\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{My Data}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -233,10 +177,71 @@ For each of the three runs you should
 \end{enumerate}
 You should also have a table like the one above summarizing the results (my table has four runs; your table should have three).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\FloatBarrier
 \newpage
 \section{Tables}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[ht]
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \FloatBarrier
 \newpage
 \section{Figures}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.71]{image/07-mechanic/run-1-energy.png}
+    \caption{Mechanic Energy for Run 1}
+    \label{figure.07.run.1.e}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.71]{image/07-mechanic/run-2-energy.png}
+    \caption{Mechanic Energy for Run 2}
+    \label{figure.07.run.2.e}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.71]{image/07-mechanic/run-5-energy.png}
+    \caption{Mechanic Energy for Run 5}
+    \label{figure.07.run.5.e}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.71]{image/07-mechanic/run-6-energy.png}
+    \caption{Mechanic Energy for Run 6}
+    \label{figure.07.run.6.e}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.71]{image/07-mechanic/run-1-fit.png}
+    \caption{Square Speed versus Height for Run 1}
+    \label{figure.07.run.1.fit}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.71]{image/07-mechanic/run-2-fit.png}
+    \caption{Square Speed versus Height for Run 2}
+    \label{figure.07.run.2.fit}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.71]{image/07-mechanic/run-5-fit.png}
+    \caption{Square Speed versus Height for Run 5}
+    \label{figure.07.run.5.fit}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.71]{image/07-mechanic/run-6-fit.png}
+    \caption{Square Speed versus Height for Run 6}
+    \label{figure.07.run.6.fit}
+\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
