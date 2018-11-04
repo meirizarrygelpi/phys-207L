@@ -2,7 +2,7 @@
 \setcounter{chapter}{8}
 \chapter{Impulse and Momentum}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-...
+In this experiment, you will study the relationship between impulse and linear momentum.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Preliminary}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -10,11 +10,11 @@ Linear momentum (or just \textbf{momentum}) is a physical quantity that incorpor
 \begin{equation}
     p = m v
 \end{equation}
-Due to the second law of motion, a net \textbf{force} causes an acceleration (a change in the velocity of an object). This in turn leads to a change in the momentum of an object. The precise relationship between momentum and forces includes a quantity called \textbf{impulse}.
+Due to the second law of motion, a net \textbf{force} causes an acceleration (a change in the velocity of an object). This in turn leads to a change in the momentum of an object. The precise relationship between momentum and forces involves a quantity called \textbf{impulse}.
 
-Formally, impulse is defined as the area under the curve in a \textbf{force versus time} graph. In principle, we need calculus to find the area under a curve. In practice we use a simple approximation: we approximate the curve as a \textbf{flat line}. The area under a flat line has the same shape as a rectangle. The area of a rectangle is the length multiplied by the width. Which flat line to use? Since force is in the vertical axis, a flat horizontal line corresponds to a fixed value of force along time. An appropriate choice for the fixed value is the \textbf{time-averaged force} $\bar{F}$. This would correspond to the width of the rectangle. The length of the rectangle is the amount of time $\Delta t$ that the force acts. The ``area'' is thus given by
+Formally, impulse is defined as the \textbf{area} under the curve in a \textbf{force versus time} graph. In principle, you need calculus to find the area under a curve. In practice you use a simple approximation: you approximate the curve as a \textbf{flat line}. The area under a flat line has the same shape as a rectangle. The area of a rectangle is the length multiplied by the width. Which flat line to use? Since force is in the vertical axis, a flat horizontal line corresponds to a fixed value of force along time. An appropriate choice for the fixed value is the \textbf{time-averaged force} $\bar{F}$. This would correspond to the width of the rectangle. The length of the rectangle is the amount of time $\Delta t$ that the force acts. The ``area'' is thus given by
 \begin{equation}
-    \text{``area'' } = \bar{F} \times \Delta t = \text{ impulse}
+    \text{``Area''} = \bar{F} \times \Delta t = \text{Impulse}
 \end{equation}
 Impulse has units of force multiplying time. If force is in newtons (N) and time in seconds (s), then impulse has units of N s. However, the newton is equivalent to
 \begin{equation}
@@ -24,32 +24,48 @@ Thus, the N s is equivalent to
 \begin{equation}
     1 \text{ N s} = 1 \text{ kg m/s}
 \end{equation}
-If you look carefully, these are the same units of momentum. This does not mean that impulse is the same as momentum. Indeed, impulse can also be defined as the \textbf{change in momentum}:
+If you look carefully, these are the same units as momentum. This does not mean that impulse is the same as momentum. Indeed, impulse can also be defined as the \textbf{change in momentum}:
 \begin{equation}
-    \text{impulse } = p_{2} - p_{1}
+    \text{Impulse} = p_{2} - p_{1}
 \end{equation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Experiment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-In order to verify the relationship between momentum, force, and impulse, we need to use a mechanical system where momentum and force change with time. A cart, moving along a track and colliding with a force sensor is perfect for this. Different attachment on the force sensor allow us to study different kinds of collisions. We also use a photogate to measure the speed of the cart before and after the collision. In this way, we collect data on force, and momentum, and the impulse can be determined in two different ways.
+In order to verify the relationship between momentum, force, and impulse, you need to use a mechanical system where momentum and force change with time. A cart, moving along a track and colliding with a force sensor is perfect for this. You can consider two kinds of collisions: \textbf{elastic} and \textbf{inelastic} collisions.
+
+In the \textbf{elastic} collisions, you use a spring attachment on the force sensor. When the cart collides with the spring, the spring contracts and then expands, pushing the cart away. The net result is that the cart bounces off the spring. This means that the incoming and outgoing speed of the cart are both non-zero.
+
+In the \textbf{inelastic} collisions, you add some sticky clay on both the force sensor and the cart. When the cart collides with the clay, it sticks to it, and comes to a complete stop. This means that the incoming speed of the cart is non-zero, but the outgoing speed of the cart is zero.
+
+To measure the speed of the cart, you use a photogate placed near the force sensor, in order to measure the speed of the cart just before and just after the collision.
+
+In this way, you collect data on force, and momentum, and the impulse can be determined in two different ways.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Analysis}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-We are going to determine the amount of impulse in two different ways.
+You are going to determine the amount of impulse in two different ways.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Determine Total Mass of Object}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Linear momentum cannot be measured directly. With the speed of the object measured with the photogate, and the mass of the object, you can calculate the experimental value of the linear momentum of the object.
+
+For elastic collisions, the object consist of the cart, the picket fence, and any extra mass added. The total mass is the sum of these three masses.
+
+For inelastic collisions, the object consist of the cart, the picket fence, any extra mass added, and the sticky clay. The total mass is the sum of these four masses.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Impulse from Change in Momentum}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The photogate measures the velocity of the object before the collision ($v_{1}$) and after the collision ($v_{2}$). Strictly speaking, \textbf{one of the velocities value should be negative} because there is \textbf{a change in the direction} of motion. We are going to multiply the value for $v_{2}$ by $-1$ in order to \textbf{make it negative}.
+The photogate measures the velocity of the object before the collision ($v_{1}$) and after the collision ($v_{2}$). For an elastic collision, strictly speaking, \textbf{one of the velocities value should be negative} because there is \textbf{a change in the direction} of motion. You have to multiply the value for $v_{1}$ by $-1$ in order to \textbf{make it negative}.
 
-With the values of velocity, and the mass of the object, you can find the momentum of the object before the collision,
+With the values of velocity, and the mass of the object, you can find the momentum of the object \textbf{before} the collision,
 \begin{equation}
     p_{1} = m v_{1}
 \end{equation}
-and the momentum after the collision,
+and the momentum \textbf{after} the collision,
 \begin{equation}
     p_{2} = m v_{2}
 \end{equation}
-The change in momentum is
+The \textbf{change} in momentum is
 \begin{equation}
     \Delta p = p_{2} - p_{1}
 \end{equation}
@@ -57,88 +73,74 @@ This is the first estimate of the amount of impulse during the collision.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Impulse from Force Acting Over Time}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The force sensor measures the amount of force on the sensor during the collision. First you need to determine when the collision is taking place. This involves making a force versus time graph and finding the time $t_{1}$ when the collision begins and the time $t_{2}$ when it ends. With these times you can compute the amount of time that the collision lasts:
+The force sensor measures the amount of \textbf{force on the sensor} during the collision. First you need to determine when the collision is taking place. This involves making a force versus time graph and finding the time $t_{1}$ when the collision begins and the time $t_{2}$ when it ends. With these times you can compute the amount of time that the collision lasts:
 \begin{equation}
     \Delta t = t_{2} - t_{1}
 \end{equation}
-Then you delete all the force values before and after the collision in the force column. Finally, you can compute the average force during this time period. This gives you the value of $\bar{F}$. With $\bar{F}$ and $\Delta t$ you can compute the impulse:
+This amount of time is known as the \textbf{duration} of the collision.
+
+When does the collision begin? If the force sensor is zeroed correctly, the force readings should be close to zero before and after the collision. Thus, the collision begins when the force reading change from zero to non-noise non-zero.
+
+You then delete all the force values before and after the collision in the force column. Finally, you can compute the average force during this time period. This gives you the value of $\bar{F}$. Note that $\bar{F}$ is the force on the sensor. What you really want is the amount of force on the cart. You can use Newton's third law of motion and simply change the sign of the force on the sensor to find the force on the cart. With $-\bar{F}$ and $\Delta t$ you can compute the impulse:
 \begin{equation}
-    \text{impulse } = \bar{F} \times \Delta t
+    \text{impulse} = -\bar{F} \times \Delta t
 \end{equation}
 This is the second estimate of the amount of impulse during the collision.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{My Data}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-There are two experiments: elastic and inelastic collisions. The difference between these experiment is that in the inelastic case, the amount of force during the collision is larger, and the velocity (and momentum) after the inelastic collision is zero. Besides that, the analysis is almost identical.
+There are two experiments: \textbf{elastic} and \textbf{inelastic} collisions. The difference between these experiments is that in the inelastic case, the amount of force during the collision is larger, and the velocity (and also momentum) after the inelastic collision is zero. Besides that, the analysis is almost identical.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Elastic Collision}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-In my elastic collision data you will find 12 runs (3 for each amount of extra mass). I analyzed runs 1, 4, 7, and 10 (corresponding to no extra mass, 100 g, 200 g, and 300 g). Here are some of the steps I followed to find my results, which are in table \ref{table.08.results.elastic}.
+In my elastic collision data you will find 12 runs. Here is a breakdown of the amount of extra mass used:
+\begin{itemize}
+    \item Runs 1, 2, and 3: 0 kg of extra mass.
+    \item Runs 4, 5, and 6: 0.1 kg of extra mass.
+    \item Runs 7, 8, and 9: 0.2 kg of extra mass.
+    \item Runs 10, 11, and 12: 0.3 kg of extra mass.
+\end{itemize}
+You can see the results in Table \ref{table:08.results.elastic}. The third column tabulates the duration of the collision while the force from the spring is acting on the sensor. As you can see, in my case, the duration tends to become larger as the amount of extra mass added to the cart increases. The change in momentum is found in the fourth column. The impulse from the ``area'' formula is found in the fifth column.
 
-The two values for the velocity are scattered along the velocity column. With the velocity values you can compute the momentum values, and thus the change in momentum.
-
-The force versus time graph has to be restricted to the region where the collision is happening. This region consist of the deep well in the middle of the graph. There seems to be small oscillations after the deep well, but these are due to the fact that after the cart leaves the spring, the spring vibrates due to its elasticity. These oscillations are not part of the collision.
-
-In order to quantify the agreement between the two values of impulse found, you can compute a modified version of the percent difference. If $I_{1}$ corresponds to the value of impulse determined from the change in momentum, and $I_{2}$ corresponds to the value of impulse determined from the average force and the length of the time interval, then the percent difference is given by
+In the last column of Table \ref{table:08.results.elastic} you can find a percent difference that quantifies the agreement between the two equivalent definitions of impulse. To calculate the traditional percent difference, you need a (theoretical) expected value and an (experimental) observed value. Here both values for the impulse are determined experimentally, so the percent difference has a modified form. If $I_{1}$ corresponds to the value of impulse determined from the change in momentum, and $I_{2}$ corresponds to the value of impulse determined from the average force and the length of the time interval, then the percent difference is given by
 \begin{equation}
     \text{percent difference } = 200 \times \left\vert \frac{I_{1} - I_{2}}{I_{1} + I_{2}} \right\vert
 \end{equation}
-(The long vertical lines mean taking the absolute value and thus ignoring the sign of the fraction inside). In my case, the percent difference was always below 2\%.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}
-    \centering
-    \begin{tabular}{|r|r|r|r|r|}\hline
-        Extra mass & $\Delta p$ & Average $F$ & $\Delta t$ & Impulse \\ \hline
-        0 kg & -0.339 kg m/s & -0.804 N & 0.430 s & -0.346 kg m/s \\
-        0.1 kg & -0.357 kg m/s & -0.764 N & 0.476 s & -0.364 kg m/s \\
-        0.2 kg & -0.528 kg m/s & -1.079 N & 0.496 s & -0.535 kg m/s \\
-        0.3 kg & -0.570 kg m/s & -1.096 N & 0.528 s & -0.579 kg m/s \\
-        \hline
-    \end{tabular}
-    \caption{Summary of results for the elastic collision}
-    \label{table.08.results.elastic}
-\end{table}
+(The long vertical lines mean taking the absolute value and thus ignoring the sign of the fraction inside).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Inelastic Collision}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-In the inelastic collisions, both the cart and the force sensor had a sticky clay attachment that enabled the cart to stick to the force sensor during the collision. Everyone has the same data, so I will not spoil the surprise. But the percent differences for the inelastic collision came out to be very small (see table \ref{table.08.results.inelastic}).
+In my inelastic collision data you will also find 12 runs. Here is a breakdown of the amount of extra mass used:
+\begin{itemize}
+    \item Runs 1, 2, and 3: 0 kg of extra mass.
+    \item Runs 4, 5, and 6: 0.1 kg of extra mass.
+    \item Runs 7, 8, and 9: 0.2 kg of extra mass.
+    \item Runs 10, 11, and 12: 0.3 kg of extra mass.
+\end{itemize}
+In the inelastic collisions, both the cart and the force sensor had a sticky clay attachment that enabled the cart to stick to the force sensor during the collision.
 
-The velocity column for each inelastic collision has a single velocity measurement. This value corresponds to $v_{1}$. The velocity after the inelastic collision is zero.
+The velocity column for each inelastic collision has a single velocity measurement. This value corresponds to $v_{1}$, the velocity of the incoming cart before the collision. The velocity after the inelastic collision is zero.
 
-There is a very important difference between the inelastic collisions and the elastic collisions: In the force versus time graph, after the initial deep well (which is deeper in the inelastic case than in the elastic case), there are peaks and wells that are significant in magnitude and cannot be regarded as noise. For example, the significant region in the force versus time graph for run 1 is in figure \ref{figure.08.run.1}. Beyond this region in time, there are further oscillations, but they are not large enough to be significant and are thus regarded as noise.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}
-	\centering
-    \begin{tabular}{|r|r|}\hline
-        Extra mass & Percent difference \\ \hline
-        0 kg & 0.355\% \\
-        0.1 kg & 0.554\% \\
-        0.2 kg & 0.408\% \\
-        0.3 kg & 0.146\% \\
-        \hline
-    \end{tabular}
-    \caption{Summary of results for the inelastic collision}
-    \label{table.08.results.inelastic}
-\end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}
-    \centering
-    \includegraphics[scale=0.71]{image/08-impulse/run1.png}
-    \caption{}
-    \label{figure.08.run.1}
-\end{figure}
+There is a very important difference between the inelastic collisions and the elastic collisions: In the force versus time graph, after the initial deep well (which is deeper in the inelastic case than in the elastic case), there are peaks and wells that are significant in magnitude and cannot be regarded as noise. For example, the significant region in the force versus time chart for run 1 is in figure \ref{figure.08.run.1}. Beyond this region in time, there are further oscillations, but they are not large enough to be significant and are thus regarded as noise.
+
+You can find my results for the inelastic collisions in Table \ref{table:08.results.inelastic}. Note that the time duration of the collision, in the third column, stays about the same value even though the extra mass is increasing.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Your Data}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-You collected data for elastic collisions. Everyone is going to use the same data for the inelastic case.
+You collected data for elastic collisions. I will make available data for the inelastic collisions. For section V01 the values of the extra mass used are in Table \ref{table:08.inelastic.mass.v01} and in Table \ref{table:08.inelastic.mass.v02} for section V02.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \section{Your Laboratory Report}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 In your lab report you should include:
 \begin{enumerate}
-    \item A table like table \ref{table.08.results.elastic} for both the elastic and the inelastic collisions. Use these tables to answer the questions below.
-    \item A table like table \ref{table.08.results.inelastic} for both the elastic and the inelastic collisions.
+    \item A table like Table \ref{table:08.results.elastic} with the results for the elastic collisions.
+    \item A table like Table \ref{table:08.results.inelastic} with the results for the inelastic collisions.
+    \item One chart with force in the vertical axis and time in the horizontal axis showing the time region where an \textbf{elastic} collision is happening.
+    \item One chart with force in the vertical axis and time in the horizontal axis showing the time region where an \textbf{inelastic} collision is happening.
+\end{enumerate}
+You should also answer the following questions:
+\begin{enumerate}
     \item How does the average force during the elastic collisions compare to the average force during the inelastic collision?
     \item How does the collision duration $\Delta t$ for the elastic collisions compare to the inelastic collisions?
 \end{enumerate}
@@ -146,7 +148,133 @@ In your lab report you should include:
 \newpage
 \section{Tables}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\FloatBarrier
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|l|r|}
+        \hline
+        Name & Value (kg) \\
+        \hline
+        Mass of Cart & 0.5089 \\
+        Mass of Fence & 0.0136 \\
+        \hline
+        Total Mass & 0.5225 \\
+        \hline
+    \end{tabular}
+    \caption{Mass values used during elastic collisions}
+    \label{table:08.mass.elastic}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|l|r|}
+        \hline
+        Name & Value (kg) \\
+        \hline
+        Mass of Cart & 0.5089 \\
+        Mass of Fence & 0.0136 \\
+        Mass of Clay & 0.0044 \\
+        \hline
+        Total Mass & 0.5269 \\
+        \hline
+    \end{tabular}
+    \caption{Mass values used during inelastic collisions}
+    \label{table:08.mass.inelastic}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|l|r|r|r|r|r|}
+        \hline
+        Run & Extra Mass (kg) & $\Delta t$ (s) & $\Delta p$ (kg m/s) & Impulse (N s) & P.D. (\%) \\  
+        \hline
+        1 & 0 & 0.244 & 0.3725 & 0.3834 & 2.87 \\
+        2 & 0 & 0.242 & 0.4504 & 0.4620 & 2.54 \\
+        3 & 0 & 0.244 & 0.5392 & 0.5549 & 2.87 \\
+        \hline
+        4 & 0.1 & 0.268 & 0.6076 & 0.6235 & 2.60 \\
+        5 & 0.1 & 0.268 & 0.4712 & 0.4814 & 2.13 \\
+        6 & 0.1 & 0.268 & 0.5080 & 0.5211 & 2.55 \\
+        \hline
+        7 & 0.2 & 0.286 & 0.4480 & 0.4574 & 2.09 \\
+        8 & 0.2 & 0.288 & 0.5296 & 0.5422 & 2.36 \\
+        9 & 0.2 & 0.284 & 0.4653 & 0.4739 & 1.84 \\
+        \hline
+        10 & 0.3 & 0.304 & 0.5461 & 0.5550 & 1.61 \\
+        11 & 0.3 & 0.302 & 0.5034 & 0.5113 & 1.57 \\
+        12 & 0.3 & 0.302 & 0.4688 & 0.4762 & 1.56 \\
+        \hline
+    \end{tabular}
+    \caption{Results for elastic collisions}
+    \label{table:08.results.elastic}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|l|r|r|r|r|r|}
+        \hline
+        Run & Extra Mass (kg) & $\Delta t$ (s) & $\Delta p$ (kg m/s) & Impulse (N s) & P.D. (\%) \\  
+        \hline
+        1 & 0 & 0.116 & 0.2029 & 0.1981 & 2.39 \\
+        2 & 0 & 0.138 & 0.2603 & 0.2624 & 0.82 \\
+        3 & 0 & 0.130 & 0.1776 & 0.1732 & 2.49 \\
+        \hline
+        4 & 0.1 & 0.116 & 0.2470 & 0.2533 & 2.53 \\
+        5 & 0.1 & 0.184 & 0.2564 & 0.2677 & 4.32 \\
+        6 & 0.1 & 0.174 & 0.2796 & 0.2904 & 3.80 \\
+        \hline
+        7 & 0.2 & 0.118 & 0.1999 & 0.1871 & 6.59 \\
+        8 & 0.2 & 0.096 & 0.1984 & 0.1883 & 5.23 \\
+        9 & 0.2 & 0.102 & 0.2195 & 0.2123 & 3.34 \\
+        \hline
+        10 & 0.3 & 0.136 & 0.3200 & 0.3198 & 0.07 \\
+        11 & 0.3 & 0.114 & 0.2390 & 0.2287 & 4.40 \\
+        12 & 0.3 & 0.112 & 0.2464 & 0.2373 & 3.76 \\
+        \hline
+    \end{tabular}
+    \caption{Results for inelastic collisions}
+    \label{table:08.results.inelastic}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|l|r|}
+        \hline
+        Runs & Extra Mass (kg) \\
+        \hline
+        1, 2, and 3 & 0 \\
+        4, 5, and 6 & 0.05 \\
+        7, 8, and 9 & 0.150 \\
+        10, 11, and 12 & 0.250 \\
+        \hline
+    \end{tabular}
+    \caption{Extra mass values used for inelastic collisions for section V01}
+    \label{table:08.inelastic.mass.v01}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|l|r|}
+        \hline
+        Runs & Extra Mass (kg) \\
+        \hline
+        1, 2, and 3 & 0 \\
+        4, 5, and 6 & 0.1 \\
+        7, 8, and 9 & 0.150 \\
+        10, 11, and 12 & 0.250 \\
+        \hline
+    \end{tabular}
+    \caption{Extra mass values used for inelastic collisions for section V02}
+    \label{table:08.inelastic.mass.v02}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
+\FloatBarrier
 \section{Figures}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.71]{image/08-impulse/Run12.png}
+    \caption{Run 1 for the inelastic collisions}
+    \label{figure.08.run.1}
+\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
