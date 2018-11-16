@@ -2,35 +2,177 @@
 \setcounter{chapter}{10}
 \chapter{Centripetal Motion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-...
+In this experiment you will study different aspects of centripetal motion.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Preliminary}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-...
+So far, you have done experiments with objects moving in a single direction (like during free-fall motion) or back and forth (like going up and down on an inclined track, or bouncing off a spring loop). Besides such linear motion, you can have rotational motion where the direction of the motion changes continuously.
+
+The simplest linear motion is with \textbf{constant velocity}: \textbf{uniform linear motion}. If the velocity is constant, then both its magnitude and direction are fixed in time.
+
+The next simplest linear motion is with constant acceleration. Free-fall motion and motion on the incline are examples of this. Since acceleration is a vector quantity, constant acceleration implies constant magnitude and constant direction.
+
+One of the simplest rotational motions is when an object moves along a \textbf{circular path} with a \textbf{velocity} vector that has a \textbf{fixed magnitude} $v$ but a direction that is constantly changing. It turns out that the \textbf{acceleration} vector of such an object also has \textbf{fixed magnitude} $a_{c}$ but constantly changing direction. The magnitude of this acceleration depends on the size of the circle and also on the magnitude of the velocity. Recall that a circle has a \textbf{radius}, which is defined as the distance from the center of the circle to any point on the circle. For an object in circular motion with constant velocity magnitude $v$ and moving in a circle with radius $r$, the magnitude of the acceleration vector is given by
+\begin{equation}
+    a_{c} = \frac{v^{2}}{r}
+\end{equation}
+This is known as the \textbf{centripetal acceleration}. If the object has mass $m$, then Newton's second law leads to the \textbf{centripetal force}:
+\begin{equation}
+    F_{c} = m a_{c} = \frac{m v^{2}}{r}
+\end{equation}
+You have sensors to measure \textbf{force} and \textbf{velocity}. The above relation suggest that for uniform circular motion you have
+\begin{equation}
+    F_{c} = \left(\frac{m}{r}\right) v^{2}
+    \label{eq:10.Fc}
+\end{equation}
+That is, the amount of force acting on the object should be proportional to the square velocity. The constant of proportionality depends on the amount of \textbf{mass} and the size of the \textbf{radius} of the circle.
+
+During uniform circular motion, the direction of the velocity vector is continuously changing. At any given moment in time, the velocity vector will be pointing in the direction that is tangential to the circle. The direction of the acceleration is also constantly changing, but it always points inwardly towards the center of the circle. Hence the name ``centripetal'' (i.e. center-pointing).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Experiment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-...
+The main goal of the experiment is to test the relation in (\ref{eq:10.Fc}) between the amount of force on the object and the square speed of the object. The slope depends on two quantities: mass and radius. To check this dependence, you performed two experiments:
+\begin{enumerate}
+    \item Keep radius fixed and change mass.
+    \item Keep mass fixed and change radius.
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Analysis}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-...
+Here are the steps to follow for the analysis.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Visualize Force versus Velocity}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+After each experiment you will collect velocity data from the photogate, and force data from the force sensor. It is good to make a chart with force in the vertical axis, and velocity in the horizontal axis. The chart should not be linear. In principle, a quadratic polynomial would be the best fit, but you do not have to do this.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Visualize Force versus Square Velocity}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In a separate column on the spreadsheet, you can compute the square velocity values. Due to the manner in which the photogate measures velocity, the data does not consist of a velocity value for each force value. Suppose that the \texttt{B} column has the force values, and the \texttt{C} column has the velocity values. Suppose also that the force values begin in row \texttt{6}, such that the first force value is in cell \texttt{B6}. There is a chance that there will be no velocity value in cell \texttt{C6} (i.e. the cell is empty). The usual way to calculate the square velocity would be to write, in a separate column, something like this:
+\begin{equation}
+    \texttt{=C6\^{}2}
+\end{equation}
+and to then apply this operation to the rest of the velocity column. But since there are empty cells in the velocity column, the above operation will give zero for these empty cells. This way the square velocity column would consist of cells with square velocity values separated by cells with zero square velocity value. This is not right: for these zero square velocity values you have a corresponding non-zero force value!
+
+You need to find the square velocity in a \textbf{conditional} way: if a cell in the velocity column is empty, then make the corresponding cell in the square velocity column also empty; otherwise calculate the square. The following command accomplishes this:
+\begin{equation}
+    \texttt{=IF(C6="", "", C6\^{}2)}
+\end{equation}
+This way the square velocity column does not contain spurious zeroes.
+
+Once the square velocity has been calculated correctly, you can make a chart with force in the vertical axis, and square velocity in the horizontal axis. The chart should now be linear. The best fit line will give you an equation of the form
+\begin{equation}
+    F = A v^{2} + B
+\end{equation}
+Here $A$ should have units of force-divided-by-square-velocity, and $B$ should have units of force. If force is in N, and velocity in m/s, then $A$ (i.e. the slope) should have units of
+\begin{equation}
+    \frac{\text{N}}{\text{m}^{2}\text{/s}^{2}} = \frac{\text{kg}}{\text{m}}
+\end{equation}
+and $B$ (i.e. the intercept) should have units of N. As discussed above, the slope of the chart should be close to the ratio of the amount of mass divided by the value of the radius. Since the intercept corresponds to the amount of force with zero velocity, the value of the intercept should be very small.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{My Data}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-...
+Here is a breakdown of my runs:
+\begin{itemize}
+    \item Runs 1, 2, and 3: $m = 200$ g and $r = 10$ cm.
+    \item Runs 4, 5, and 6: $m = 100$ g and $r = 10$ cm.
+    \item Runs 7, 8, and 9: $m = 300$ g and $r = 10$ cm.
+    \item Runs 10, 11, and 12: $m = 200$ g and $r = 7$ cm.
+    \item Runs 13, 14, and 15: $m = 200$ g and $r = 13$ cm.
+\end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Your Data}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-...
+You should have the following runs:
+\begin{itemize}
+    \item Runs 1, 2, and 3: $m = 200$ g and $r = 10$ cm.
+    \item Runs 4, 5, and 6: $m = 100$ g and $r = 10$ cm.
+    \item Runs 7, 8, and 9: $m = 300$ g and $r = 10$ cm.
+    \item Runs 10, 11, and 12: $m = 200$ g and $r = 8$ cm.
+    \item Runs 13, 14, and 15: $m = 200$ g and $r = 12$ cm.
+\end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \section{Your Laboratory Report}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-...
+Your lab report should include the following:
+\begin{itemize}
+    \item A table like Table \ref{table:10.m.r} with the mass values, the radii, and the expected slopes.
+    \item A table like Table ... with your results.
+    \item One chart with force in the vertical axis, and \textbf{velocity} in the horizontal axis. You are free to choose which run.
+    \item Five charts with force in the vertical axis, and \textbf{square velocity} in the horizontal axis. One chart from runs 1, 2, or 3; one chart from runs 4, 5, or 6; one chart from runs 7, 8, or 9; one chart from runs 10, 11 or 12; and one chart from runs 13, 14, or 15. You are free to choose which five runs to include in the lab report.
+\end{itemize}
+You should also answer the following questions:
+\begin{itemize}
+    \item Is the linear fit appropriate for the force versus velocity chart?
+    \item Is the linear fit appropriate for the force versus square velocity chart?
+    \item What happens to the observed slope when the mass is decreased?
+    \item What happens to the observed slope when the mass is increased?
+    \item What happens to the observed slope when the radius is decreased?
+    \item What happens to the observed slope when the radius is increased?
+\end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \section{Tables}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}
+    \centering
+    \begin{tabular}{|l|r|r|r|r|r|}
+        \hline
+        Run & Cart Mass (kg) & Extra Mass (kg) & Total Mass (kg) & Radius (m) & Slope (kg/m) \\
+        \hline
+        1 & 0.050 & 0.2 & 0.250 & 0.1 & 2.5 \\
+        2 & 0.050 & 0.2 & 0.250 & 0.1 & 2.5 \\
+        3 & 0.050 & 0.2 & 0.250 & 0.1 & 2.5 \\
+        \hline
+        4 & 0.050 & 0.1 & 0.150 & 0.1 & 1.5 \\
+        5 & 0.050 & 0.1 & 0.150 & 0.1 & 1.5 \\
+        6 & 0.050 & 0.1 & 0.150 & 0.1 & 1.5 \\
+        \hline
+        7 & 0.050 & 0.3 & 0.350 & 0.1 & 3.5 \\
+        8 & 0.050 & 0.3 & 0.350 & 0.1 & 3.5 \\
+        9 & 0.050 & 0.3 & 0.350 & 0.1 & 3.5 \\
+        \hline
+        10 & 0.050 & 0.2 & 0.250 & 0.07 & 3.5714 \\
+        11 & 0.050 & 0.2 & 0.250 & 0.07 & 3.5714 \\
+        12 & 0.050 & 0.2 & 0.250 & 0.07 & 3.5714 \\
+        \hline
+        13 & 0.050 & 0.2 & 0.250 & 0.13 & 1.9231 \\
+        14 & 0.050 & 0.2 & 0.250 & 0.13 & 1.9231 \\
+        15 & 0.050 & 0.2 & 0.250 & 0.13 & 1.9231 \\
+        \hline
+    \end{tabular}
+    \caption{Mass values and radii used, along with expected slope values.}
+    \label{table:10.m.r}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}
+    \centering
+    \begin{tabular}{|l|r|r|r|r|}
+        \hline
+        Run & Intercept (N) & Observed Slope (kg/m) & Expected Slope (kg/m) & P.D. (\%) \\
+        \hline
+        1 & & & & \\
+        2 & & & & \\
+        3 & & & & \\
+        \hline
+        4 & & & & \\
+        5 & & & & \\
+        6 & & & & \\
+        \hline
+        7 & & & & \\
+        8 & & & & \\
+        9 & & & & \\
+        \hline
+        10 & & & & \\
+        11 & & & & \\
+        12 & & & & \\
+        \hline
+        13 & & & & \\
+        14 & & & & \\
+        15 & & & & \\
+        \hline
+    \end{tabular}
+\end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \FloatBarrier
 \newpage
