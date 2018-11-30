@@ -10,7 +10,9 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{placeins}
+\usepackage{appendix}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\chaptername}{Laboratory}
 \newcommand{\red}[1]{{\color{red} #1}}
 \newcommand{\blue}[1]{{\color{blue} #1}}
 \newcommand{\green}[1]{{\color{ForestGreen} #1}}
@@ -19,29 +21,31 @@
 \newcommand{\yellow}[1]{{\color{Dandelion} #1}}
 \newcommand{\black}[1]{{\color{black} #1}}
 \newcommand{\gray}[1]{{\color{Gray} #1}}
-\renewcommand{\thechapter}{\Alph{chapter}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{\textsc{PHYS 207L Data Analysis Guides}}
-\author{M.E. Irizarry-Gelp\'{i}}
-\date{\today}
+\author{M.E. Irizarry-Gelp\'{i}\\College of Mount Saint Vincent}
+\date{Updated: \today}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \maketitle
 \tableofcontents
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\input{chapter/preamble}
-\input{chapter/00-intro}
-\input{chapter/01-error}
-\input{chapter/02-incline}
-\input{chapter/03-first-law}
-\input{chapter/04-second-law}
-\input{chapter/05-third-law}
-\input{chapter/06-kinetic}
-\input{chapter/07-mechanic}
-\input{chapter/08-impulse}
-\input{chapter/09-collisions}
-\input{chapter/10-centripetal}
-\input{chapter/11-shm}
+\input{chapter/preamble.tex}
+\input{chapter/01-error.tex}
+\input{chapter/02-incline.tex}
+\input{chapter/03-first-law.tex}
+\input{chapter/04-second-law.tex}
+\input{chapter/05-third-law.tex}
+\input{chapter/06-kinetic.tex}
+\input{chapter/07-mechanic.tex}
+\input{chapter/08-impulse.tex}
+\input{chapter/09-collisions.tex}
+\input{chapter/10-centripetal.tex}
+\input{chapter/11-shm.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{appendices}
+    \input{chapter/00-intro.tex}
+\end{appendices}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
