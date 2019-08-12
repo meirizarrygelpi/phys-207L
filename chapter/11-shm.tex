@@ -1,23 +1,23 @@
-% Copyright 2018 Melvin Eloy Irizarry-Gelpí
+% Copyright 2018-2019 Melvin Eloy Irizarry-Gelpí
 \setcounter{chapter}{10}
 \chapter{Simple Harmonic Motion}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 In this experiment you will study simple harmonic motion.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \section{Preliminary}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 Simple harmonic motion provides a great opportunity to test many important physical laws, some of which you have already seen in previous experiments.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \subsection{Hooke's Law}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 When an elastic spring is stretched or compressed beyond its natural relaxed length, a restorative force arises on the spring that causes the spring to return to its natural relaxed length. This force is proportional to how much distance $x$ the spring is stretched:
 \begin{equation} \label{eq.11.hooke}
     F_{k} = - k x
 \end{equation}
 This relation is known as \textbf{Hooke's law}. Here the minus sign is due to the restorative nature of the force (it is always opposite to what the spring is doing), and $k$ is the \textbf{spring constant}. If force is in newtons (N) and distance from equilibrium is in meters (m), then the spring constant has units of newton-per-meter (N/m).
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \subsection{Newton's Second Law}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 If a mass $m$ is attached to one end of the spring, the mass will move back-and-forth when the spring is stretched or compressed. In the absence of other forces, the net force on the object is just the force from the spring.
 \begin{equation}
     F_{\text{net}} = F_{k} = -kx
@@ -49,9 +49,9 @@ such that
     \label{eq:11.axomega}
 \end{equation}
 The physical meaning of $\omega$ will become clear later.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \subsection{Sine and Cosine}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 The \textbf{sine} and \textbf{cosine} functions are very important (and relevant) for simple harmonic motion. These functions are familiar from trigonometry where they are used to express the ratio of lengths in a right triangle.
 
 Figure \ref{figure:11.sin.cos} shows the shape of the cosine and sine functions. These functions oscillate between $\pm 1$ and are \textbf{periodic}. More specifically, the horizontal distance between consecutive peaks of $\sin(x)$ and $\cos(x)$ is $2\pi$. Note that the ``angle'' in Figure \ref{figure:11.sin.cos} is not in degrees, but in a system of units known as \textbf{radians}. Most calculators and computers assume that the $x$ is in radians before computing sine or cosine. The conversion factor between radians and degrees is
@@ -59,9 +59,9 @@ Figure \ref{figure:11.sin.cos} shows the shape of the cosine and sine functions.
     180 \text{ degrees} = \pi \text{ radians}
 \end{equation}
 The symbol for radians is rad. For all practical purposes, a radian is equivalent to a pure number without units.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \subsection{Sinusoidal Motion}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 When you look at the position of the object as it changes with time, you will notice a pattern similar to a sine or cosine function. This suggest a \textbf{sinusoidal fit} for position $x$ as a function of time $t$:
 \begin{equation}
     x(t) = A_{x} \sin\left( B_{x}t + C_{x} \right) + D_{x}
@@ -101,9 +101,9 @@ That is, you expect
     A_{F} = kA_{x} && B_{F} = B_{x} && \vert C_{F} - C_{x} \vert = \pi && D_{F} = -kD_{x}
 \end{align}
 Since force and position are being measured by different sensors, these relations are non-trivial.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \subsection{Period of Oscillation and Angular Frequency}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 For a mass $m$ attached to a spring with spring constant $k$, the \textbf{period of oscillation} is given by
 \begin{equation}
     T = 2\pi \sqrt{\frac{m}{k}}
@@ -114,21 +114,21 @@ The period is the time it takes for the mass to do one full cycle. Related to th
     \label{eq.11.omega}
 \end{equation}
 You have already seen the appearance of $\omega^{2}$ as the slope in the $a$ versus $x$ relation in Figure \ref{eq:11.axomega}. As you are going to see, the same value of angular frequency controls how quickly position, velocity, acceleration, and force change with time.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \section{Experiment}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 You used a motion sensor to measure the position, velocity and acceleration of a mass hanging from a spring. The spring in turn hangs from a force sensor that you used to measure force. If the sensor is zeroed correctly, the constant weight force $mg$ is taken into account. When the hanging mass is moved from equilibrium and released, the motion was oscillatory.
 
 After recording data for a short time, you used the LabQuest device to obtain the values of the fit parameters that best describe both the force and the position data versus time.
 
 You used four combinations of mass and spring constant, as stated in Table \ref{table.11.parameters}.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \section{Analysis}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 There are many aspects of simple harmonic motion that can be verified with this experiment.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \subsection{Force and Position}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 You can verify \textbf{Hooke's law}, equation (\ref{eq.11.hooke}), by making a scatter chart with \textbf{position} in the horizontal axis, and \textbf{force} in the vertical axis. The shape of this chart should be a downward line, as in Figure \ref{figure.11.hooke}. You can find the slope with the \texttt{SLOPE} function. If position is in column \texttt{X} with the first value in row \texttt{6}, and force is in column \texttt{Y}, with first value in row \texttt{6}; then the command is
 \begin{equation}
     \texttt{=SLOPE(Y6:Y, X6:X)}
@@ -138,9 +138,9 @@ The linear behavior confirms Hooke's law. The slope of the linear fit correspond
     k_{\text{obs}} = - (\text{slope of force versus position linear fit})
 \end{equation}
 Note that position and force data come from \textbf{different} sensors.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \subsection{Force and Acceleration}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 You can verify \textbf{Newton's second law of motion} by making a scatter chart with \textbf{acceleration} in the horizontal axis, and \textbf{force} in the vertical axis. The shape of this chart should be an upward line, as in Figure \ref{figure.11.newton}. You can find the slope with the \texttt{SLOPE} function. The linear behavior confirms Newton's second law, and the value of the slope is \textbf{mass}. You can use this slope as an indirect measurement of the amount of mass hanging from the spring:
 \begin{equation}
     m_{\text{obs}} = \text{slope of force versus acceleration linear fit}
@@ -151,9 +151,9 @@ Together with the measurement of the spring constant from the force versus posit
 \begin{equation}
     \omega_{1} = \sqrt{\frac{k_{\text{obs}}}{m_{\text{obs}}}}
 \end{equation}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \subsection{Acceleration and Position}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 Combining Hooke's law with Newton's second law of motion gives equation (\ref{eq.11.ax}). Using the definition of $\omega$ in equation (\ref{eq.11.omega}), we find that indeed,
 \begin{equation}
     a = -\omega^{2}x
@@ -162,9 +162,9 @@ That is, for simple harmonic motion, the acceleration is proportional to the pos
 \begin{equation}
     \omega_{2} = \sqrt{- (\text{slope of acceleration versus position})}
 \end{equation}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \subsection{Common Angular Frequency}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 From the LabQuest device, you obtained the parameters for the sinusoidal fit for both position and force. Both the $B_{x}$ parameter in the position fit, and the $B_{F}$ parameter in the force fit should correspond to the angular frequency of the simple harmonic motion. Hence, the $B_{x}$ parameter in the position fit provides another experimental estimate of the angular frequency:
 \begin{equation}
     \omega_{3} = B_{x} \text{ from position fit}
@@ -176,13 +176,13 @@ and the $B_{F}$ parameter from the force fit provides another experimental estim
 Note that, since the data for position and force comes from different sensors, these measurements can be taken as fully independent.
 
 In principle you can perform a sinusoidal fit on velocity and acceleration too. However, the parameters of these fits are not independent. Indeed, theoretically, they depend on the parameters for the position fit as stated in equations (\ref{eq.11.v}) and (\ref{eq.11.a}).
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \subsection{Velocity and Position}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 A chart with velocity and position is called a \textbf{phase space} chart. For this particular experiment with simple harmonic motion, the velocity and position data yield an \textbf{elliptical shape} (a closed orbit), as in Figure \ref{figure.11.phase}. Now you know!
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \section{My Data}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 My data consist of 12 runs:
 \begin{itemize}
     \item Runs 1, 2, and 3: $k = 5$ N/m and $m = 50$ g.
@@ -191,14 +191,14 @@ My data consist of 12 runs:
     \item Runs 10, 11, and 12: $k = 15$ N/m and $m = 200$ g.
 \end{itemize}
 Table \ref{table.11.fit} summarizes the sinusoidal fit parameters for the position and force data. Table \ref{table.11.k.m} summarizes the experimental estimates for the spring constant and the mass. Table \ref{table.11.omega} summarizes the results for all the estimates of the angular frequency.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \section{Your Data}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 You should have considered four distinct combinations of spring constant and mass, and taken at least three runs for each combination.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \newpage
 \section{Your Laboratory Report}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 In your lab report you should include:
 \begin{itemize}
     \item One table like Table \ref{table.11.fit} with the fit parameters. Also include a column with the values for $\vert C_{F} - C_{x} \vert$, and a column with the values for $A_{F} / A_{x}$.
@@ -217,10 +217,10 @@ You should answer the following questions:
     \item Can you test Hooke's law with the data from this experiment? Does the measured spring constant agree with the expected value used?
     \item Are your four estimates of the angular frequencies close to the expected theoretical value given by (\ref{eq.11.omega}).
 \end{enumerate}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \newpage
 \section{Tables}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \begin{table}[ht]
     \centering
     \begin{tabular}{|r|r|r|}\hline
@@ -234,7 +234,7 @@ You should answer the following questions:
     \caption{Four combinations of mass and spring constant, along with the expected $\omega$ value}
     \label{table.11.parameters}
 \end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \begin{table}[ht]
     \centering
     \begin{tabular}{|l|r|r|r|r|r|r|r|r|}
@@ -263,7 +263,7 @@ You should answer the following questions:
     \caption{Sinusoidal fit parameters}
     \label{table.11.fit}
 \end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \begin{table}[ht]
     \centering
     \begin{tabular}{|l|r|r|r|r|}
@@ -292,7 +292,7 @@ You should answer the following questions:
     \caption{Expected and Observed values for spring constant and mass}
     \label{table.11.k.m}
 \end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \begin{table}[ht]
     \centering
     \begin{tabular}{|l|r|r|r|r|r|r|r|}
@@ -301,9 +301,9 @@ You should answer the following questions:
         \hline
         Run & Expected $\omega$ & $\omega_{1}$ & $\omega_{2}$ & $\omega_{3}$ & $\omega_{4}$ & Average $\omega$ & P.D. \\
         \hline
-        1 & 10.000 & 9.9344 & 9.8570 & 10.073 & 10.074 & 9.9846 & -0.15\% \\
-        2 & 10.000 & 9.8671 & 9.8177 & 10.08 & 10.081 & 9.9615 & -0.39\% \\
-        3 & 10.000 & 9.8499 & 9.7926 & 10.087 & 10.087 & 9.9541 & -0.46\% \\
+        1 & 10.000 & 9.9344 & 9.8570 & 10.073 & 10.074 & 9.9846 & \textminus 0.15\% \\
+        2 & 10.000 & 9.8671 & 9.8177 & 10.08 & 10.081 & 9.9615 & \textminus 0.39\% \\
+        3 & 10.000 & 9.8499 & 9.7926 & 10.087 & 10.087 & 9.9541 & \textminus 0.46\% \\
         \hline
         4 & 7.071 & 7.0579 & 7.0380 & 7.151 & 7.1509 & 7.0994 & 0.40\% \\
         5 & 7.071 & 7.0825 & 7.0457 & 7.1512 & 7.1476 & 7.1067 & 0.50\% \\
@@ -321,43 +321,43 @@ You should answer the following questions:
     \caption{Experimental estimates of the angular frequency}
     \label{table.11.omega}
 \end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \FloatBarrier
 \newpage
 \section{Figures}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \begin{figure}[ht]
     \centering
     \includegraphics{chart/11-shm/trig.pdf}
     \caption{Sine and Cosine functions}
     \label{figure:11.sin.cos}
 \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \begin{figure}[ht]
     \centering
     \includegraphics[scale=0.71]{image/11-shm/run-1-hooke.png}
     \caption{Testing Hooke's Law}
     \label{figure.11.hooke}
 \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \begin{figure}[ht]
     \centering
     \includegraphics[scale=0.71]{image/11-shm/run-1-newton.png}
     \caption{Testing Newton's Second Law of Motion}
     \label{figure.11.newton}
 \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \begin{figure}[ht]
     \centering
     \includegraphics[scale=0.71]{image/11-shm/run-1-shm.png}
     \caption{Testing relation between acceleration and position due to simple harmonic motion}
     \label{figure.11.ax}
 \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \begin{figure}[ht]
     \centering
     \includegraphics[scale=0.71]{image/11-shm/run-1-phase.png}
     \caption{Visualizing the phase space for simple harmonic motion}
     \label{figure.11.phase}
 \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%

@@ -1,11 +1,11 @@
-% Copyright 2018 Melvin Eloy Irizarry-Gelpí
+% Copyright 2018-2019 Melvin Eloy Irizarry-Gelpí
 \setcounter{chapter}{9}
 \chapter{Centripetal Motion}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 In this experiment you will study different aspects of centripetal motion.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \section{Preliminary}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 So far, you have done experiments with objects moving in a single direction (like during free-fall motion) or back and forth (like going up and down on an inclined track, or bouncing off a spring loop). Besides such linear motion, you can have rotational motion where the direction of the motion changes continuously.
 
 The simplest linear motion is with \textbf{constant velocity}: \textbf{uniform linear motion}. If the velocity is constant, then both its magnitude and direction are fixed in time.
@@ -28,27 +28,27 @@ You have sensors to measure \textbf{force} and \textbf{velocity}. The above rela
 That is, the amount of force acting on the object should be proportional to the square velocity. The constant of proportionality depends on the amount of \textbf{mass} and the size of the \textbf{radius} of the circle.
 
 During uniform circular motion, the direction of the velocity vector is continuously changing. At any given moment in time, the velocity vector will be pointing in the direction that is tangential to the circle. The direction of the acceleration is also constantly changing, but it always points inwardly towards the center of the circle. Hence the name ``centripetal'' (i.e. center-pointing).
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \section{Experiment}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 The main goal of the experiment is to test the relation in (\ref{eq:10.Fc}) between the amount of force on the object and the square speed of the object. The slope depends on two quantities: mass and radius. To check this dependence, you performed two experiments:
 \begin{enumerate}
     \item Keep radius fixed and change mass.
     \item Keep mass fixed and change radius.
 \end{enumerate}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \section{Analysis}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 Here are the steps to follow for the analysis.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \subsection{Visualize Force versus Velocity}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 After each experiment you will collect velocity data from the photogate, and force data from the force sensor. It is good to make a chart with force in the vertical axis, and velocity in the horizontal axis. The chart \textbf{should not be linear}. In principle, a quadratic polynomial would be the best fit, but you do not have to do this.
 
 You make this chart for at least one run, just to check the data.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \subsection{Visualize Force versus Square Velocity}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 In a separate column on the spreadsheet, you can compute the square velocity values. Due to the manner in which the photogate measures velocity, the data does not consist of a velocity value for each force value. Suppose that column \texttt{B} has the force values, and column \texttt{C} has the velocity values. Suppose also that the force values begin in row \texttt{6}, such that the first force value is in cell \texttt{B6}. There is a chance that there will be no velocity value in cell \texttt{C6} (i.e. the cell is empty). The usual way to calculate the square velocity would be to write, in a separate column, something like this:
 \begin{equation}
     \texttt{=C6\^{}2}
@@ -70,15 +70,15 @@ Here $A$ (the slope) should have units of force-divided-by-square-velocity, and 
     \frac{\text{N}}{\text{m}^{2}\text{/s}^{2}} = \frac{\text{kg}}{\text{m}}
 \end{equation}
 and $B$ should have units of N. As discussed above, the slope of the chart should be close to the ratio of the amount of mass divided by the value of the radius. Since the intercept corresponds to the amount of force with zero velocity, the value of the intercept should be very small, corresponding to a force value that should be equivalent to noise, and thus effectively zero.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \subsection{Cut any Plateau Region}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 For reasons that I am still trying to understand, the force sensor might yield a data set that exhibits a \textbf{plateau} (a flat region on a chart). This might be due to the force sensor saturating and not being able to properly record force data. For example, see Figure \ref{figure.10.run.1.before} where there is a plateau in the right hand side, for the larger force values. The plateau is having an undesirable effect because the linear fit is not appropriate.
 
 It is safe to \textbf{cut the plateau} from the data set (as long as we assume the plateau is due to systematic error and not a real physical phenomenon). One way to consistently do this cut is to begin from the first row of data, and delete all the rows with a force value larger than 8 N. This is an informal \textbf{rule of thumb} and some times does not succeeds in cutting the plateau, meaning that forces less than 8 N should be cut (usually until 7.5 N). After doing such a cut, the chart should consist of a single linear segment, and the linear fit should be appropriate. For run 1, Figure \ref{figure.10.run.1} has the data after the cut. The linear fit is now much closer to the data.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \section{My Data}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 Here is a breakdown of my runs:
 \begin{itemize}
     \item Runs 1, 2, and 3: extra $m = 200$ g and $r = 10$ cm.
@@ -122,9 +122,9 @@ Even though there is great disagreement between the observed slope values and th
     \item When the radius of the circle is decreased, the slope increases.
 \end{enumerate}
 I give myself a C- for this experiment. Sorry!
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \section{Your Data}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 You should have the following runs:
 \begin{itemize}
     \item Runs 1, 2, and 3: extra $m = 200$ g and $r = 10$ cm.
@@ -134,10 +134,10 @@ You should have the following runs:
     \item Runs 13, 14, and 15: extra $m = 200$ g and $r = 12$ cm.
 \end{itemize}
 The important thing about runs 7, 8 and 9 is that the extra mass value is larger than 200 g. Some students used 300 g, and others used 250 g. Both cases should yield the desirable outcome.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \newpage
 \section{Your Laboratory Report}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 Your lab report should include the following:
 \begin{itemize}
     \item A table like Table \ref{table:10.m.r} with the mass values, the radii, and the expected slopes.
@@ -154,10 +154,10 @@ You should also answer the following questions:
     \item What happens to the observed slope when the radius is decreased?
     \item What happens to the observed slope when the radius is increased?
 \end{itemize}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \newpage
 \section{Tables}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \begin{table}[ht]
     \centering
     \begin{tabular}{|l|r|r|r|r|r|}
@@ -174,26 +174,26 @@ You should also answer the following questions:
     \caption{Mass values and radii used, along with expected slope values}
     \label{table:10.m.r}
 \end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \begin{table}[ht]
     \centering
     \begin{tabular}{|l|r|r|r|r|}
         \hline
         Run & Expected Slope (kg/m) & Observed Slope (kg/m) & Intercept (N) & P.D. (\%) \\
         \hline
-        1 & 2.521 & 4.1407 & -0.0583 & 64.25 \\
-        2 & 2.521 & 4.0983 & -0.0493 & 62.57 \\
-        3 & 2.521 & 4.0410 & -0.0135 & 60.30 \\
+        1 & 2.521 & 4.1407 & \textminus 0.0583 & 64.25 \\
+        2 & 2.521 & 4.0983 & \textminus 0.0493 & 62.57 \\
+        3 & 2.521 & 4.0410 & \textminus 0.0135 & 60.30 \\
         \hline
-        4 & 1.521 & 2.4436 & -0.0267 & 60.66 \\
-        5 & 1.521 & 2.4216 & -0.0057 & 59.21 \\
-        6 & 1.521 & 2.4016 & -0.0037 & 57.89 \\
+        4 & 1.521 & 2.4436 & \textminus 0.0267 & 60.66 \\
+        5 & 1.521 & 2.4216 & \textminus 0.0057 & 59.21 \\
+        6 & 1.521 & 2.4016 & \textminus 0.0037 & 57.89 \\
         \hline
         7 & 3.521 & 5.6048 & 0.0341 & 59.18 \\
         8 & 3.521 & 5.5167 & 0.1128 & 56.68 \\
         9 & 3.521 & 5.5928 & 0.1266 & 58.84 \\
         \hline
-        10 & 3.151 & 5.4076 & -0.0385 & 71.60 \\
+        10 & 3.151 & 5.4076 & \textminus 0.0385 & 71.60 \\
         11 & 3.151 & 5.1893 & 0.0595 & 64.68 \\
         12 & 3.151 & 5.1779 & 0.0544 & 64.31 \\
         \hline
@@ -205,7 +205,7 @@ You should also answer the following questions:
     \caption{Results for slope and intercept}
     \label{table:10.results}
 \end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \begin{table}[ht]
     \centering
     \begin{tabular}{|l|r|r|r|}
@@ -236,21 +236,21 @@ You should also answer the following questions:
     \caption{Ratio of observed slope to expected slope}
     \label{table.10.ratio}
 \end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \newpage
 \section{Figures}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \begin{figure}[ht]
     \centering
     \includegraphics[scale=0.71]{image/10-centripetal/Run1BeforeCut.png}
     \caption{Run 1 before the cut; with plateau}
     \label{figure.10.run.1.before}
 \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \begin{figure}[ht]
     \centering
     \includegraphics[scale=0.71]{image/10-centripetal/Run1.png}
     \caption{Run 1 after the cut; without plateau}
     \label{figure.10.run.1}
 \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%

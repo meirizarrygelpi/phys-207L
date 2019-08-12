@@ -1,6 +1,6 @@
-% Copyright 2018 Melvin Eloy Irizarry-Gelpí
-\documentclass[letterpaper, 12pt]{report}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright 2018-2019 Melvin Eloy Irizarry-Gelpí
+\documentclass[letterpaper]{report}
+%
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{fullpage}
@@ -11,8 +11,12 @@
 \usepackage{graphicx}
 \usepackage{placeins}
 \usepackage{appendix}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{textcomp}
+\usepackage{sourceserifpro}
+\usepackage{sourcecodepro}
+%
 \renewcommand{\chaptername}{Laboratory}
+\renewcommand{\partname}{Report}
 \newcommand{\red}[1]{{\color{red} #1}}
 \newcommand{\blue}[1]{{\color{blue} #1}}
 \newcommand{\green}[1]{{\color{ForestGreen} #1}}
@@ -21,31 +25,33 @@
 \newcommand{\yellow}[1]{{\color{Dandelion} #1}}
 \newcommand{\black}[1]{{\color{black} #1}}
 \newcommand{\gray}[1]{{\color{Gray} #1}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \begin{document}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{\textsc{PHYS 207L Data Analysis Guides}}
-\author{M.E. Irizarry-Gelp\'{i}\\College of Mount Saint Vincent}
+%
+\title{\Huge{PHYS 207L Data Analysis Guides}}
+\author{M.E. Irizarry-Gelp\'{i}, Ph.D. \\ Division of Natural Sciences \\ College of Mount Saint Vincent}
 \date{Updated: \today}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \maketitle
 \tableofcontents
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \input{chapter/preamble.tex}
+\input{chapter/00-intro.tex}
+\part{Constant Acceleration}
 \input{chapter/01-error.tex}
 \input{chapter/02-incline.tex}
+\part{Force}
 \input{chapter/03-first-law.tex}
 \input{chapter/04-second-law.tex}
 \input{chapter/05-third-law.tex}
+\part{Energy}
 \input{chapter/06-kinetic.tex}
 \input{chapter/07-mechanic.tex}
+\part{Momentum}
 \input{chapter/08-impulse.tex}
 \input{chapter/09-collisions.tex}
+\part{Non-Constant Acceleration}
 \input{chapter/10-centripetal.tex}
 \input{chapter/11-shm.tex}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{appendices}
-    \input{chapter/00-intro.tex}
-\end{appendices}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \end{document}

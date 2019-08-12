@@ -1,11 +1,11 @@
-% Copyright 2018 Melvin Eloy Irizarry-Gelpí
+% Copyright 2018-2019 Melvin Eloy Irizarry-Gelpí
 \setcounter{chapter}{0}
 \chapter{Error Analysis}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 In this experiment you will learn about error analysis and provide an estimate for the acceleration of a free-falling object under the influence of gravity.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \section{Preliminary}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 Ignoring the effects of air resistance, when an object is dropped and falls a certain height, its velocity is proportional to the amount of travel time. The slope in the linear relation corresponds to the free-fall acceleration. Since this acceleration is due to gravity, its value is usually denoted by $g$. On Earth, near sea level, the value of $g$ is 9.80 m/s$^{2}$.
 
 Here velocity is measured in meters per second (m/s), and time is measured in seconds (s). A linear relation between velocity $v$ and time $t$ has the mathematical form
@@ -13,21 +13,21 @@ Here velocity is measured in meters per second (m/s), and time is measured in se
     v = A t + B
 \end{equation}
 Here $A$ is the \textbf{slope} and $B$ is the \textbf{intercept}. Both $A$ and $B$ will also have units. Indeed, $A$ must have units of meters per second per second (m/s/s or m/s$^{2}$) and $B$ must have units of meters per second (m/s). Thus, the slope should have units of \textbf{acceleration}, and the intercept should have units of \textbf{velocity}.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \section{Experiment}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 You use a photogate to measure the velocity over time of a picket fence that falls freely. Then you use the LabQuest device to easily find the equation for the line that best fits the experimental data.
 
 First you considered 5 runs. For each run, you dropped the picket fence from increasingly higher starting positions. You recorded both the slope and the intercept.
 
 Then you considered 25 runs. For these runs, you always dropped the picket fence from just above the photogate. You recorded only the slope. In the end you should have a total of 30 values for the slope.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \section{Analysis}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 You can divide the analysis into five parts.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \subsection{First 5 Runs} \label{sec:01.first.5}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 For the first 5 runs, you recorded \textbf{both the slope and the intercept} values of the best-fit line. Here are some questions:
 \begin{enumerate}
     \item Are the \textbf{slope} values for different heights all close in magnitude? Explain the physical consequences of your observation.
@@ -38,9 +38,9 @@ For the first 5 runs, you recorded \textbf{both the slope and the intercept} val
     \item What is the \textbf{average} slope value? Use the \texttt{AVERAGE} function (see Equation \ref{eq:00.average}).
     \item What is the \textbf{percent difference} between the expected value for the slope (9.80 m/s$^{2}$) and the 5-run average? See Equation \ref{eq:00.percent.diff}.
 \end{enumerate}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \subsection{Latter 25 Runs} \label{sec:01.latter.25}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 For the latter 25 runs, you recorded \textbf{only the slope}. Here are some questions:
 \begin{enumerate}
     \item What is the minimum slope value recorded?
@@ -50,9 +50,9 @@ For the latter 25 runs, you recorded \textbf{only the slope}. Here are some ques
     \item Are the answers to these questions similar to the answers for the first 5 runs?
     \item What is the percent difference between the expected value for the slope (9.80 m/s$^{2}$) and the 25-run average?
 \end{enumerate}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \subsection{Aggregate of 30 Runs} \label{sec:01.all.30}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 You can combine the first 5 runs with the latter 25 runs and make a 30-run aggregate. You can ask similar questions:
 \begin{enumerate}
     \item What is the minimum slope value recorded?
@@ -65,9 +65,9 @@ You can combine the first 5 runs with the latter 25 runs and make a 30-run aggre
     \item What are the boundaries of the \textbf{error interval} (i.e. \texttt{AVERAGE} $\pm$ \texttt{ERROR})?
     \item What is the percent difference between the expected value for the slope (9.80 m/s$^{2}$) and the 30-run average?
 \end{enumerate}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \subsection{Central 20 Runs} \label{sec:01.central.20}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 You can take the 30-run aggregate, sort the values in either increasing or decreasing order, and then drop the \textbf{smallest} 5 values, and also the \textbf{largest} 5 values. After doing this you remain with \textbf{20 values}, corresponding to the 20 runs that are most ``central''. That is, the 20 values that are neither the smallest nor the largest. Note that 20 out of 30 is the same as 2/3 of the data set (66\%).
 
 Here is how to sort a column with Google Sheets. If \texttt{Aggregate30} is the name of the named range with the 30 slope values, then, in a separate sheet use
@@ -84,9 +84,9 @@ After dropping the bottom 5 and top 5, you can answer the following questions:
     \item What is the error?
     \item What is the percent difference between the expected value for the slope (9.80 m/s$^{2}$) and the (central) 20-run average?
 \end{enumerate} 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \subsection{Closest 20 Runs} \label{sec:01.closest.20}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 Instead of looking at the central 2/3 of the data, you can look at the 2/3 of the data that is \textbf{closest} to the 30-run average. Proximity requires a notion of distance. In our case we can define the distance between the slope value $g_{j}$ and the 30-run average slope $g_{A}$ as
 \begin{equation}
     \text{distance} = \vert g_{j} - g_{A} \vert
@@ -118,9 +118,9 @@ After doing this, you can answer the following questions:
     \item What is the average slope value for these 20 runs?
     \item What is the percent difference between the expected value for the slope (9.80 m/s$^{2}$) and the (closest) 20-run average?
 \end{enumerate}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \section{My Data}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 The data for my first 5 runs are in Table \ref{table:01.first.5}. The data for my latter 25 runs are in Table \ref{table:01.latter.25}.
 
 In Table \ref{table:01.describe.5} and Table \ref{table:01.describe.25}, I describe the raw data. Note that, in my case, the average slope is much larger, and also much closer to the actual value, for the 25 runs.
@@ -134,14 +134,14 @@ In Table \ref{table:01.describe.20.center} you can find the statistics for the s
 Instead of the central 2/3, you can keep the 2/3 that is closest to the 30-run average. In Table \ref{table:01.describe.20.close} and Table \ref{table:01.error.20.close} you can find the analogous results for this case. Note that for my data, the error happens to be smaller for the closest 20 runs than for the central 20 runs.
 
 Finally, Table \ref{table:01.summary} has the comparisons of the different averages to the expected value, in the form of percent difference. In my case, the least error was found for the closest 20 runs. Your results might be different.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \section{Your Data}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 Your data should consist of 5 initial pairs of slope and intercept values, plus 25 additional slope values. In total you should have 30 slopes and 5 intercepts.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \newpage
 \section{Your Laboratory Report}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 Your laboratory report should include the following:
 \begin{itemize}
     \item Tables like Table \ref{table:01.first.5} and \ref{table:01.latter.25} with your raw data. This is one of the few experiments where you can include the raw data in your report.
@@ -158,10 +158,10 @@ You should answer the following questions:
     \item Out of Sections \ref{sec:01.all.30}, \ref{sec:01.central.20}, and \ref{sec:01.closest.20}, which part had the largest/smallest amount of error?
     \item Which of your estimates is closest to the expected value?
 \end{enumerate}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \newpage
 \section{Tables}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \begin{table}[ht]
     \centering
     \begin{tabular}{|r|r|}
@@ -179,7 +179,7 @@ You should answer the following questions:
     \label{table:01.first.5}
 \end{table}
 \vspace{\stretch{1}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \begin{table}[ht]
     \centering
     \begin{tabular}{|r|r|r|r|r|}
@@ -199,7 +199,7 @@ You should answer the following questions:
     \label{table:01.latter.25}
 \end{table}
 \vspace{\stretch{1}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \begin{table}[ht]
     \centering
     \begin{tabular}{|l|r|}
@@ -217,7 +217,7 @@ You should answer the following questions:
 \end{table}
 \vspace{\stretch{1}}
 \newpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \begin{table}[ht]
     \centering
     \begin{tabular}{|l|r|}
@@ -234,7 +234,7 @@ You should answer the following questions:
     \label{table:01.describe.25}
 \end{table}
 \vspace{\stretch{1}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \begin{table}[ht]
     \centering
     \begin{tabular}{|l|r|}
@@ -253,7 +253,7 @@ You should answer the following questions:
     \label{table:01.describe.30}
 \end{table}
 \vspace{\stretch{1}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \begin{table}[ht]
     \centering
     \begin{tabular}{|l|r|}
@@ -270,7 +270,7 @@ You should answer the following questions:
 \end{table}
 \vspace{\stretch{1}}
 \newpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \begin{table}[ht]
     \centering
     \begin{tabular}{|l|r|}
@@ -289,7 +289,7 @@ You should answer the following questions:
     \label{table:01.describe.20.center}
 \end{table}
 \vspace{\stretch{1}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \begin{table}[ht]
     \centering
     \begin{tabular}{|l|r|}
@@ -305,7 +305,7 @@ You should answer the following questions:
     \label{table:01.error.20.center}
 \end{table}
 \vspace{\stretch{1}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \begin{table}[ht]
     \centering
     \begin{tabular}{|l|r|}
@@ -325,7 +325,7 @@ You should answer the following questions:
 \end{table}
 \vspace{\stretch{1}}
 \newpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \begin{table}[ht]
     \centering
     \begin{tabular}{|l|r|}
@@ -341,18 +341,18 @@ You should answer the following questions:
     \label{table:01.error.20.close}
 \end{table}
 \vspace{\stretch{1}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \begin{table}[ht]
     \centering
     \begin{tabular}{|l|r|r|r|r|}
         \hline
         Name & Error (m/s$^{2}$) & Experimental (m/s$^{2}$) & Theoretical (m/s$^{2}$) & P.D. \\
         \hline
-        First 5 & 0.2283 & 9.5721 & 9.8 & -2.33\% \\
-        Latter 25 & 0.1528 & 9.7202 & 9.8 & -0.81\% \\
-        Aggregate 30 & 0.2679 & 9.6955 & 9.8 & -1.07\% \\
-        Center 20 & 0.0989 & 9.7251 & 9.8 & -0.76\% \\
-        Closest 20 & 0.0834 & 9.7355 & 9.8 & -0.66\% \\
+        First 5 & 0.2283 & 9.5721 & 9.8 & \textminus 2.33\% \\
+        Latter 25 & 0.1528 & 9.7202 & 9.8 & \textminus 0.81\% \\
+        Aggregate 30 & 0.2679 & 9.6955 & 9.8 & \textminus 1.07\% \\
+        Center 20 & 0.0989 & 9.7251 & 9.8 & \textminus 0.76\% \\
+        Closest 20 & 0.0834 & 9.7355 & 9.8 & \textminus 0.66\% \\
         \hline
     \end{tabular}
     \caption{Summary of results and percent differences}
