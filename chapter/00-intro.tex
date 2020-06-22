@@ -1,5 +1,5 @@
 % Copyright 2018-2020 Melvin Eloy Irizarry-Gelpí
-\setcounter{chapter}{-1}
+% \setcounter{chapter}{-1}
 \chapter{Working with Spreadsheets}
 %
 In this experiment you will gain experience using spreadsheets to analyze and visualize data.
@@ -211,8 +211,8 @@ The \texttt{3} here indicates the \textbf{third quartile}, which is another name
 %
 In Figure \ref{figure:00.baseline.quartiles} you can find the baseline data and the three percentiles marked. It appears that the 25th and 75th percentiles are about the same distance away from the 50th percentile. Indeed,
 \begin{align}
-    5.032499\text{ lb} - 4.576510\text{ lb} &= 0.455989 \text{ lb} \\
-    5.484631\text{ lb} - 5.032499\text{ lb} &= 0.452132 \text{ lb}
+    5.03 \ \text{lb} - 4.58 \ \text{lb} &= 0.46 \ \text{lb} \\
+    5.48 \ \text{lb} - 5.03 \ \text{lb} &= 0.45 \ \text{lb}
 \end{align}
 This can be interpreted as the sensor not showing a preference for larger or smaller values, which is a good thing.
 
@@ -341,7 +341,7 @@ If $E$ is the central error, and $\sigma$ is the standard deviation, then the \t
 \begin{equation}
     C = \frac{E}{\sigma}
 \end{equation}
-Since this is the ratio of two quantities with the same units, the Chebyshev number does not have units. The meaning of the Chebyshev number is how many standard deviations fit from the center to either boundary of the range. In my case, the Chebyshev number in the baseline segment is 2.416304. This confirms that the third Chebyshev interval is too large and encodes all of the data.
+Since this is the ratio of two quantities with the same units, the Chebyshev number does not have units. The meaning of the Chebyshev number is how many standard deviations fit from the center to either boundary of the range. In my case, the Chebyshev number in the baseline segment is 2.42. This confirms that the third Chebyshev interval is too large and encodes all of the data.
 %
 \subsubsection{Error Interval}
 %
@@ -520,61 +520,168 @@ Your data also consist of two files:
 Although these have the same names as my files, they have different values. Also, the ``theoretical'' values for each section are different. See Tables \ref{table:00.theoretical.demo}, \ref{table:00.theoretical.v01} and \ref{table:00.theoretical.v02} for specific details.
 %
 \newpage
-\section{Your Laboratory Report}
+\section{Your Laboratory Worksheet}
 %
-There is no written lab report submission for this activity. However, you have to \textbf{submit a spreadsheet file} with your work, which \textbf{will be graded}. Submissions are done via Canvas.
-
-For \textbf{part 1}, your spreadsheet should include the following:
+Please print your work before coming to class.
+%
+\paragraph{Part 1: Weight}
+%
 \begin{enumerate}
-    \item A sheet with your raw data
-    \item A sheet with the data and results for the baseline segment
-    \item A sheet with the data and results for the first weight segment
-    \item A sheet with the data and results for the second weight segment
-    \item A sheet summarizing your results
+    \item Provide a \textbf{scatter chart} with weight in the vertical axis, and time in the horizontal axis. Label each of the segments as either ``Baseline'', ``Weight 1'', or ``Weight 2''.
+    \item For each of the three weight segments, provide a \textbf{table} with
+    \begin{itemize}
+        \item Minimum
+        \item 25\textsuperscript{th} Percentile
+        \item 50\textsuperscript{th} Percentile (Median)
+        \item 75\textsuperscript{th} Percentile
+        \item Maximum
+        \item Arithmetic Mean
+        \item Geometric Mean
+        \item Harmonic Mean
+        \item Standard Deviation
+        \item Range
+        \item Central Error
+    \end{itemize}
+    See Table \ref{table.00.template.1} for a template.
+    \item For each of the three weight segments, provide a \textbf{table} with the percent difference between the expected value and the observed arithmetic mean value. See Table \ref{table.00.template.2} for a template.
+    \item Using the observed arithmetic mean values, calculate the ``true'' values:
+    \begin{gather}
+        \text{``true weight 1''} = \text{``observed weight 1''} - \text{baseline} \\
+        \text{``true weight 2''} = \text{``observed weight 2''} - \text{baseline}
+    \end{gather}
+    If proper methods are followed, what should be the observed value of the baseline weight?
 \end{enumerate}
-For \textbf{each segment}, you should
+%
+\paragraph{Part 2: Velocity}
+%
 \begin{enumerate}
-    \item Include a table like Table \ref{table:00.baseline.descriptive} with the minimum, the three quartiles, and the maximum.
-    \item Include a table like Table \ref{table:00.baseline.means} with the three Pythagorean means.
-    \item Confirm that the harmonic mean is smaller than the geometric mean, and also that the geometric mean is smaller than the usual average.
-    \item Include a table like Table \ref{table:00.baseline.interval} with the boundaries of the error interval.
-    \item Include a chart like Figure \ref{figure:00.baseline.interval} illustrating the error interval. It is okay if the boundaries of the error interval are not of the same color.
-    \item Include a table like Table \ref{table:00.results} summarizing all of your results.
+    \item Provide a \textbf{scatter chart} with velocity in the vertical axis, and time in the horizontal axis. If the data has a linear shape, include the best-fit line and display its equation.
+    \item Provide a \textbf{table} with
+    \begin{itemize}
+        \item observed value of slope
+        \item expected value of slope
+        \item percent difference for slope
+        \item observed value of intercept
+        \item expected value of intercept
+        \item percent difference for intercept
+    \end{itemize}
+    See Table \ref{table.00.template.3} for a template.
 \end{enumerate}
-You can use the spreadsheet with my results as reference.
+%
+% \newpage
+% \section{Your Laboratory Report}
+% %
+% There is no written lab report submission for this activity. However, you have to \textbf{submit a spreadsheet file} with your work, which \textbf{will be graded}. Submissions are done via Canvas.
 
-For \textbf{part 2}, your spreadsheet should include the following:
-\begin{itemize}
-    \item A table like Table \ref{table:00.velocity.results} with the slope and intercept values of the best-fit line, as well as the percent differences
-    \item A chart like Figure \ref{figure:00.velocity.fit} with the velocity data and the best fit line. Make sure that you include the equation.
-\end{itemize}
+% For \textbf{part 1}, your spreadsheet should include the following:
+% \begin{enumerate}
+%     \item A sheet with your raw data
+%     \item A sheet with the data and results for the baseline segment
+%     \item A sheet with the data and results for the first weight segment
+%     \item A sheet with the data and results for the second weight segment
+%     \item A sheet summarizing your results
+% \end{enumerate}
+% For \textbf{each segment}, you should
+% \begin{enumerate}
+%     \item Include a table like Table \ref{table:00.baseline.descriptive} with the minimum, the three quartiles, and the maximum.
+%     \item Include a table like Table \ref{table:00.baseline.means} with the three Pythagorean means.
+%     \item Confirm that the harmonic mean is smaller than the geometric mean, and also that the geometric mean is smaller than the usual average.
+%     \item Include a table like Table \ref{table:00.baseline.interval} with the boundaries of the error interval.
+%     \item Include a chart like Figure \ref{figure:00.baseline.interval} illustrating the error interval. It is okay if the boundaries of the error interval are not of the same color.
+%     \item Include a table like Table \ref{table:00.results} summarizing all of your results.
+% \end{enumerate}
+% You can use the spreadsheet with my results as reference.
+
+% For \textbf{part 2}, your spreadsheet should include the following:
+% \begin{itemize}
+%     \item A table like Table \ref{table:00.velocity.results} with the slope and intercept values of the best-fit line, as well as the percent differences
+%     \item A chart like Figure \ref{figure:00.velocity.fit} with the velocity data and the best fit line. Make sure that you include the equation.
+% \end{itemize}
 %
 \newpage
-\section{Tables}
+\section{Table Templates}
+%
+\begin{table}[ht!]
+    \begin{center}
+        \begin{tabular}{l | l | l | l}
+            & \textbf{Baseline} (lb) & \textbf{Weight 1} (lb) & \textbf{Weight 2} (lb) \\
+            \hline
+            Minimum & & & \\
+            25\textsuperscript{th} Percentile & & & \\
+            50\textsuperscript{th} Percentile & & & \\
+            75\textsuperscript{th} Percentile & & & \\
+            Maximum & & & \\
+            \hline
+            Arithmetic Mean & & & \\
+            Geometric Mean & & & \\
+            Harmonic Mean & & & \\
+            Standard Deviation & & & \\
+            \hline
+            Range & & & \\
+            Central Error & & & \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \caption{Template 1 for Part 1}
+    \label{table.00.template.1}
+\end{table}
+%
+\begin{table}[ht!]
+    \begin{center}
+        \begin{tabular}{l | l | l | l}
+            & \textbf{Baseline} (lb) & \textbf{Weight 1} (lb) & \textbf{Weight 2} (lb) \\
+            \hline
+            Observed Value & & & \\
+            Expected Value & & & \\
+            \hline
+            Percent Difference & & & \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \caption{Template 2 for Part 1}
+    \label{table.00.template.2}
+\end{table}
+%
+\begin{table}[ht!]
+    \begin{center}
+        \begin{tabular}{l | l | l}
+            & \textbf{Slope} (m/s\textsuperscript{2}) & \textbf{Intercept} (m/s) \\
+            \hline
+            Observed Value & & \\
+            Expected Value & & \\
+            \hline
+            Percent Difference & & \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \caption{Template 3 for Part 2}
+    \label{table.00.template.3}
+\end{table}
+%
+\newpage
+\section{Example Tables}
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|l|r|}
-        \hline
-        Name & Value (lb) \\
+    \begin{tabular}{l|r}
+        \textbf{Name} & \textbf{Value} (lb) \\
         \hline
 		Minimum & 3.468206 \\
-		25th Percentile & 4.576510 \\
-		50th Percentile & 5.032499 \\
-		75th Percentile & 5.484631 \\
+		25\textsuperscript{th} Percentile & 4.576510 \\
+		50\textsuperscript{th} Percentile & 5.032499 \\
+		75\textsuperscript{th} Percentile & 5.484631 \\
 		Maximum & 6.429887 \\
 		\hline
 	\end{tabular}
-    \caption{Min, 25th, 50th, 75th Percentiles, and Max for Baseline Segment}
+    \caption{Min, 25\textsuperscript{th}, 50\textsuperscript{th}, 75\textsuperscript{th} Percentiles, and Max for Baseline Segment}
     \label{table:00.baseline.descriptive}
 \end{table}
 \vspace{\stretch{1}}
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|l|r|}
-        \hline
-		Name & Value (lb) \\
+    \begin{tabular}{l|r}
+		\textbf{Name} & \textbf{Value} (lb) \\
         \hline
 		Arithmetic Mean & 5.042546 \\
 		Geometric Mean & 5.005110 \\
@@ -590,9 +697,8 @@ For \textbf{part 2}, your spreadsheet should include the following:
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|l|r|}
-        \hline
-        Name & Value (lb) \\
+    \begin{tabular}{l|r}
+        \textbf{Name} & \textbf{Value} (lb) \\
         \hline
         $w_{A} + 3 \sigma$ & 6.881107 \\
         $w_{A} + 2 \sigma$ & 6.268254 \\
@@ -613,8 +719,8 @@ For \textbf{part 2}, your spreadsheet should include the following:
 %
 \begin{table}[ht]
     \centering
-	\begin{tabular}{|l|r|} \hline
-		Name & Value (lb) \\
+    \begin{tabular}{l|r}
+        \textbf{Name} & \textbf{Value} (lb) \\
 		\hline
 		Range & 2.961681 \\
 	    Center & 4.949047 \\
@@ -628,8 +734,8 @@ For \textbf{part 2}, your spreadsheet should include the following:
 %
 \begin{table}[ht]
     \centering
-	\begin{tabular}{|l|r|} \hline
-		Name & Value (lb) \\
+    \begin{tabular}{l|r} 
+        \textbf{Name} & \textbf{Value} (lb) \\
 		\hline
         $w_{A} + E$ & 6.523387 \\
         $w_{A}$ & 5.042546 \\
@@ -643,12 +749,11 @@ For \textbf{part 2}, your spreadsheet should include the following:
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|l|r|r|r|}
+    \begin{tabular}{l|r|r|r}
+        \textbf{Name} & \textbf{Experimental} & \textbf{Theoretical} & \textbf{P.D.} (\%) \\
         \hline
-        Name & Experimental & Theoretical & P.D. \\
-        \hline
-        Slope & 10.936546 m/s$^{2}$ & 11 m/s$^{2}$ & \textminus 0.58\% \\
-        Intercept & 3.303589 m/s & 3 m/s & 10.12\% \\
+        Slope & 10.936546 m/s$^{2}$ & 11 m/s$^{2}$ & \textminus 0.58 \\
+        Intercept & 3.303589 m/s & 3 m/s & 10.12 \\
         \hline
     \end{tabular}
     \caption{Final and Percent Differences}
@@ -659,22 +764,21 @@ For \textbf{part 2}, your spreadsheet should include the following:
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|l|r|r|r|r|r|r|r|}
+    \begin{tabular}{l|r|r|r|r|r|r|r}
+        \textbf{Name} & $W_{B}$ & $W_{1}$ & $W_{2}$ & $W_{1} - W_{B}$ & \textbf{P.D.} (\%) & $W_{2} - W_{B}$ & \textbf{P.D.} (\%) \\
         \hline
-        Name & $W_{B}$ & $W_{1}$ & $W_{2}$ & $W_{1} - W_{B}$ & P.D. & $W_{2} - W_{B}$ & P.D. \\
-        \hline
-        Mean & 5.042546 & 99.923191 & 170.931045 & 94.880645 & \textminus 0.13\% & 165.888499 & \textminus 0.07\% \\
-        G Mean & 5.005110 & 99.921589 & 170.929918 & 94.916478 & \textminus 0.09\% & 165.924808 & \textminus 0.05\% \\
-        H Mean & 4.967486 & 99.919986 & 170.928791 & 94.952499 & \textminus 0.05\% & 165.961305 & \textminus 0.02\% \\
-        Median & 5.032499 & 99.911915 & 170.953287 & 94.879416 & \textminus 0.13\% & 165.920788 & \textminus 0.05\% \\
-        Center & 4.949047 & 99.859397 & 170.895024 & 94.910351 & \textminus 0.09\% & 165.945978 & \textminus 0.03\% \\
+        Mean & 5.042546 & 99.923191 & 170.931045 & 94.880645 & \textminus 0.13 & 165.888499 & \textminus 0.07 \\
+        G Mean & 5.005110 & 99.921589 & 170.929918 & 94.916478 & \textminus 0.09 & 165.924808 & \textminus 0.05 \\
+        H Mean & 4.967486 & 99.919986 & 170.928791 & 94.952499 & \textminus 0.05 & 165.961305 & \textminus 0.02 \\
+        Median & 5.032499 & 99.911915 & 170.953287 & 94.879416 & \textminus 0.13 & 165.920788 & \textminus 0.05 \\
+        Center & 4.949047 & 99.859397 & 170.895024 & 94.910351 & \textminus 0.09 & 165.945978 & \textminus 0.03 \\
         \hline
         Theory & 0.000000 & 95.000000 & 166.000000 & 95.000000 & N.A. & 166.000000 & N.A. \\
         \hline
         SD & 0.612854 & 0.565955 & 0.620371 & N.A. & N.A. & N.A. & N.A. \\
         Range & 2.961681 & 3.045906 & 3.445420 & N.A. & N.A. & N.A. & N.A. \\
         Error & 1.480841 & 1.522953 & 1.722710 & N.A. & N.A. & N.A. & N.A. \\
-        RU & 29.37\% & 1.52\% & 1.01\% & N.A. & N.A. & N.A. & N.A. \\
+        RU (\%) & 29.37 & 1.52 & 1.01 & N.A. & N.A. & N.A. & N.A. \\
         \hline
     \end{tabular}
     \caption{Results and Percent Differences. All weights are in pounds (lb).}
@@ -684,9 +788,8 @@ For \textbf{part 2}, your spreadsheet should include the following:
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|l|r|}
-        \hline
-        Name & Value (lb) \\
+    \begin{tabular}{l|r}
+        \textbf{Name} & \textbf{Value} (lb) \\
         \hline
         $W_{1}$ & $94.880645 \pm 1.522953$ \\
         $W_{2}$ & $165.888499 \pm 1.722710$ \\
@@ -700,9 +803,8 @@ For \textbf{part 2}, your spreadsheet should include the following:
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|l|r|}
-        \hline
-        Name & Value \\
+    \begin{tabular}{l|r}
+        \textbf{Name} & \textbf{Value} \\
         \hline
         Weight 1 & 95 lb \\
         Weight 2 & 166 lb \\
@@ -718,9 +820,8 @@ For \textbf{part 2}, your spreadsheet should include the following:
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|l|r|}
-        \hline
-        Name & Value \\
+    \begin{tabular}{l|r}
+        \textbf{Name} & \textbf{Value} \\
         \hline
         Weight 1 & 88 lb \\
         Weight 2 & 160 lb \\
@@ -736,9 +837,8 @@ For \textbf{part 2}, your spreadsheet should include the following:
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|l|r|}
-        \hline
-        Name & Value \\
+    \begin{tabular}{l|r}
+        \textbf{Name} & \textbf{Value} \\
         \hline
         Weight 1 & 93 lb \\
         Weight 2 & 142 lb \\
@@ -753,7 +853,7 @@ For \textbf{part 2}, your spreadsheet should include the following:
 \vspace{\stretch{1}}
 \newpage
 %
-\section{Figures}
+\section{Example Charts}
 %
 \vspace{\stretch{1}}
 \begin{figure}[ht]
