@@ -139,44 +139,132 @@ Finally, Table \ref{table:01.summary} has the comparisons of the different avera
 %
 Your data should consist of 5 initial pairs of slope and intercept values, plus 25 additional slope values. In total you should have 30 slopes and 5 intercepts.
 %
-\newpage
-\section{Your Laboratory Report}
-%
-Your laboratory report should include the following:
-\begin{itemize}
-    \item Tables like Table \ref{table:01.first.5} and \ref{table:01.latter.25} with your raw data. This is one of the few experiments where you can include the raw data in your report.
-    \item Answers to all the questions in Section \ref{sec:01.first.5} (some in a table like Table \ref{table:01.describe.5}).
-    \item Answers to all the questions in Section \ref{sec:01.latter.25} (some in a table like Table \ref{table:01.describe.25}).
-    \item Answers to all the questions in Section \ref{sec:01.all.30} (some in tables like Tables \ref{table:01.describe.30} and \ref{table:01.error.30}).
-    \item Answers to all the questions in Section \ref{sec:01.central.20} (some in tables like Tables \ref{table:01.describe.20.center} and \ref{table:01.error.20.center}).
-    \item Answers to all the questions in Section \ref{sec:01.closest.20} (some in tables like Tables \ref{table:01.describe.20.close} and \ref{table:01.error.20.close}).
-    \item Compare your average slope values to the expected value by calculating percent differences as in Table \ref{table:01.summary}.
-\end{itemize}
-You should answer the following questions:
-\begin{enumerate}
-    \item Given two ways to keep 2/3 of the data (central 20 runs or closest 20 runs), which approach do you think yields the most confident or robust result? Why?
-    \item Out of Sections \ref{sec:01.all.30}, \ref{sec:01.central.20}, and \ref{sec:01.closest.20}, which part had the largest/smallest amount of error?
-    \item Which of your estimates is closest to the expected value?
-\end{enumerate}
+% \newpage
+% \section{Your Laboratory Report}
+% %
+% Your laboratory report should include the following:
+% \begin{itemize}
+%     \item Tables like Table \ref{table:01.first.5} and \ref{table:01.latter.25} with your raw data. This is one of the few experiments where you can include the raw data in your report.
+%     \item Answers to all the questions in Section \ref{sec:01.first.5} (some in a table like Table \ref{table:01.describe.5}).
+%     \item Answers to all the questions in Section \ref{sec:01.latter.25} (some in a table like Table \ref{table:01.describe.25}).
+%     \item Answers to all the questions in Section \ref{sec:01.all.30} (some in tables like Tables \ref{table:01.describe.30} and \ref{table:01.error.30}).
+%     \item Answers to all the questions in Section \ref{sec:01.central.20} (some in tables like Tables \ref{table:01.describe.20.center} and \ref{table:01.error.20.center}).
+%     \item Answers to all the questions in Section \ref{sec:01.closest.20} (some in tables like Tables \ref{table:01.describe.20.close} and \ref{table:01.error.20.close}).
+%     \item Compare your average slope values to the expected value by calculating percent differences as in Table \ref{table:01.summary}.
+% \end{itemize}
+% You should answer the following questions:
+% \begin{enumerate}
+%     \item Given two ways to keep 2/3 of the data (central 20 runs or closest 20 runs), which approach do you think yields the most confident or robust result? Why?
+%     \item Out of Sections \ref{sec:01.all.30}, \ref{sec:01.central.20}, and \ref{sec:01.closest.20}, which part had the largest/smallest amount of error?
+%     \item Which of your estimates is closest to the expected value?
+% \end{enumerate}
 %
 \newpage
 \section{Your Laboratory Worksheet}
 %
 Please print your work before coming to class.
 %
-\paragraph{Part 1: }
+\paragraph{Part 1: First 5 runs}
+%
+For the first 5 runs, you recorded \textbf{both the slope and the intercept} values of the best-fit line.
+\begin{enumerate}
+    \item Are the \textbf{slope} values for different heights all close in magnitude? Explain the physical consequences of your observation. (What is the physical meaning of the slope?)
+    \item Are the \textbf{intercept} values for different heights all close in magnitude? Explain the physical consequences of your observation.
+    \item What is the smallest slope value (i.e. the \textbf{minimum}) recorded? Use the \texttt{MIN} function.
+    \item What is the \textbf{median} slope value? Use the \texttt{MEDIAN} function.
+    \item What is the largest slope value (i.e. the \textbf{maximum}) recorded? Use the \texttt{MAX} function.
+    \item What is the \textbf{average} slope value? Use the \texttt{AVERAGE} function.
+    \item What is the \textbf{percent difference} between the expected value for the slope (9.8067 m/s\textsuperscript{2}) and the 5-run average?
+\end{enumerate}
+%
+\paragraph{Part 2: Latter 25 runs}
+%
+For the latter 25 runs, you recorded \textbf{only the slope}.
+\begin{enumerate}
+    \item What is the minimum slope value recorded?
+    \item What is the median slope value?
+    \item What is the maximum slope value recorded?
+    \item What is the average slope value?
+    \item Are the answers to questions 1 through 4 above similar to the answers for the first 5 runs?
+    \item What is the percent difference between the expected value for the slope (9.8067 m/s\textsuperscript{2}) and the 25-run average?
+\end{enumerate}
+%
+\paragraph{Part 3: Aggregate of 30 runs}
+%
+You can combine the first 5 runs with the latter 25 runs and make a 30-run aggregate. You can ask similar questions:
+\begin{enumerate}
+    \item What is the minimum slope value recorded?
+    \item What is the median slope value?
+    \item What is the maximum slope value recorded?
+    \item What is the \textbf{central error}?
+    \item What is the average slope?
+    \item What are the boundaries of the \textbf{error interval} (i.e. \texttt{AVERAGE} $\pm$ \texttt{ERROR})?
+    \item What is the percent difference between the expected value for the slope (9.8067 m/s\textsuperscript{2}) and the 30-run average?
+\end{enumerate}
+%
+\paragraph{Part 4: Central 20 runs}
+%
+After sorting all values in the 30-run aggregate, and dropping the bottom 5 and top 5, you have the central 20-run set. Note that 20 runs out of a total of 30 runs corresponds to 2/3 of the data.
+\begin{enumerate}
+    \item What is the minimum slope value for these 20 runs?
+    \item What is the median slope value for these 20 runs?
+    \item What is the maximum slope value for these 20 runs?
+    \item What is the central error?
+    \item What is the average slope value for these 20 runs?
+    \item What are the boundaries of the error interval?
+    \item What is the percent difference between the expected value for the slope (9.8067 m/s\textsuperscript{2}) and the (central) 20-run average?
+\end{enumerate}
+%
+\paragraph{Part 5: Closest 20 runs}
+%
+Instead of sorting by value, you can sort by proximity to the 30-run average. After dropping the 10 values that are farthest away from the 30-run average, you have the closest 20-run set.
+\begin{enumerate}
+    \item What is the minimum slope value for these 20 runs?
+    \item What is the median slope value for these 20 runs?
+    \item What is the maximum slope value for these 20 runs?
+    \item What is the central error?
+    \item What is the average slope value for these 20 runs?
+    \item What are the boundaries of the error interval?
+    \item What is the percent difference between the expected value for the slope (9.8067 m/s\textsuperscript{2}) and the (closest) 20-run average?
+\end{enumerate}
+%
+\paragraph{Part 6: Results}
+%
+\begin{enumerate}
+    \item In parts 4 and 5 you used different ways to reduce the 30-run data. Which approach do you think is more valid? Why?
+\end{enumerate}
 %
 \newpage
 \section{Table Templates}
+%
+\begin{table}[ht!]
+    \begin{center}
+        \begin{tabular}{l | l | l | l | l | l}
+            & First 5 & Latter 25 & Aggregate 30 & Central 20 & Closest 20 \\
+            \hline
+            Minimum & & & & & \\
+            Mean & & & & & \\
+            Maximum & & & & & \\
+            \hline
+            Average & & & & & \\
+            Percent Difference & & & & & \\
+            \hline
+            Central Error & & & & & \\
+            Average + Error & & & & & \\
+            Average \textminus Error & & & & & \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \caption{Template for results}
+\end{table}
 %
 \newpage
 \section{Example Tables}
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|r|r|}
-        \hline
-        Slope (m/s$^{2}$) & Intercept (m/s) \\
+    \begin{tabular}{r|r}
+        \textbf{Slope} (m/s$^{2}$) & \textbf{Intercept} (m/s) \\
         \hline
         9.4265 & 0.8407 \\
         9.7359 & 1.2777 \\
@@ -192,7 +280,7 @@ Please print your work before coming to class.
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|r|r|r|r|r|}
+    \begin{tabular}{r|r|r|r|r}
         \hline
         9.7839 & 9.586 & 9.5585 & 9.5695 & 9.8151 \\
         \hline
@@ -212,9 +300,8 @@ Please print your work before coming to class.
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|l|r|}
-        \hline
-        Name & Value (m/s$^{2}$) \\
+    \begin{tabular}{l|r}
+        \textbf{Name} & \textbf{Value} (m/s$^{2}$) \\
         \hline
         Minimum & 9.2793 \\
         Median & 9.7066 \\
@@ -230,9 +317,8 @@ Please print your work before coming to class.
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|l|r|}
-        \hline
-        Name & Value (m/s$^{2}$) \\
+    \begin{tabular}{l|r}
+        \textbf{Name} & \textbf{Value} (m/s$^{2}$) \\
         \hline
         Minimum & 9.5095 \\
         Median & 9.7468 \\
@@ -247,14 +333,13 @@ Please print your work before coming to class.
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|l|r|}
-        \hline
-        Name & Value (m/s$^{2}$) \\
+    \begin{tabular}{l|r}
+        \textbf{Name} & \textbf{Value} (m/s$^{2}$) \\
         \hline
         Minimum & 9.2793 \\
-        25th Percentile & 9.6862 \\
-        50th Percentile & 9.7361 \\
-        75th Percentile & 9.7762 \\
+        25\textsuperscript{th} Percentile & 9.6862 \\
+        50\textsuperscript{th} Percentile & 9.7361 \\
+        75\textsuperscript{th} Percentile & 9.7762 \\
         Maximum & 9.8151 \\
         Error & 0.2679 \\
         \hline
@@ -266,9 +351,8 @@ Please print your work before coming to class.
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|l|r|}
-        \hline
-        Name & Value (m/s$^{2}$) \\
+    \begin{tabular}{l|r}
+        \textbf{Name} & \textbf{Value} (m/s$^{2}$) \\
         \hline
         Average - Error & 9.4276 \\
         Average & 9.6955 \\
@@ -283,14 +367,14 @@ Please print your work before coming to class.
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|l|r|}
-        \hline
-        Name & Value (m/s$^{2}$) \\
+    \begin{tabular}{l|r}
+
+        \textbf{Name} & \textbf{Value} (m/s$^{2}$) \\
         \hline
         Minimum & 9.586 \\
-        25th Percentile & 9.7066 \\
-        50th Percentile & 9.7361 \\
-        75th Percentile & 9.7608 \\
+        25\textsuperscript{th} Percentile & 9.7066 \\
+        50\textsuperscript{th} Percentile & 9.7361 \\
+        75\textsuperscript{th} Percentile & 9.7608 \\
         Maximum & 9.7839 \\
         Error & 0.0989 \\
         \hline
@@ -302,9 +386,8 @@ Please print your work before coming to class.
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|l|r|}
-        \hline
-        Name & Value (m/s$^{2}$) \\
+    \begin{tabular}{l|r}
+        \textbf{Name} & \textbf{Value} (m/s$^{2}$) \\
         \hline
         Average - Error & 9.6261 \\
         Average & 9.7251 \\
@@ -318,14 +401,13 @@ Please print your work before coming to class.
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|l|r|}
-        \hline
-        Name & Value (m/s$^{2}$) \\
+    \begin{tabular}{l|r}
+        \textbf{Name} & \textbf{Value} (m/s$^{2}$) \\
         \hline
         Minimum & 9.628 \\
-        25th Percentile & 9.7097 \\
-        50th Percentile & 9.7388 \\
-        75th Percentile & 9.7635 \\
+        25\textsuperscript{th} Percentile & 9.7097 \\
+        50\textsuperscript{th} Percentile & 9.7388 \\
+        75\textsuperscript{th} Percentile & 9.7635 \\
         Maximum & 9.7948 \\
         Error & 0.0834 \\
         \hline
@@ -338,9 +420,8 @@ Please print your work before coming to class.
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|l|r|}
-        \hline
-        Name & Value (m/s$^{2}$) \\
+    \begin{tabular}{l|r}
+        \textbf{Name} & \textbf{Value} (m/s$^{2}$) \\
         \hline
         Average - Error & 9.6521 \\
         Average & 9.7355 \\
@@ -354,15 +435,14 @@ Please print your work before coming to class.
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|l|r|r|r|r|}
+    \begin{tabular}{l|r|r|r|r}
+        \textbf{Name} & \textbf{Error} (m/s$^{2}$) & \textbf{Experimental} (m/s$^{2}$) & \textbf{Theoretical} (m/s$^{2}$) & \textbf{P.D.} (\%) \\
         \hline
-        Name & Error (m/s$^{2}$) & Experimental (m/s$^{2}$) & Theoretical (m/s$^{2}$) & P.D. \\
-        \hline
-        First 5 & 0.2283 & 9.5721 & 9.8 & \textminus 2.33\% \\
-        Latter 25 & 0.1528 & 9.7202 & 9.8 & \textminus 0.81\% \\
-        Aggregate 30 & 0.2679 & 9.6955 & 9.8 & \textminus 1.07\% \\
-        Center 20 & 0.0989 & 9.7251 & 9.8 & \textminus 0.76\% \\
-        Closest 20 & 0.0834 & 9.7355 & 9.8 & \textminus 0.66\% \\
+        First 5 & 0.2283 & 9.5721 & 9.8 & \textminus 2.33 \\
+        Latter 25 & 0.1528 & 9.7202 & 9.8 & \textminus 0.81 \\
+        Aggregate 30 & 0.2679 & 9.6955 & 9.8 & \textminus 1.07 \\
+        Center 20 & 0.0989 & 9.7251 & 9.8 & \textminus 0.76 \\
+        Closest 20 & 0.0834 & 9.7355 & 9.8 & \textminus 0.66 \\
         \hline
     \end{tabular}
     \caption{Summary of results and percent differences}
