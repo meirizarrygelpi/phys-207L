@@ -54,11 +54,11 @@ You choose about \textbf{four points along the incline} and use a ruler to measu
 %
 You can take distinct positions and calculate the differences. For example, consider the two-box case and the first two measurements (label 1 and 2) in Table \ref{table:02.height.2}. The first two heights are $h_{1} = 8.9$ cm and $h_{2} = 11.7$ cm. The \textbf{difference} is
 \begin{equation}
-    \Delta h = h_{2} - h_{1} = 2.8 \text{ cm}
+    \Delta h = h_{2} - h_{1} = 2.8 \ \text{cm}
 \end{equation}
 Similarly, the first two positions along the incline are $d_{1} = 25$ cm and $d_{2} = 50$ cm. The \textbf{difference} is
 \begin{equation}
-    \Delta d = d_{2} - d_{1} = 25 \text{ cm}
+    \Delta d = d_{2} - d_{1} = 25 \ \text{cm}
 \end{equation}
 If you have \textbf{four} pairs of positions (as in Table \ref{table:02.height.2} and Table \ref{table:02.height.1}), then you should be able to calculate \textbf{six} distinct differences for each dimension. In Table \ref{table:02.sine.2} and Table \ref{table:02.sine.1} you can find the values of my differences.
 %
@@ -70,7 +70,7 @@ The sine of the angle of inclination is given by the ratio of differences:
 \end{equation}
 For each pair of differences $\Delta h$ and $\Delta d$, you can calculate a value of this ratio. Using the differences mentioned above for the two-box case, the sine is
 \begin{equation}
-    \sin(\theta) = \frac{2.8 \text{ cm}}{25 \text{ cm}} = 0.112
+    \sin(\theta) = \frac{2.8 \ \text{cm}}{25 \ \text{cm}} = 0.112
 \end{equation}
 The sine values for the one-box and two-box cases are in Table \ref{table:02.sine.2} and Table \ref{table:02.sine.1}. Since the two boxes that you used to raise the track are almost the same height, it follows that the sine for the two-box case should be almost twice the value of the sine for the one-box case.
 %
@@ -179,13 +179,12 @@ You are free to choose which run to use for each chart. However, in order to obt
 \end{enumerate}
 %
 \newpage
-\section{Tables}
+\section{Example Tables}
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|l|r|r|}
-        \hline
-        Label & $d$ (cm) & $h$ (cm) \\
+    \begin{tabular}{l|r|r}
+        \textbf{Label} & $d$ (cm) & $h$ (cm) \\
         \hline
         1 & 25 & 8.9 \\
         2 & 50 & 11.7 \\
@@ -196,13 +195,11 @@ You are free to choose which run to use for each chart. However, in order to obt
     \caption{Position along incline and height for \textbf{two-box} case}
     \label{table:02.height.2}
 \end{table}
-\vspace{\stretch{1}}
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|l|r|r|}
-        \hline
-        Label & $d$ (cm) & $h$ (cm) \\
+    \begin{tabular}{l|r|r}
+        \textbf{Label} & $d$ (cm) & $h$ (cm) \\
         \hline
         1 & 25 & 8.2 \\
         2 & 50 & 9.4 \\
@@ -213,13 +210,11 @@ You are free to choose which run to use for each chart. However, in order to obt
     \caption{Position along incline and height for \textbf{one-box} case}
     \label{table:02.height.1}
 \end{table}
-\vspace{\stretch{1}}
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|l|r|r|r|}
-        \hline
-        Labels & $\Delta d$ (cm) & $\Delta h$ (cm) & $\sin(\theta) = \Delta h / \Delta d$ \\
+    \begin{tabular}{l|r|r|r}
+        \textbf{Labels} & $\Delta d$ (cm) & $\Delta h$ (cm) & $\sin(\theta) = \Delta h / \Delta d$ \\
         \hline
         2 and 1 & 25 & 2.8 & 0.112 \\
         3 and 2 & 25 & 2.9 & 0.116 \\
@@ -232,13 +227,11 @@ You are free to choose which run to use for each chart. However, in order to obt
     \caption{Sine for angle of inclination for \textbf{two-box} case. Average is 0.115.}
     \label{table:02.sine.2}
 \end{table}
-\vspace{\stretch{1}}
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|l|r|r|r|}
-        \hline
-        Labels & $\Delta d$ (cm) & $\Delta h$ (cm) & $\sin(\theta) = \Delta h / \Delta d$ \\
+    \begin{tabular}{l|r|r|r}
+        \textbf{Labels} & $\Delta d$ (cm) & $\Delta h$ (cm) & $\sin(\theta) = \Delta h / \Delta d$ \\
         \hline
         2 and 1 & 25 & 1.2 & 0.048 \\
         3 and 2 & 25 & 1.4 & 0.056 \\
@@ -251,13 +244,11 @@ You are free to choose which run to use for each chart. However, in order to obt
     \caption{Sine for angle of inclination for \textbf{one-box} case. Average is 0.055.}
     \label{table:02.sine.1}
 \end{table}
-\vspace{\stretch{1}}
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|l|r|r|r|}
-        \hline
-        Run & $C$ (m) & $B$ (m/s) & $A$ (m/s\textsuperscript{2}) \\
+    \begin{tabular}{l|r|r|r}
+        \textbf{Run} & $C$ (m) & $B$ (m/s) & $A$ (m/s\textsuperscript{2}) \\
         \hline
         1 & \textminus 1.29 & 2.14 & \textminus 0.557 \\
         2 & \textminus 1.07 & 1.95 & \textminus 0.551 \\
@@ -271,13 +262,11 @@ You are free to choose which run to use for each chart. However, in order to obt
     \caption{Summary of results: fit parameters from \textbf{position} data}
     \label{table:02.fit.d}
 \end{table}
-\vspace{\stretch{1}}
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|l|r|r|}
-        \hline
-        Run & Slope (m/s\textsuperscript{2}) & Intercept (m/s) \\
+    \begin{tabular}{l|r|r}
+        \textbf{Run} & \textbf{Slope} (m/s\textsuperscript{2}) & \textbf{Intercept} (m/s) \\
         \hline
         1 & \textminus 1.13 & 2.16 \\
         2 & \textminus 1.09 & 1.94 \\
@@ -291,13 +280,11 @@ You are free to choose which run to use for each chart. However, in order to obt
     \caption{Summary of results: fit parameters from \textbf{velocity} data}
     \label{table:02.fit.v}
 \end{table}
-\vspace{\stretch{1}}
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|l|r|}
-        \hline
-        Run & Average Acceleration (m/s\textsuperscript{2}) \\
+    \begin{tabular}{l|r}
+        \textbf{Run} & \textbf{Average Acceleration} (m/s\textsuperscript{2}) \\
         \hline
         1 & \textminus 1.030 \\
         2 & \textminus 1.010 \\
@@ -311,13 +298,11 @@ You are free to choose which run to use for each chart. However, in order to obt
     \caption{Summary of results: average \textbf{acceleration}}
     \label{table:02.fit.a}
 \end{table}
-\vspace{\stretch{1}}
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|l|r|r|r|r|}
-        \hline
-        Run & $A$ & $2A$ & Slope & Average Acceleration \\
+    \begin{tabular}{l|r|r|r|r}
+        \textbf{Run} & $A$ & $2A$ & \textbf{Slope} & \textbf{Average Acceleration} \\
         \hline
         1 & \textminus 0.557 & \textminus 1.114 & \textminus 1.13 & \textminus 1.030 \\
         2 & \textminus 0.551 & \textminus 1.102 & \textminus 1.09 & \textminus 1.010 \\
@@ -331,13 +316,11 @@ You are free to choose which run to use for each chart. However, in order to obt
     \caption{Checks for constant acceleration: consistent acceleration across measurements. All values in the last four columns are in units of m/s\textsuperscript{2}.}
     \label{table:02.check.a}
 \end{table}
-\vspace{\stretch{1}}
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|l|r|r|r|r|}
-        \hline
-        Run & $\sin(\theta)$ & $2A / \sin(\theta)$ & $\text{Slope}/\sin(\theta)$ & $(\text{Average Acceleration})/\sin(\theta)$ \\
+    \begin{tabular}{l|r|r|r|r}
+        \textbf{Run} & $\sin(\theta)$ & $2A / \sin(\theta)$ & $\text{Slope}/\sin(\theta)$ & $(\text{Average Acceleration})/\sin(\theta)$ \\
         \hline
         1 & 0.115 & \textminus 9.706 & \textminus 9.845 & \textminus 8.974 \\
         2 & 0.115 & \textminus 9.601 & \textminus 9.497 & \textminus 8.796 \\
@@ -351,13 +334,11 @@ You are free to choose which run to use for each chart. However, in order to obt
     \caption{Checks for constant acceleration: agreement with $g = -9.80$ m/s\textsuperscript{2}. All values in the last three columns are in units of m/s\textsuperscript{2}.}
     \label{table:02.check.g}
 \end{table}
-\vspace{\stretch{1}}
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|l|r|r|}
-        \hline
-        Run & $B$ (m/s) & Intercept (m/s) \\
+    \begin{tabular}{l|r|r}
+        \textbf{Run} & $B$ (m/s) & \textbf{Intercept} (m/s) \\
         \hline
         1 & 2.14 & 2.16 \\
         2 & 1.95 & 1.94 \\
@@ -371,20 +352,17 @@ You are free to choose which run to use for each chart. However, in order to obt
     \caption{Checks for constant acceleration: comparing intercept and $B$.}
     \label{table:02.check.v0}
 \end{table}
-\vspace{\stretch{1}}
 %
 \FloatBarrier
 \newpage
-\section{Figures}
+\section{Example Charts}
 %
-\vspace{\stretch{1}}
 \begin{figure}[ht]
     \centering
     \includegraphics[scale=0.71]{image/02-incline/Run1-d.png}
     \caption{Full raw position data for run 1}
     \label{figure:02.raw.d}
 \end{figure}
-\vspace{\stretch{1}}
 %
 \begin{figure}[ht]
     \centering
