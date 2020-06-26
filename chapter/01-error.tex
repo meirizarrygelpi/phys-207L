@@ -6,13 +6,13 @@ In this experiment you will learn about error analysis and provide an estimate f
 %
 \section{Preliminary}
 %
-Ignoring the effects of air resistance, when an object is dropped and falls a certain height, its velocity is proportional to the amount of travel time. The slope in the linear relation corresponds to the free-fall acceleration. Since this acceleration is due to gravity, its value is usually denoted by $g$. On Earth, near sea level, the value of $g$ is 9.80 m/s$^{2}$.
+Ignoring the effects of air resistance, when an object is dropped and falls from a given height, its velocity is proportional to the amount of travel time. The slope in the linear relation corresponds to the free-fall acceleration. Since this acceleration is due to gravity, its value is usually denoted by $g$. On Earth, near sea level, the value of $g$ is 9.80 m/s\textsuperscript{2}.
 
-Here velocity is measured in meters per second (m/s), and time is measured in seconds (s). A linear relation between velocity $v$ and time $t$ has the mathematical form
+Here velocity is measured in meter per second (m/s), and time is measured in second (s). A linear relation between velocity $v$ and time $t$ has the mathematical form
 \begin{equation}
     v = A t + B
 \end{equation}
-Here $A$ is the \textbf{slope} and $B$ is the \textbf{intercept}. Both $A$ and $B$ will also have units. Indeed, $A$ must have units of meters per second per second (m/s/s or m/s$^{2}$) and $B$ must have units of meters per second (m/s). Thus, the slope should have units of \textbf{acceleration}, and the intercept should have units of \textbf{velocity}.
+Here $A$ is the \textbf{slope} and $B$ is the \textbf{intercept}. Both $A$ and $B$ will also have units. Indeed, $A$ must have units of meter per second per second (m/s/s or m/s\textsuperscript{2}) and $B$ must have units of meter per second (m/s). Thus, the slope should have units of \textbf{acceleration}, and the intercept should have units of \textbf{velocity}.
 %
 \section{Experiment}
 %
@@ -28,43 +28,23 @@ You can divide the analysis into five parts.
 %
 \subsection{First 5 Runs} \label{sec:01.first.5}
 %
-For the first 5 runs, you recorded \textbf{both the slope and the intercept} values of the best-fit line. Here are some questions:
-\begin{enumerate}
-    \item Are the \textbf{slope} values for different heights all close in magnitude? Explain the physical consequences of your observation.
-    \item Are the \textbf{intercept} values for different heights all close in magnitude? Explain the physical consequences of your observation.
-    \item What is the smallest slope value (i.e. the \textbf{minimum}) recorded? Use the \texttt{MIN} function (see Equation \ref{eq:00.min}).
-    \item What is the \textbf{median} slope value? Use the \texttt{MEDIAN} function (see Equation \ref{eq:00.median}).
-    \item What is the largest slope value (i.e. the \textbf{maximum}) recorded? Use the \texttt{MAX} function (see Equation \ref{eq:00.max}).
-    \item What is the \textbf{average} slope value? Use the \texttt{AVERAGE} function (see Equation \ref{eq:00.average}).
-    \item What is the \textbf{percent difference} between the expected value for the slope (9.80 m/s$^{2}$) and the 5-run average? See Equation \ref{eq:00.percent.diff}.
-\end{enumerate}
+For the first 5 runs, you recorded \textbf{both the slope and the intercept} values of the best-fit line. For these values you can calculate:
+\begin{itemize}
+    \item Minimum
+    \item Median (50\textsuperscript{th} percentile)
+    \item Maximum
+    \item Average (observed value)
+    \item Percent difference with expected value (9.8067 m/s\textsuperscript{2})
+\end{itemize}
+Here use the 5 values from this part.
 %
 \subsection{Latter 25 Runs} \label{sec:01.latter.25}
 %
-For the latter 25 runs, you recorded \textbf{only the slope}. Here are some questions:
-\begin{enumerate}
-    \item What is the minimum slope value recorded?
-    \item What is the median slope value?
-    \item What is the maximum slope value recorded?
-    \item What is the average slope value?
-    \item Are the answers to these questions similar to the answers for the first 5 runs?
-    \item What is the percent difference between the expected value for the slope (9.80 m/s$^{2}$) and the 25-run average?
-\end{enumerate}
+For the latter 25 runs, you recorded \textbf{only the slope}. You can calculate the same quantities as in the previous part, but now use the 25 values.
 %
 \subsection{Aggregate of 30 Runs} \label{sec:01.all.30}
 %
-You can combine the first 5 runs with the latter 25 runs and make a 30-run aggregate. You can ask similar questions:
-\begin{enumerate}
-    \item What is the minimum slope value recorded?
-    \item What is the \textbf{25th percentile} slope value? Use the \texttt{PERCENTILE} function (see Equation \ref{eq:00.percentile.25}).
-    \item What is the \textbf{50th percentile} slope value? Use the \texttt{PERCENTILE} function (see Equation \ref{eq:00.percentile.50}).
-    \item What is the \textbf{75th percentile} slope value? Use the \texttt{PERCENTILE} function (see Equation \ref{eq:00.percentile.75}).
-    \item What is the maximum slope value recorded?
-    \item What is the \textbf{error} (see Equation \ref{eq:00.error})?
-    \item What is the average slope?
-    \item What are the boundaries of the \textbf{error interval} (i.e. \texttt{AVERAGE} $\pm$ \texttt{ERROR})?
-    \item What is the percent difference between the expected value for the slope (9.80 m/s$^{2}$) and the 30-run average?
-\end{enumerate}
+You can combine the first 5 runs with the latter 25 runs and make a 30-run aggregate. You can calculate the same quantities as in the previous parts, but now use the 30 values.
 %
 \subsection{Central 20 Runs} \label{sec:01.central.20}
 %
@@ -75,15 +55,6 @@ Here is how to sort a column with Google Sheets. If \texttt{Aggregate30} is the 
     \texttt{=SORT(Aggregate30, 1, TRUE)}
 \end{equation}
 If there is enough space, you should see the 30 slope values appear but in ascending order (smallest to largest). Using \texttt{FALSE} instead of \texttt{TRUE} will give you the slopes in descending order (largest to smallest).
-
-After dropping the bottom 5 and top 5, you can answer the following questions:
-\begin{enumerate}
-    \item What is the minimum slope value for these 20 runs?
-    \item What is the average slope value for these 20 runs?
-    \item What is the maximum slope value for these 20 runs?
-    \item What is the error?
-    \item What is the percent difference between the expected value for the slope (9.80 m/s$^{2}$) and the (central) 20-run average?
-\end{enumerate} 
 %
 \subsection{Closest 20 Runs} \label{sec:01.closest.20}
 %
@@ -110,14 +81,6 @@ Here is a more detailed list of steps to follow:
     \end{equation}
     You should see the 30 slope values appear in one column, and the 30 distance values appear in the second column, but the distance column will be sorted in descending order. The top 10 values correspond to the 10 values that are farthest away from the 30-run average. The other 20 values constitute the closest 20 runs.
 \end{enumerate}
-After doing this, you can answer the following questions:
-\begin{enumerate}
-    \item What is the minimum slope value for these 20 runs?
-    \item What is the maximum slope value for these 20 runs?
-    \item What is the error?
-    \item What is the average slope value for these 20 runs?
-    \item What is the percent difference between the expected value for the slope (9.80 m/s$^{2}$) and the (closest) 20-run average?
-\end{enumerate}
 %
 \section{My Data}
 %
@@ -125,7 +88,7 @@ The data for my first 5 runs are in Table \ref{table:01.first.5}. The data for m
 
 In Table \ref{table:01.describe.5} and Table \ref{table:01.describe.25}, I describe the raw data. Note that, in my case, the average slope is much larger, and also much closer to the actual value, for the 25 runs.
 
-After combining all the runs into the 30-run aggregate, you can consider other quantities like the percentiles. In Table \ref{table:01.describe.30} you can find the three percentiles, as well as the previous quantities that were also found in the first two parts. The boundaries of the error interval for the 30-run aggregate are found in Table \ref{table:01.error.30}. Note that the established value for the slope, 9.80 m/s$^{2}$ is inside of the error interval.
+After combining all the runs into the 30-run aggregate, you can consider other quantities like the percentiles. In Table \ref{table:01.describe.30} you can find the three percentiles, as well as the previous quantities that were also found in the first two parts. The boundaries of the error interval for the 30-run aggregate are found in Table \ref{table:01.error.30}. Note that the established value for the slope, 9.8067 m/s\textsuperscript{2} is inside of the error interval.
 
 The minimum slope for the 30-run aggregate is quite small and could be an outlier. One way to deal with outliers is to restrict to a subset of the data. To be clear: You do not get to choose which values to keep or which values to drop based on their proximity to the expected value. That would be cheating. It would introduce bias to your data. Besides, in most experiments, you do not know the expected value. Instead you can restrict to a subset of the data by following an explicit rule intrinsic to the data.
 
@@ -243,7 +206,7 @@ Instead of sorting by value, you can sort by proximity to the 30-run average. Af
             & First 5 & Latter 25 & Aggregate 30 & Central 20 & Closest 20 \\
             \hline
             Minimum & & & & & \\
-            Mean & & & & & \\
+            Median & & & & & \\
             Maximum & & & & & \\
             \hline
             Average & & & & & \\
@@ -264,7 +227,7 @@ Instead of sorting by value, you can sort by proximity to the 30-run average. Af
 \begin{table}[ht]
     \centering
     \begin{tabular}{r|r}
-        \textbf{Slope} (m/s$^{2}$) & \textbf{Intercept} (m/s) \\
+        \textbf{Slope} (m/s\textsuperscript{2}) & \textbf{Intercept} (m/s) \\
         \hline
         9.4265 & 0.8407 \\
         9.7359 & 1.2777 \\
@@ -292,14 +255,14 @@ Instead of sorting by value, you can sort by proximity to the 30-run average. Af
         9.7677 & 9.7252 & 9.7621 & 9.7566 & 9.6849 \\
         \hline
     \end{tabular}
-    \caption{Slope values for latter 25 runs, in units of m/s$^{2}$}
+    \caption{Slope values for latter 25 runs, in units of m/s\textsuperscript{2}}
     \label{table:01.latter.25}
 \end{table}
 %
 \begin{table}[ht]
     \centering
     \begin{tabular}{l|r}
-        \textbf{Name} & \textbf{Value} (m/s$^{2}$) \\
+        \textbf{Name} & \textbf{Value} (m/s\textsuperscript{2}) \\
         \hline
         Minimum & 9.2793 \\
         Median & 9.7066 \\
@@ -314,7 +277,7 @@ Instead of sorting by value, you can sort by proximity to the 30-run average. Af
 \begin{table}[ht]
     \centering
     \begin{tabular}{l|r}
-        \textbf{Name} & \textbf{Value} (m/s$^{2}$) \\
+        \textbf{Name} & \textbf{Value} (m/s\textsuperscript{2}) \\
         \hline
         Minimum & 9.5095 \\
         Median & 9.7468 \\
@@ -329,7 +292,7 @@ Instead of sorting by value, you can sort by proximity to the 30-run average. Af
 \begin{table}[ht]
     \centering
     \begin{tabular}{l|r}
-        \textbf{Name} & \textbf{Value} (m/s$^{2}$) \\
+        \textbf{Name} & \textbf{Value} (m/s\textsuperscript{2}) \\
         \hline
         Minimum & 9.2793 \\
         25\textsuperscript{th} Percentile & 9.6862 \\
@@ -346,7 +309,7 @@ Instead of sorting by value, you can sort by proximity to the 30-run average. Af
 \begin{table}[ht]
     \centering
     \begin{tabular}{l|r}
-        \textbf{Name} & \textbf{Value} (m/s$^{2}$) \\
+        \textbf{Name} & \textbf{Value} (m/s\textsuperscript{2}) \\
         \hline
         Average - Error & 9.4276 \\
         Average & 9.6955 \\
@@ -361,7 +324,7 @@ Instead of sorting by value, you can sort by proximity to the 30-run average. Af
     \centering
     \begin{tabular}{l|r}
 
-        \textbf{Name} & \textbf{Value} (m/s$^{2}$) \\
+        \textbf{Name} & \textbf{Value} (m/s\textsuperscript{2}) \\
         \hline
         Minimum & 9.586 \\
         25\textsuperscript{th} Percentile & 9.7066 \\
@@ -378,7 +341,7 @@ Instead of sorting by value, you can sort by proximity to the 30-run average. Af
 \begin{table}[ht]
     \centering
     \begin{tabular}{l|r}
-        \textbf{Name} & \textbf{Value} (m/s$^{2}$) \\
+        \textbf{Name} & \textbf{Value} (m/s\textsuperscript{2}) \\
         \hline
         Average - Error & 9.6261 \\
         Average & 9.7251 \\
@@ -392,7 +355,7 @@ Instead of sorting by value, you can sort by proximity to the 30-run average. Af
 \begin{table}[ht]
     \centering
     \begin{tabular}{l|r}
-        \textbf{Name} & \textbf{Value} (m/s$^{2}$) \\
+        \textbf{Name} & \textbf{Value} (m/s\textsuperscript{2}) \\
         \hline
         Minimum & 9.628 \\
         25\textsuperscript{th} Percentile & 9.7097 \\
@@ -409,7 +372,7 @@ Instead of sorting by value, you can sort by proximity to the 30-run average. Af
 \begin{table}[ht]
     \centering
     \begin{tabular}{l|r}
-        \textbf{Name} & \textbf{Value} (m/s$^{2}$) \\
+        \textbf{Name} & \textbf{Value} (m/s\textsuperscript{2}) \\
         \hline
         Average - Error & 9.6521 \\
         Average & 9.7355 \\
@@ -423,7 +386,7 @@ Instead of sorting by value, you can sort by proximity to the 30-run average. Af
 \begin{table}[ht]
     \centering
     \begin{tabular}{l|r|r|r|r}
-        \textbf{Name} & \textbf{Error} (m/s$^{2}$) & \textbf{Experimental} (m/s$^{2}$) & \textbf{Theoretical} (m/s$^{2}$) & \textbf{P.D.} (\%) \\
+        \textbf{Name} & \textbf{Error} (m/s\textsuperscript{2}) & \textbf{Experimental} (m/s\textsuperscript{2}) & \textbf{Theoretical} (m/s\textsuperscript{2}) & \textbf{P.D.} (\%) \\
         \hline
         First 5 & 0.2283 & 9.5721 & 9.8 & \textminus 2.33 \\
         Latter 25 & 0.1528 & 9.7202 & 9.8 & \textminus 0.81 \\
