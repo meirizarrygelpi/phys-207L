@@ -1,6 +1,6 @@
 % Copyright 2018-2020 Melvin Eloy Irizarry-Gelpí
 % \setcounter{chapter}{5}
-\chapter{Kinetic and Elastic Energy}
+\chapter{Kinetic and Elastic Potential Energy}
 %
 In this experiment you will check that kinetic energy depends on speed in a quadratic way.
 %
@@ -8,9 +8,9 @@ In this experiment you will check that kinetic energy depends on speed in a quad
 %
 Energy is a fundamental concept in physics. Unlike force, which is a vector quantity, energy has no intrinsic direction. The \textbf{SI unit} for energy is the joule (J). One joule of energy is equivalent to 1 newton-meter:
 \begin{equation}
-    1 \text{ J} = 1 \text{ N m}
+    1 \ \text{J} = 1 \ \text{N{ }\textperiodcentered{ }m}
 \end{equation}
-There are many forms of energy. \textbf{Kinetic energy} is the energy associated to being in a state of \textbf{motion}. Not surprisingly, the amount of kinetic energy $K$ of an object depends on the amount of mass $m$ and the amount of speed $v$ (not velocity $\vec{v}$). As you will check, the amount of kinetic energy is quadratic in speed:
+There are many forms of energy. \textbf{Kinetic energy} is the energy associated to being in a state of \textbf{motion}. Not surprisingly, the amount of kinetic energy $K$ of an object depends on the amount of mass $m$ and the amount of speed $v$ (not velocity $\mathbf{v}$). As you will check, the amount of kinetic energy is quadratic in speed:
 \begin{equation}
     K = \frac{1}{2} m v^{2}
 \end{equation}
@@ -18,21 +18,35 @@ Note that kinetic energy cannot be negative, because mass and square speed are a
 
 A simple direct experiment to test that kinetic energy depends on speed as stated above would involve measuring the speed $v$ and the energy $K$ of a moving object, and checking that the chart with speed and kinetic energy is quadratic. However, we do not have a sensor that measures kinetic energy directly.
 
-When you compress or stretch a spring, you are storing a form of energy known as \textbf{elastic energy}. The amount of elastic energy $U$ stored in a spring with spring constant $k$ and compressed/stretched a distance from equilibrium $x$ is given by
+When you compress or stretch a spring, you are storing a form of energy known as \textbf{elastic potential energy}. The amount of elastic potential energy $U$ stored in a spring with spring constant $k$ that is compressed/stretched a distance from equilibrium $x$ is given by
 \begin{equation}
     U = \frac{1}{2} k x^{2}
 \end{equation}
-Note that, like kinetic energy, elastic energy cannot be negative, since $k$ and $x^{2}$ are non-negative. If the distance from equilibrium is zero, then you have zero elastic energy. That is, when the spring is in its relaxed shape, it stores zero amount of elastic energy. The mathematical form of $U$ is very similar to the mathematical form of $K$.
-
-Elastic energy is an example of energy that can be stored over time and used later. Such kinds of energy are known as potential energy. Another important form of energy is \textbf{mechanical energy}, which is just the sum of kinetic energy and any form of potential energy available. The symbol for mechanical energy is $E$.
+Note that, like kinetic energy, elastic potential energy cannot be negative, since $k$ and $x^{2}$ are non-negative. If the distance from equilibrium is zero, then you have zero elastic potential energy. That is, when the spring is in its relaxed shape, it stores zero amount of elastic potential energy. The mathematical form of $U$ is very similar to the mathematical form of $K$.
+%
+\subsection{The spring constant}
+%
+If the value of the spring constant $k$ is not known, you can use Hooke's law to find it:
+\begin{equation}
+    F = -kx
+\end{equation}
+Here $F$ is the amount of force applied on the spring when stretched/compressed a distance $x$. Since the amount of force is directly proportional to the distance, the spring constant can be found as the slope in a force versus distance chart. Note that in SI units, the spring constant has units of N/m.
+%
+\subsection{Mechanical energy}
+%
+Elastic potential energy is an example of energy that can be stored over time and used later. Such kinds of energy are known as potential energy. Another important form of energy is \textbf{mechanical energy}, which is just the sum of kinetic energy and any form of potential energy available. The symbol for mechanical energy is $E$:
+\begin{equation}
+    E = K + U
+\end{equation}
+Sometimes, the value of mechanical energy is constant over time and does not change during the motion of an object. This is known as conservation of mechanical energy.
 %
 \section{Experiment}
 %
-You have a cart with a picket fence. The cart can move along a flat track. You can use a photogate to measure the speed of the cart at a given point along the track. You have a spring loop attached to one end of the track. When you push the cart against the spring loop, you compress the spring loop, and you do \textbf{work} (another form of energy). This work is stored on the spring as elastic potential energy. While holding the cart against the spring, the cart is not moving, so the speed of the cart is zero. Thus, at this point in time, the cart has zero kinetic energy. As stated above, the amount of elastic energy depends on how much the spring is compressed. At this point in time the mechanical energy, the sum of the kinetic and elastic energy, is just purely elastic:
+You have a cart with a picket fence. The cart can move along a flat track. You can use a photogate to measure the speed of the cart at a given point along the track. You have a spring loop attached to one end of the track. When you push the cart against the spring loop, you compress the spring loop, and you do \textbf{work} (another form of energy). This work is stored on the spring as elastic potential energy. While holding the cart against the spring, the cart is not moving, so the speed of the cart is zero. Thus, at this point in time, the cart has zero kinetic energy. As stated above, the amount of elastic potential energy depends on how much the spring is compressed. At this point in time the mechanical energy, the sum of the kinetic and elastic potential energy, is just purely elastic:
 \begin{equation}
     E_{1} = K + U = \frac{1}{2} m v^{2} + \frac{1}{2} k x^{2} = \frac{1}{2} k x^{2}
 \end{equation}
-Then you release the cart. The spring now expands to its equilibrium shape ($x = 0$). As the spring expands, it pushes the cart forward, transferring the elastic energy to the cart. The cart is now moving, so it has kinetic energy. This energy came from the elastic energy of the spring. At this moment, the mechanical energy is just purely kinetic:
+Then you release the cart. The spring now expands to its equilibrium shape ($x = 0$). As the spring expands, it pushes the cart forward, transferring the elastic potential energy to the cart. The cart is now moving, so it has kinetic energy. This energy came from the elastic potential energy of the spring. At this moment, the mechanical energy is just purely kinetic:
 \begin{equation}
     E_{2} = K + U = \frac{1}{2} m v^{2} + \frac{1}{2} k x^{2} = \frac{1}{2} m v^{2}
 \end{equation}
@@ -98,11 +112,11 @@ You can use a digital scale to find the value of the mass of the cart, and the m
 
 The slope in Figure \ref{figure:06.v.2} provides an estimate for $\omega^{2}$:
 \begin{equation}
-    \omega^{2} \approx 62.3 \text{ rad}^{2}\text{/s}^{2}
+    \omega^{2} \approx 62.3 \ \text{rad\textsuperscript{2}/s\textsuperscript{2}}
 \end{equation}
 Using the definition of $\omega^{2}$ to solve for $k$ gives
 \begin{equation}
-    k = \omega^{2} m \approx \left( 62.3 \text{ rad}^{2}\text{/s}^{2} \right) \left( 0.5218 \text{ kg} \right) = 31.508 \text{ N/m}
+    k = \omega^{2} m \approx \left( 62.3 \ \text{rad\textsuperscript{2}/s\textsuperscript{2}} \right) \left( 0.5218 \ \text{kg} \right) = 31.508 \ \text{N/m}
 \end{equation}
 The spring constant for the spring loop will be slightly different for each spring, but your result should be close to 30 N/m.
 %
@@ -114,25 +128,98 @@ My raw data for launch position and speed is in Table \ref{table:06.data}. The f
 %
 Your data should be very similar to mine, but the actual launch positions might be different due to the varying shapes of the spring loops. You should have a total of eight data points.
 %
-\newpage
-\section{Your Laboratory Report}
+% \newpage
+% \section{Your Laboratory Report}
+% %
+% Your lab report should include the following:
+% \begin{enumerate}
+%     \item A table like Table \ref{table:06.mass} with the mass values you measured.
+%     \item A table like Table \ref{table:06.data} with the positions you used for launching the cart, the corresponding distance from equilibrium, the speed you measured, and the 3-run average speed.
+%     \item A chart with $v^{2}$ in the vertical axis, and $x^{2}$ in the horizontal axis. Include the best fit line, along with the equation.
+%     \item Use the slope value to estimate $\omega^{2}$. Then use this estimate of $\omega^{2}$ and the total mass of the object to estimate the value of the spring constant $k$ for the spring loop.
+% \end{enumerate}
 %
-Your lab report should include the following:
+\newpage
+\section{Your Laboratory Worksheet}
+%
+Please print your work before coming to class.
+%
+\paragraph{Part 1: Spring constant}
+%
 \begin{enumerate}
-    \item A table like Table \ref{table:06.mass} with the mass values you measured.
-    \item A table like Table \ref{table:06.data} with the positions you used for launching the cart, the corresponding distance from equilibrium, the speed you measured, and the 3-run average speed.
-    \item A chart with $v^{2}$ in the vertical axis, and $x^{2}$ in the horizontal axis. Include the best fit line, along with the equation.
-    \item Use the slope value to estimate $\omega^{2}$. Then use this estimate of $\omega^{2}$ and the total mass of the object to estimate the value of the spring constant $k$ for the spring loop.
+    \item Provide a \textbf{scatter chart} with force in the vertical axis, and distance from equilibrium in the horizontal axis. If the data has a linear shape, include a best-fit line and display its equation.
+    \item Use Hooke's law to determine observed value of the spring constant for the loop you used.
 \end{enumerate}
+%
+\paragraph{Part 2: Angular frequency}
+%
+\begin{enumerate}
+    \item For each distance from equilibrium, you collected three runs with velocity data. Provide a \textbf{table} with
+    \begin{itemize}
+        \item the distance from equilibrium $x$
+        \item the 3-run average velocity $v$
+    \end{itemize}
+    You should have 8 rows with data.
+    \item Provide a scatter chart with $v^{2}$ in the vertical axis, and $x^{2}$ in the horizontal axis. If the data has a linear shape, include a best-fit line and display its equation.
+    \item Determine the observed value of the squared angular frequency $\omega^{2}$ for the mass and loop you used.
+\end{enumerate}
+%
+\paragraph{Part 3: Results}
+%
+\begin{enumerate}
+    \item Provide a \textbf{table} with
+    \begin{itemize}
+        \item the mass of the cart you used
+        \item the mass of the picket fence you used
+        \item the total mass
+    \end{itemize}
+    \item Use the total mass you measured, and the value of the squared angular frequency you obtained above, to obtain another estimate of the spring constant for the loop. How do both values compare?
+\end{enumerate}
+%
+\newpage
+\section{Table Templates}
+%
+\begin{table}[ht!]
+    \begin{center}
+        \begin{tabular}{l | l | l | l | l | l}
+            \textbf{Label} & $x$ (cm) & $v_{1}$ (m/s) & $v_{2}$ (m/s) & $v_{3}$ (m/s) & 3-run average $v$ (m/s) \\
+            \hline
+            1 & & & & & \\
+            2 & & & & & \\
+            3 & & & & & \\
+            4 & & & & & \\
+            5 & & & & & \\
+            6 & & & & & \\
+            7 & & & & & \\
+            8 & & & & & \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \caption{Sample Table 1}
+\end{table}
+%
+\begin{table}[ht!]
+    \begin{center}
+        \begin{tabular}{l | l}
+            & \textbf{Mass} (kg) \\
+            \hline
+            Cart & \\
+            Picket fence & \\
+            \hline
+            Total & \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \caption{Sample Table 2}
+\end{table}
 %
 \newpage
 \section{Example Tables}
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|l|r|}
-        \hline
-        Name & Value (kg) \\
+    \begin{tabular}{l|r}
+        \textbf{Name} & \textbf{Value} (kg) \\
         \hline
         Mass of cart & 0.5088 \\
         Mass of picket fence & 0.013 \\
@@ -146,8 +233,7 @@ Your lab report should include the following:
 %
 \begin{table}[ht]
     \centering
-    \begin{tabular}{|l|r|r|r|r|r|}
-        \hline
+    \begin{tabular}{l|r|r|r|r|r}
         $d$ (cm) & $x$ (cm) & $v_{1}$ (m/s) & $v_{2}$ (m/s) & $v_{3}$ (m/s) & Average $v$ (m/s) \\
         \hline
         11 & 0 & 0 & 0 & 0 & 0 \\
