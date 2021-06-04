@@ -1,12 +1,11 @@
-% Copyright 2018-2020 Melvin Eloy Irizarry-Gelpí
-\documentclass[letterpaper,12pt]{report}
+% Copyright 2018-2021 Melvin Eloy Irizarry-Gelpí
+\documentclass[letterpaper,11pt]{report}
 %
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{fullpage}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{setspace}
-\usepackage{url}
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{placeins}
@@ -29,49 +28,50 @@
 %
 \begin{document}
 %
-\title{\Huge{Data Analysis Guides \\ for \\ General Physics I Laboratory \\ (PHYS 207L)}}
-\author{M.E. Irizarry-Gelp\'{i}, Ph.D. \\ Division of Natural Sciences \\ College of Mount Saint Vincent}
-\date{Fall 2020 \\ Last updated: {\today} {\currenttime}}
+\title{\Huge{General Physics I Laboratory \\ Data Analysis Guides}}
+\author{M.E. Irizarry-Gelp\'{i}, Ph.D. \\ Division of Natural Sciences \\ College of Mount Saint Vincent \\ Bronx, New York}
+\date{PHYS 207L -- Fall 2021 \\ Last updated: {\today} {\currenttime}}
 %
 \maketitle
 \tableofcontents
 %
 \input{chapter/preamble.tex}
 %
-\setcounter{part}{0}
-\part{Constant Acceleration}
+% \setcounter{part}{0}
+% \part{Constant Acceleration}
 %
+\input{chapter/00-intro.tex}
 \input{chapter/01-error.tex}
 \input{chapter/02-incline.tex}
 %
-\setcounter{part}{1}
-\part{Force}
+% \setcounter{part}{1}
+% \part{Force}
 %
 \input{chapter/03-first-law.tex}
 \input{chapter/04-second-law.tex}
 \input{chapter/05-third-law.tex}
 %
-\setcounter{part}{2}
-\part{Energy}
+% \setcounter{part}{2}
+% \part{Energy}
 %
+\input{chapter/10-centripetal.tex}
 \input{chapter/06-kinetic.tex}
 %
-\setcounter{part}{3}
-\part{Momentum}
+% \setcounter{part}{3}
+% \part{Momentum}
 %
 \input{chapter/08-impulse.tex}
 \input{chapter/09-collisions.tex}
 %
-\setcounter{part}{4}
-\part{Non-Constant Acceleration}
+% \setcounter{part}{4}
+% \part{Non-Constant Acceleration}
 %
-\input{chapter/10-centripetal.tex}
 \input{chapter/11-shm.tex}
 %
 \appendix
-%
-\input{chapter/00-intro.tex}
-\input{chapter/style-guide.tex}
-\input{chapter/07-mechanic.tex}
+% 
+\input{chapter/style-slide-deck.tex}
+% \input{chapter/style-guide.tex}
+% \input{chapter/07-mechanic.tex}
 %
 \end{document}

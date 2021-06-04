@@ -1,4 +1,4 @@
-% Copyright 2018-2020 Melvin Eloy Irizarry-Gelpí
+% Copyright 2018-2021 Melvin Eloy Irizarry-Gelpí
 % Laboratory 1
 \setcounter{chapter}{0}
 \chapter{Error Analysis}
@@ -123,104 +123,104 @@ Your data should consist of 5 initial pairs of slope and intercept values, plus 
 %     \item Which of your estimates is closest to the expected value?
 % \end{enumerate}
 %
-\newpage
-\section{Your Laboratory Worksheet}
-%
-Please print your work before coming to class.
-%
-\paragraph{Part 1: First 5 runs}
-%
-For the first 5 runs, you recorded \textbf{both the slope and the intercept} values of the best-fit line.
-\begin{enumerate}
-    \item Are the \textbf{slope} values for different heights all close in magnitude? Explain the physical consequences of your observation. (What is the physical meaning of the slope?)
-    \item Are the \textbf{intercept} values for different heights all close in magnitude? Explain the physical consequences of your observation.
-    \item What is the smallest slope value (i.e. the \textbf{minimum}) recorded? Use the \texttt{MIN} function.
-    \item What is the \textbf{median} slope value? Use the \texttt{MEDIAN} function.
-    \item What is the largest slope value (i.e. the \textbf{maximum}) recorded? Use the \texttt{MAX} function.
-    \item What is the \textbf{average} slope value? Use the \texttt{AVERAGE} function.
-    \item What is the \textbf{percent difference} between the expected value for the slope (9.8067 m/s\textsuperscript{2}) and the 5-run average?
-\end{enumerate}
-%
-\paragraph{Part 2: Latter 25 runs}
-%
-For the latter 25 runs, you recorded \textbf{only the slope}.
-\begin{enumerate}
-    \item What is the minimum slope value recorded?
-    \item What is the median slope value?
-    \item What is the maximum slope value recorded?
-    \item What is the average slope value?
-    \item Are the answers to questions 1 through 4 above similar to the answers for the first 5 runs?
-    \item What is the percent difference between the expected value for the slope (9.8067 m/s\textsuperscript{2}) and the 25-run average?
-\end{enumerate}
-%
-\paragraph{Part 3: Aggregate of 30 runs}
-%
-You can combine the first 5 runs with the latter 25 runs and make a 30-run aggregate. You can ask similar questions:
-\begin{enumerate}
-    \item What is the minimum slope value recorded?
-    \item What is the median slope value?
-    \item What is the maximum slope value recorded?
-    \item What is the \textbf{central error}?
-    \item What is the average slope?
-    \item What are the boundaries of the \textbf{error interval} (i.e. \texttt{AVERAGE} $\pm$ \texttt{ERROR})?
-    \item What is the percent difference between the expected value for the slope (9.8067 m/s\textsuperscript{2}) and the 30-run average?
-\end{enumerate}
-%
-\paragraph{Part 4: Central 20 runs}
-%
-After sorting all values in the 30-run aggregate, and dropping the bottom 5 and top 5, you have the central 20-run set. Note that 20 runs out of a total of 30 runs corresponds to 2/3 of the data.
-\begin{enumerate}
-    \item What is the minimum slope value for these 20 runs?
-    \item What is the median slope value for these 20 runs?
-    \item What is the maximum slope value for these 20 runs?
-    \item What is the central error?
-    \item What is the average slope value for these 20 runs?
-    \item What are the boundaries of the error interval?
-    \item What is the percent difference between the expected value for the slope (9.8067 m/s\textsuperscript{2}) and the (central) 20-run average?
-\end{enumerate}
-%
-\paragraph{Part 5: Closest 20 runs}
-%
-Instead of sorting by value, you can sort by proximity to the 30-run average. After dropping the 10 values that are farthest away from the 30-run average, you have the closest 20-run set.
-\begin{enumerate}
-    \item What is the minimum slope value for these 20 runs?
-    \item What is the median slope value for these 20 runs?
-    \item What is the maximum slope value for these 20 runs?
-    \item What is the central error?
-    \item What is the average slope value for these 20 runs?
-    \item What are the boundaries of the error interval?
-    \item What is the percent difference between the expected value for the slope (9.8067 m/s\textsuperscript{2}) and the (closest) 20-run average?
-\end{enumerate}
-%
-\paragraph{Part 6: Results}
-%
-\begin{enumerate}
-    \item In parts 4 and 5 you used different ways to reduce the 30-run data. Which approach do you think is more valid? Why?
-\end{enumerate}
-%
-\newpage
-\section{Table Templates}
-%
-\begin{table}[ht!]
-    \begin{center}
-        \begin{tabular}{l | l | l | l | l | l}
-            & First 5 & Latter 25 & Aggregate 30 & Central 20 & Closest 20 \\
-            \hline
-            Minimum & & & & & \\
-            Median & & & & & \\
-            Maximum & & & & & \\
-            \hline
-            Average & & & & & \\
-            Percent Difference & & & & & \\
-            \hline
-            Central Error & & & & & \\
-            Average + Error & & & & & \\
-            Average \textminus Error & & & & & \\
-            \hline
-        \end{tabular}
-    \end{center}
-    \caption{Template for results}
-\end{table}
+% \newpage
+% \section{Your Laboratory Worksheet}
+% %
+% Please print your work before coming to class.
+% %
+% \paragraph{Part 1: First 5 runs}
+% %
+% For the first 5 runs, you recorded \textbf{both the slope and the intercept} values of the best-fit line.
+% \begin{enumerate}
+%     \item Are the \textbf{slope} values for different heights all close in magnitude? Explain the physical consequences of your observation. (What is the physical meaning of the slope?)
+%     \item Are the \textbf{intercept} values for different heights all close in magnitude? Explain the physical consequences of your observation.
+%     \item What is the smallest slope value (i.e. the \textbf{minimum}) recorded? Use the \texttt{MIN} function.
+%     \item What is the \textbf{median} slope value? Use the \texttt{MEDIAN} function.
+%     \item What is the largest slope value (i.e. the \textbf{maximum}) recorded? Use the \texttt{MAX} function.
+%     \item What is the \textbf{average} slope value? Use the \texttt{AVERAGE} function.
+%     \item What is the \textbf{percent difference} between the expected value for the slope (9.8067 m/s\textsuperscript{2}) and the 5-run average?
+% \end{enumerate}
+% %
+% \paragraph{Part 2: Latter 25 runs}
+% %
+% For the latter 25 runs, you recorded \textbf{only the slope}.
+% \begin{enumerate}
+%     \item What is the minimum slope value recorded?
+%     \item What is the median slope value?
+%     \item What is the maximum slope value recorded?
+%     \item What is the average slope value?
+%     \item Are the answers to questions 1 through 4 above similar to the answers for the first 5 runs?
+%     \item What is the percent difference between the expected value for the slope (9.8067 m/s\textsuperscript{2}) and the 25-run average?
+% \end{enumerate}
+% %
+% \paragraph{Part 3: Aggregate of 30 runs}
+% %
+% You can combine the first 5 runs with the latter 25 runs and make a 30-run aggregate. You can ask similar questions:
+% \begin{enumerate}
+%     \item What is the minimum slope value recorded?
+%     \item What is the median slope value?
+%     \item What is the maximum slope value recorded?
+%     \item What is the \textbf{central error}?
+%     \item What is the average slope?
+%     \item What are the boundaries of the \textbf{error interval} (i.e. \texttt{AVERAGE} $\pm$ \texttt{ERROR})?
+%     \item What is the percent difference between the expected value for the slope (9.8067 m/s\textsuperscript{2}) and the 30-run average?
+% \end{enumerate}
+% %
+% \paragraph{Part 4: Central 20 runs}
+% %
+% After sorting all values in the 30-run aggregate, and dropping the bottom 5 and top 5, you have the central 20-run set. Note that 20 runs out of a total of 30 runs corresponds to 2/3 of the data.
+% \begin{enumerate}
+%     \item What is the minimum slope value for these 20 runs?
+%     \item What is the median slope value for these 20 runs?
+%     \item What is the maximum slope value for these 20 runs?
+%     \item What is the central error?
+%     \item What is the average slope value for these 20 runs?
+%     \item What are the boundaries of the error interval?
+%     \item What is the percent difference between the expected value for the slope (9.8067 m/s\textsuperscript{2}) and the (central) 20-run average?
+% \end{enumerate}
+% %
+% \paragraph{Part 5: Closest 20 runs}
+% %
+% Instead of sorting by value, you can sort by proximity to the 30-run average. After dropping the 10 values that are farthest away from the 30-run average, you have the closest 20-run set.
+% \begin{enumerate}
+%     \item What is the minimum slope value for these 20 runs?
+%     \item What is the median slope value for these 20 runs?
+%     \item What is the maximum slope value for these 20 runs?
+%     \item What is the central error?
+%     \item What is the average slope value for these 20 runs?
+%     \item What are the boundaries of the error interval?
+%     \item What is the percent difference between the expected value for the slope (9.8067 m/s\textsuperscript{2}) and the (closest) 20-run average?
+% \end{enumerate}
+% %
+% \paragraph{Part 6: Results}
+% %
+% \begin{enumerate}
+%     \item In parts 4 and 5 you used different ways to reduce the 30-run data. Which approach do you think is more valid? Why?
+% \end{enumerate}
+% %
+% \newpage
+% \section{Table Templates}
+% %
+% \begin{table}[ht!]
+%     \begin{center}
+%         \begin{tabular}{l | l | l | l | l | l}
+%             & First 5 & Latter 25 & Aggregate 30 & Central 20 & Closest 20 \\
+%             \hline
+%             Minimum & & & & & \\
+%             Median & & & & & \\
+%             Maximum & & & & & \\
+%             \hline
+%             Average & & & & & \\
+%             Percent Difference & & & & & \\
+%             \hline
+%             Central Error & & & & & \\
+%             Average + Error & & & & & \\
+%             Average \textminus Error & & & & & \\
+%             \hline
+%         \end{tabular}
+%     \end{center}
+%     \caption{Template for results}
+% \end{table}
 %
 \newpage
 \section{Example Tables}

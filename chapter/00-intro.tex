@@ -1,8 +1,8 @@
-% Copyright 2018-2020 Melvin Eloy Irizarry-Gelpí
+% Copyright 2018-2021 Melvin Eloy Irizarry-Gelpí
 % Chapter 0
-% \setcounter{chapter}{-1}
+\setcounter{chapter}{-1}
 % Appendix A
-\setcounter{chapter}{0}
+% \setcounter{chapter}{0}
 \chapter{Working with Spreadsheets}
 %
 In this activity you will gain experience using spreadsheets to analyze and visualize data.
@@ -91,7 +91,7 @@ If you \textbf{copy and paste} the data directly into a spreadsheet, you will pr
 
 Instead of copying and pasting the data, it is \textbf{better to import} the data. In Google Sheets, you can do this by going to
 \begin{equation}
-    \texttt{File > Import}
+    \texttt{File >> Import}
 \end{equation}
 Find your file. As import location, choose \texttt{Insert new sheet(s)}. You do not need to change any other import setting. After this you should see a spreadsheet with \textbf{two columns} of data. Column \texttt{A} should be time, and column \texttt{B} should be weight. Row \texttt{1} should be the header column.
 
@@ -105,7 +105,7 @@ Before any analysis is done on new data, it is always useful to make a quick vis
 
 By default, Google Sheets will provide you with a \textbf{line chart}. This is not necessarily the best option for your kind of data, so change the \texttt{Chart Type} to a \textbf{scatter chart}. You will get a chart with points instead of a line. I find it convenient to change the default settings for the size of the points, in order to obtain a better chart. You can double-click on a chart to access the \texttt{Chart editor} menu, and then going to
 \begin{equation}
-    \texttt{Chart editor > CUSTOMIZE > Series > Point Size}
+    \texttt{Chart editor >> CUSTOMIZE >> Series >> Point Size}
 \end{equation}
 and changing the value from \texttt{7px} to \texttt{2px}.
 
@@ -135,7 +135,7 @@ After separating each segment, it will be helpful to make a scatter chart for ea
 
 Each chart should have a \textbf{title}, and \textbf{labeled horizontal and vertical axes}. You can double-click on a chart to access the \texttt{Chart editor} menu. The title can be changed under
 \begin{equation}
-    \texttt{Chart editor > CUSTOMIZE > Chart \& axis titles > Type}
+    \texttt{Chart editor >> CUSTOMIZE >> Chart \& axis titles >> Type}
 \end{equation}
 and choose the \texttt{Chart title} option to add a title to the chart. A good title would be something along the lines of ``Baseline Measurement'' in order to provide context. You can add a label to the horizontal axis by choosing \texttt{Horizontal axis title} instead. A good axis label will include the \textbf{name of the quantity} and the \textbf{units} being used to measure it. For example, ``Time (s)'' (for the \textbf{horizontal} axis) and ``Weight (lb)'' (for the \textbf{vertical} axis).
 
@@ -145,7 +145,7 @@ Other useful changes to the default settings are to reduce the size of the point
 %
 You are going to use the data in the spreadsheet to calculate quantities that are going to help you understand and describe the data. In order to do these calculations, it will be convenient to give nicknames to the parts of the spreadsheet with the numerical data. These are called \textbf{named ranges}. To add a named range, first open the menu by going to
 \begin{equation}
-    \texttt{Data > Named ranges...}
+    \texttt{Data >> Named ranges...}
 \end{equation}
 Go to the \texttt{Baseline} sheet, and select the second cell in the weight column (i.e. the first cell with a numerical value in column \texttt{B}). Hold the \texttt{Shift} key and press the \texttt{Page Down} key or down arrow key to move down along the column all the way to the end. When all the numerical values in that column are selected, click on \texttt{+ Add a range} and give it a useful name like \texttt{WeightB} (for baseline weight). Finally, click on \texttt{Done}. You can do something similar for the weight column in the other two segments, using names like \texttt{Weight1} and \texttt{Weight2}.
 %
@@ -435,7 +435,7 @@ There is a particular method to find the values for $A$ and $B$ that correspond 
 
 The simplest thing to do is to add a \textbf{linear trend line} to your velocity versus time chart. After double clicking on the chart, and getting the \texttt{Chart editor} menu, go to
 \begin{equation}
-    \texttt{CUSTOMIZE > Series}
+    \texttt{CUSTOMIZE >> Series}
 \end{equation}
 and check the \texttt{Trendline} box. A new menu will appear below. The \textbf{type} of the trend line should be \texttt{Linear}. You might want to choose a \textbf{color} for the trend line that is very different from the data (e.g. blue data and red trend line). Also, change the \textbf{label} to \texttt{Use Equation}. This will display the equation for the trend line in the legend. In my case, the equation has the form
 \begin{equation}
@@ -527,115 +527,115 @@ Your data also consist of two files:
 \end{itemize}
 Although these have the same names as my files, they have different values. Also, the ``theoretical'' values for each section are different. See Tables \ref{table:00.theoretical.demo}, \ref{table:00.theoretical.v01} and \ref{table:00.theoretical.v02} for specific details.
 %
-\newpage
-\section{Your Laboratory Worksheet}
-%
-Please print your work before coming to class.
-%
-\paragraph{Part 1: Weight}
-%
-\begin{enumerate}
-    \item Provide a \textbf{scatter chart} with weight in the vertical axis, and time in the horizontal axis. Label each of the segments as either ``Baseline'', ``Weight 1'', or ``Weight 2''. (You can do this labeling by hand.)
-    \item For each of the three weight segments, provide a \textbf{table} with
-    \begin{itemize}
-        \item Minimum
-        \item 25\textsuperscript{th} Percentile
-        \item 50\textsuperscript{th} Percentile (Median)
-        \item 75\textsuperscript{th} Percentile
-        \item Maximum
-        \item Arithmetic Mean
-        \item Geometric Mean
-        \item Harmonic Mean
-        \item Standard Deviation
-        \item Range
-        \item Central Error
-    \end{itemize}
-    See Table \ref{table.00.template.1} for a template.
-    \item Since the baseline values are non-zero and relatively large, the results for Weight 1 and Weight 2 need to be adjusted. Using the observed arithmetic mean values as the ``raw observed'' values, calculate the ``true observed'' values:
-    \begin{gather}
-        \text{true observed weight 1} = \text{raw observed weight 1} - \text{baseline} \\
-        \text{true observed weight 2} = \text{raw observed weight 2} - \text{baseline}
-    \end{gather}
-    \item If proper methods are followed, what should be the observed value of the baseline weight?
-    \item For each of the three weight segments, provide a \textbf{table} with the percent difference between the expected value and the true observed value. See Table \ref{table.00.template.2} for a template.
-\end{enumerate}
-%
-\paragraph{Part 2: Velocity}
-%
-\begin{enumerate}
-    \item Provide a \textbf{scatter chart} with velocity in the vertical axis, and time in the horizontal axis. If the data has a linear shape, include the best-fit line and display its equation.
-    \item Provide a \textbf{table} with
-    \begin{itemize}
-        \item observed value of slope
-        \item expected value of slope
-        \item percent difference for slope
-        \item observed value of intercept
-        \item expected value of intercept
-        \item percent difference for intercept
-    \end{itemize}
-    See Table \ref{table.00.template.3} for a template.
-\end{enumerate}
-%
-\newpage
-\section{Table Templates}
-%
-\begin{table}[ht!]
-    \begin{center}
-        \begin{tabular}{l | l | l | l}
-            & \textbf{Baseline} (lb) & \textbf{Weight 1} (lb) & \textbf{Weight 2} (lb) \\
-            \hline
-            Minimum & & & \\
-            25\textsuperscript{th} Percentile & & & \\
-            50\textsuperscript{th} Percentile & & & \\
-            75\textsuperscript{th} Percentile & & & \\
-            Maximum & & & \\
-            \hline
-            Arithmetic Mean & & & \\
-            Geometric Mean & & & \\
-            Harmonic Mean & & & \\
-            Standard Deviation & & & \\
-            \hline
-            Range & & & \\
-            Central Error & & & \\
-            \hline
-        \end{tabular}
-    \end{center}
-    \caption{Template 1 for Part 1}
-    \label{table.00.template.1}
-\end{table}
-%
-\begin{table}[ht!]
-    \begin{center}
-        \begin{tabular}{l | l | l | l}
-            & \textbf{Baseline} (lb) & \textbf{Weight 1} (lb) & \textbf{Weight 2} (lb) \\
-            \hline
-            Raw Observed Value & & & \\
-            True Observed Value & & & \\
-            Expected Value & & & \\
-            \hline
-            Percent Difference & & & \\
-            \hline
-        \end{tabular}
-    \end{center}
-    \caption{Template 2 for Part 1}
-    \label{table.00.template.2}
-\end{table}
-%
-\begin{table}[ht!]
-    \begin{center}
-        \begin{tabular}{l | l | l}
-            & \textbf{Slope} (m/s\textsuperscript{2}) & \textbf{Intercept} (m/s) \\
-            \hline
-            Observed Value & & \\
-            Expected Value & & \\
-            \hline
-            Percent Difference & & \\
-            \hline
-        \end{tabular}
-    \end{center}
-    \caption{Template 3 for Part 2}
-    \label{table.00.template.3}
-\end{table}
+% \newpage
+% \section{Your Laboratory Worksheet}
+% %
+% Please print your work before coming to class.
+% %
+% \paragraph{Part 1: Weight}
+% %
+% \begin{enumerate}
+%     \item Provide a \textbf{scatter chart} with weight in the vertical axis, and time in the horizontal axis. Label each of the segments as either ``Baseline'', ``Weight 1'', or ``Weight 2''. (You can do this labeling by hand.)
+%     \item For each of the three weight segments, provide a \textbf{table} with
+%     \begin{itemize}
+%         \item Minimum
+%         \item 25\textsuperscript{th} Percentile
+%         \item 50\textsuperscript{th} Percentile (Median)
+%         \item 75\textsuperscript{th} Percentile
+%         \item Maximum
+%         \item Arithmetic Mean
+%         \item Geometric Mean
+%         \item Harmonic Mean
+%         \item Standard Deviation
+%         \item Range
+%         \item Central Error
+%     \end{itemize}
+%     See Table \ref{table.00.template.1} for a template.
+%     \item Since the baseline values are non-zero and relatively large, the results for Weight 1 and Weight 2 need to be adjusted. Using the observed arithmetic mean values as the ``raw observed'' values, calculate the ``true observed'' values:
+%     \begin{gather}
+%         \text{true observed weight 1} = \text{raw observed weight 1} - \text{baseline} \\
+%         \text{true observed weight 2} = \text{raw observed weight 2} - \text{baseline}
+%     \end{gather}
+%     \item If proper methods are followed, what should be the observed value of the baseline weight?
+%     \item For each of the three weight segments, provide a \textbf{table} with the percent difference between the expected value and the true observed value. See Table \ref{table.00.template.2} for a template.
+% \end{enumerate}
+% %
+% \paragraph{Part 2: Velocity}
+% %
+% \begin{enumerate}
+%     \item Provide a \textbf{scatter chart} with velocity in the vertical axis, and time in the horizontal axis. If the data has a linear shape, include the best-fit line and display its equation.
+%     \item Provide a \textbf{table} with
+%     \begin{itemize}
+%         \item observed value of slope
+%         \item expected value of slope
+%         \item percent difference for slope
+%         \item observed value of intercept
+%         \item expected value of intercept
+%         \item percent difference for intercept
+%     \end{itemize}
+%     See Table \ref{table.00.template.3} for a template.
+% \end{enumerate}
+% %
+% \newpage
+% \section{Table Templates}
+% %
+% \begin{table}[ht!]
+%     \begin{center}
+%         \begin{tabular}{l | l | l | l}
+%             & \textbf{Baseline} (lb) & \textbf{Weight 1} (lb) & \textbf{Weight 2} (lb) \\
+%             \hline
+%             Minimum & & & \\
+%             25\textsuperscript{th} Percentile & & & \\
+%             50\textsuperscript{th} Percentile & & & \\
+%             75\textsuperscript{th} Percentile & & & \\
+%             Maximum & & & \\
+%             \hline
+%             Arithmetic Mean & & & \\
+%             Geometric Mean & & & \\
+%             Harmonic Mean & & & \\
+%             Standard Deviation & & & \\
+%             \hline
+%             Range & & & \\
+%             Central Error & & & \\
+%             \hline
+%         \end{tabular}
+%     \end{center}
+%     \caption{Template 1 for Part 1}
+%     \label{table.00.template.1}
+% \end{table}
+% %
+% \begin{table}[ht!]
+%     \begin{center}
+%         \begin{tabular}{l | l | l | l}
+%             & \textbf{Baseline} (lb) & \textbf{Weight 1} (lb) & \textbf{Weight 2} (lb) \\
+%             \hline
+%             Raw Observed Value & & & \\
+%             True Observed Value & & & \\
+%             Expected Value & & & \\
+%             \hline
+%             Percent Difference & & & \\
+%             \hline
+%         \end{tabular}
+%     \end{center}
+%     \caption{Template 2 for Part 1}
+%     \label{table.00.template.2}
+% \end{table}
+% %
+% \begin{table}[ht!]
+%     \begin{center}
+%         \begin{tabular}{l | l | l}
+%             & \textbf{Slope} (m/s\textsuperscript{2}) & \textbf{Intercept} (m/s) \\
+%             \hline
+%             Observed Value & & \\
+%             Expected Value & & \\
+%             \hline
+%             Percent Difference & & \\
+%             \hline
+%         \end{tabular}
+%     \end{center}
+%     \caption{Template 3 for Part 2}
+%     \label{table.00.template.3}
+% \end{table}
 %
 \newpage
 \section{Example Tables}
