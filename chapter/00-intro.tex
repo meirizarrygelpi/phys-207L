@@ -73,15 +73,19 @@ As you can see, a single data file with hundreds of rows can correspond to dozen
 %
 \subsubsection{Start a new spreadsheet}
 %
-It goes without saying that you should begin with an \textbf{empty spreadsheet}. Please, give your spreadsheet a useful \textbf{filename} so that it can be later identified and distinguished from spreadsheets of other students, and from your own spreadsheets for other experiments. For example, \texttt{irizarry-gelpi-lab-00-weight} is a good filename because:
+It goes without saying that you should begin with an \textbf{empty spreadsheet}. Please, give your spreadsheet a useful \textbf{filename} so that it can be later identified and distinguished from spreadsheets of other students, and from your own spreadsheets for other experiments. For example,
+\begin{center}
+    \texttt{irizarry-gelpi-lab-00-weight}
+\end{center}
+is a good filename because:
 \begin{itemize}
     \item \texttt{irizarry-gelpi} indicates the \textbf{name} of the owner of the spreadsheet
     \item \texttt{lab-00} indicates which \textbf{laboratory} is in the spreadsheet
     \item \texttt{weight} indicates which \textbf{part} or experiment is in the spreadsheet
 \end{itemize}
-Each student is required to submit his/her own spreadsheet. There is no need to include your partner's name in the filename. Also, no need to include information about the spreadsheet version like \texttt{v1} or \texttt{final}.
+Each student is required to keep his/her own spreadsheet. There is no need to include your partner's name in the filename. Also, no need to include information about the spreadsheet version like \texttt{v1} or \texttt{final}.
 
-Please, do not submit a file called \texttt{physics-lab} or \texttt{Untitled spreadsheet}. Students who do not follow best practices will get points taken off.
+Please, do not keep a file called \texttt{physics-lab} or \texttt{Untitled spreadsheet}. Students who do not follow best practices will get points taken off.
 %
 \subsubsection{Import the data}
 %
@@ -99,7 +103,7 @@ I like to give this sheet with the raw data the name \texttt{RawData}. You can c
 %
 \subsubsection{Visualize the full data}
 %
-This step involves making a chart in order to obtain an initial visualization of the full data.
+This step involves \textbf{making a chart} in order to obtain an initial visualization of the full data.
 
 Before any analysis is done on new data, it is always useful to make a quick visualization. You can do this by selecting the two columns with data (click on column \texttt{A}, hold the \texttt{Shift} key, and move right to highlight column \texttt{B}), and clicking on \texttt{Insert Chart}.
 
@@ -131,13 +135,13 @@ The first row on each sheet should be a header with the name and unit of each qu
 %
 \subsubsection{Visualize each segment}
 %
-After separating each segment, it will be helpful to make a scatter chart for each portion, in order to get a better idea of how each segment looks up close.
+After separating each segment, it will be helpful to \textbf{make a scatter chart} for each portion, in order to get a better idea of how each segment looks up close.
 
 Each chart should have a \textbf{title}, and \textbf{labeled horizontal and vertical axes}. You can double-click on a chart to access the \texttt{Chart editor} menu. The title can be changed under
 \begin{equation}
     \texttt{Chart editor >> CUSTOMIZE >> Chart \& axis titles >> Type}
 \end{equation}
-and choose the \texttt{Chart title} option to add a title to the chart. A good title would be something along the lines of ``Baseline Measurement'' in order to provide context. You can add a label to the horizontal axis by choosing \texttt{Horizontal axis title} instead. A good axis label will include the \textbf{name of the quantity} and the \textbf{units} being used to measure it. For example, ``Time (s)'' (for the \textbf{horizontal} axis) and ``Weight (lb)'' (for the \textbf{vertical} axis).
+and choose the \texttt{Chart title} option to add a title to the chart. A good title would be something along the lines of ``Baseline Weight Measurement'' in order to provide context. You can add a label to the horizontal axis by choosing \texttt{Horizontal axis title} instead. A good axis label will include the \textbf{name of the quantity} and the \textbf{units} being used to measure it. For example, ``Time (s)'' (for the \textbf{horizontal} axis) and ``Weight (lb)'' (for the \textbf{vertical} axis).
 
 Other useful changes to the default settings are to reduce the size of the points, and to remove the legend, since only one quantity is in the chart.
 %
@@ -151,9 +155,9 @@ Go to the \texttt{Baseline} sheet, and select the second cell in the weight colu
 %
 \subsubsection{Significant Figures}
 %
-Take a look at the numbers in both the time and weight columns. The time column contains values with at most 2 decimal figures. For the weight column, the values have at most 1 decimal figures. This means that (for this activity only)
+Take a look at the numbers in both the time and weight columns. The time column contains values with at most 3 decimal figures. For the weight column, the values have at most 1 decimal figures. This means that (for this activity only)
 \begin{itemize}
-    \item any time quantity that we compute should be rounded to 2 decimal places, and
+    \item any time quantity that we compute should be rounded to 3 decimal places, and
     \item any weight quantity should be rounded to 1 decimal places.
 \end{itemize}
 The numbers of decimal figures kept depends on the number of decimal figures given in the data.
@@ -164,7 +168,7 @@ The steps in this section apply to each of the three segments in the weight data
 %
 \subsubsection{Minimum}
 %
-Since the weight values are spread over a region, it is useful to known what is the smallest weight measurement in a segment. This value is known as the \textbf{minimum}. One way to find this value is to literally scan the weight column and keep track of the smallest value. That is not a good idea when you have hundreds of values. A more efficient way is to have Google Sheets do this for you. The minimum can be found by using the \texttt{MIN} function via
+Since the weight values are spread over a region, it is useful to known what is the smallest weight measurement in a segment. This value is known as the \textbf{minimum}. One way to find this value is to literally scan the weight column and keep track of the smallest value. That is not a good idea when you have hundreds of values! A more efficient way is to have Google Sheets do this for you. The minimum can be found by using the \texttt{MIN} function via
 \begin{equation}
     \texttt{=MIN(WeightB)}
     \label{eq:00.min}
@@ -217,14 +221,14 @@ The \texttt{3} here indicates the \textbf{third quartile}, which is another name
 %
 \subsubsection{Visualizing the percentiles}
 %
-In Figure \ref{figure:00.baseline.quartiles} you can find the baseline data and the three percentiles marked. It appears that the 25\textsuperscript{th} and 75\textsuperscript{th} percentiles are about the same distance away from the 50\textsuperscript{th} percentile. Indeed,
+In Figure~\ref{figure:00.baseline.quartiles} you can find the baseline data and the three percentiles marked. It appears that the 25\textsuperscript{th} and 75\textsuperscript{th} percentiles are about the same distance away from the 50\textsuperscript{th} percentile. Indeed,
 \begin{align}
     10.3 \ \text{lb} - 8.4 \ \text{lb} &= 1.9 \ \text{lb} \\
     12.2 \ \text{lb} - 10.3 \ \text{lb} &= 1.9 \ \text{lb}
 \end{align}
 This can be interpreted as the sensor not showing a preference for larger or smaller values, which is a good thing.
 
-In order to plot horizontal lines like the ones that appear in Figure \ref{figure:00.baseline.quartiles}, it is convenient to fill an empty column with the desired constant value. The hard way to do this would be to copy and paste the same value on each cell in a column. This is not fun if you have to do this hundreds of times. Instead, you can write the desired value on the first cell in the column, then select that cell, press and hold the \texttt{Shift} key, and drag the selection box down along the column until the end. Now press the \texttt{Ctrl} (or \texttt{Cmd} key in macOS) and \texttt{D} keys. The effect should be to apply the value in the first cell to everything down of it.
+In order to plot horizontal lines like the ones that appear in Figure~\ref{figure:00.baseline.quartiles}, it is convenient to fill an empty column with the desired constant value. The hard way to do this would be to copy and paste the same value on each cell in a column. This is not fun if you have to do this hundreds of times. Instead, you can write the desired value on the first cell in the column, then select that cell, press and hold the \texttt{Shift} key, and drag the selection box down along the column until the end. Now press the \texttt{Ctrl} (or \texttt{Cmd} key in macOS) and \texttt{D} keys. The effect should be to apply the value in the first cell to everything down of it.
 %
 \subsubsection{Maximum}
 %
@@ -233,7 +237,7 @@ The \textbf{maximum} is the largest weight measurement recorded. You can find th
     \texttt{=MAX(WeightB)}
     \label{eq:00.max}
 \end{equation}
-It is good to tabulate the results obtained so far. In Table \ref{table:00.baseline.descriptive} you can find the minimum, the three percentiles, and the maximum. In my case, for the baseline, the median is close to 10 lb.
+It is good to tabulate the results obtained so far. In Table~\ref{table:00.baseline.descriptive} you can find the minimum, the three percentiles, and the maximum. In my case, for the baseline, the median is close to 10 lb.
 %
 \begin{center}
     \fbox{\begin{minipage}{35em}
@@ -243,7 +247,7 @@ It is good to tabulate the results obtained so far. In Table \ref{table:00.basel
 %
 \subsubsection{Average (Arithmetic Mean)}
 %
-So far we have identified particular points in the data that have special significance: the minimum, the quartiles, and the maximum (see Table \ref{table:00.baseline.descriptive}). The \textbf{average}, also known as the \textbf{arithmetic mean}, or just THE \textbf{mean}, is another value that can be calculated from the data, but that in general does not correspond to any point in the data. The average can be interpreted as a sort of ``middle'' or ``typical'' value. You can calculate this with the \texttt{AVERAGE} function:
+So far we have identified particular points in the data that have special significance: the minimum, the quartiles, and the maximum (see Table~\ref{table:00.baseline.descriptive}). The \textbf{average}, also known as the \textbf{arithmetic mean}, or just THE \textbf{mean}, is another value that can be calculated from the data, but that in general does not correspond to any point in the data. The average can be interpreted as a sort of ``middle'' or ``typical'' value. You can calculate this with the \texttt{AVERAGE} function:
 \begin{equation}
     \texttt{=AVERAGE(WeightB)}
     \label{eq:00.average}
@@ -252,7 +256,7 @@ Mathematically, given $N$ values of weight $w_{1}$, $w_{2}$, ..., $w_{N}$, the a
 \begin{equation}
     w_{A} = \frac{1}{N} \left( w_{1} + w_{2} + ... + w_{N} \right)
 \end{equation}
-Note that this is different from the median.
+Note that the average is different from the median.
 %
 \begin{center}
     \fbox{\begin{minipage}{24em}
@@ -270,7 +274,7 @@ Mathematically, given $N$ values of weight $w_{1}$, $w_{2}$, ..., $w_{N}$, the g
 \begin{equation}
     w_{G} = \left( w_{1} \times w_{2} \times ... \times w_{N} \right)^{1/N}
 \end{equation}
-Note that this equation only applies to values that are positive and non-zero.
+Note that this equation only applies to values that are \textbf{positive} and \textbf{non-zero}.
 %
 \subsubsection{Harmonic Mean}
 %
@@ -282,7 +286,7 @@ Mathematically, given $N$ values of weight $w_{1}$, $w_{2}$, ..., $w_{N}$, the h
 \begin{equation}
     w_{H} = N \left( \frac{1}{w_{1}} + \frac{1}{w_{2}} + ... + \frac{1}{w_{N}} \right)^{-1}
 \end{equation}
-Note that this equation only applies to values that are non-zero.
+Note that this equation only applies to values that are \textbf{non-zero}.
 %
 \subsubsection{Pythagorean Means}
 %
@@ -304,7 +308,7 @@ The meaning of the standard deviation depends on the particular distribution of 
 \end{equation}
 Note the ``P'' at the end of the name of this function.
 
-You can tabulate the three Pythagorean means and the SD together. In Table \ref{table:00.baseline.means} you can find the results for my case.
+You can tabulate the three Pythagorean means and the SD together. In Table~\ref{table:00.baseline.means} you can find the results for my case.
 %
 \subsubsection{Chebyshev Intervals}
 %
@@ -314,7 +318,7 @@ With the average $w_{A}$ and the standard deviation $\sigma$ you can compute the
     w_{A} - 2\sigma \leq {}&W \leq w_{A} + 2\sigma \\
     w_{A} - 3\sigma \leq {}&W \leq w_{A} + 3\sigma
 \end{align}
-In my case, the boundaries for the first three Chebyshev intervals appear in Table \ref{table:00.baseline.chebyshev}. All three intervals can be visualized together in Figure \ref{figure:00.baseline.chebyshev}, and separately in Figures \ref{figure:00.baseline.chebyshev.1}, \ref{figure:00.baseline.chebyshev.2}, and \ref{figure:00.baseline.chebyshev.3}.
+In my case, the boundaries for the first three Chebyshev intervals appear in Table~\ref{table:00.baseline.chebyshev}. All three intervals can be visualized together in Figure~\ref{figure:00.baseline.chebyshev}, and separately in Figures \ref{figure:00.baseline.chebyshev.1}, \ref{figure:00.baseline.chebyshev.2}, and \ref{figure:00.baseline.chebyshev.3}.
 %
 \subsubsection{Range}
 %
@@ -330,7 +334,7 @@ The \textbf{center} is defined as the value in the middle of the range. You can 
 \begin{equation}
     \texttt{=(MAX(WeightB) + MIN(WeightB))/2}
 \end{equation}
-Note that this is different from the average or the median. You can visualize the range and the center as in Figure \ref{figure:00.baseline.center}.
+Note that this is different from the average or the median. You can visualize the range and the center as in Figure~\ref{figure:00.baseline.center}.
 %
 \subsubsection{Central Error}
 %
@@ -341,7 +345,7 @@ Error is a very broad concept. For practical purposes, we are going to define th
 \end{equation}
 The meaning of the central error is the distance from the center to either end of the range window.
 
-You can tabulate the values of the range, center, and error together. The values for my case are found in Table \ref{table:00.baseline.range}.
+You can tabulate the values of the range, center, and error together. The values for my case are found in Table~\ref{table:00.baseline.range}.
 %
 \subsubsection{Chebyshev Number}
 %
@@ -353,13 +357,13 @@ Since this is the ratio of two quantities with the same units, the Chebyshev num
 %
 \subsubsection{Error Interval}
 %
-If $E$ is the central error, and $w_{A}$ is the average, then the error interval is given by
+If $E$ is the central error, and $w_{A}$ is the average, then the \textbf{error interval} is given by
 \begin{equation}
     w_{A} - E \leq w \leq w_{A} + E
 \end{equation}
 The boundaries of the error interval can be used to limit the possible values of the observed estimate of the quantity that is being measured.
 
-The values for the error interval boundaries for my case are in Table \ref{table:00.baseline.interval}. A visualization or the error interval can be found in Figure \ref{figure:00.baseline.interval}.
+The values for the error interval boundaries for my case are in Table~\ref{table:00.baseline.interval}. A visualization or the error interval can be found in Figure~\ref{figure:00.baseline.interval}.
 %
 \subsubsection{Relative Uncertainty}
 %
@@ -377,11 +381,11 @@ You can repeat the above steps on the other two segments in the experiment. If y
 %
 \subsubsection{Accounting for the baseline weight measurement}
 %
-The baseline measurement is meant to give some data on the sensor's default setting. In principle, the baseline measurement should give a zero value. In practice, this can be done via proper zeroing of the sensor, where the default value is set to zero. However, sometimes the sensor is not zeroed properly, and the baseline measurement is non-zero. That appears to be the case here: in my case the average value of the baseline weight measurement is close to 10 lb. This means that this value must be \textbf{subtracted} from the other two weight measurements. In my case, these subtractions are done in Table \ref{table:00.results}.
+The baseline measurement is meant to give some data on the sensor's default setting. In principle, the baseline measurement should give a zero value. In practice, this can be done via proper \textbf{zeroing of the sensor}, where the default value is set to zero. However, sometimes the sensor is not zeroed properly, and the baseline measurement is non-zero. That appears to be the case here: in my case the average value of the baseline weight measurement is close to 10 lb. This means that this value must be \textbf{subtracted} from the other two weight measurements. In my case, these subtractions are done in Table~\ref{table:00.results}.
 %
 \subsubsection{Percent Difference}
 %
-If you know the theoretical (expected) value $w_{T}$ that you should have obtained in an experiment with zero error and zero uncertainty, then you can calculate the \textbf{percent difference} (PD) in order to judge how well your experimental (observed) value $w_{E}$ is:
+If you know the theoretical (\textbf{expected}) value $w_{T}$ that you should have obtained in an experiment with zero error and zero uncertainty, then you can calculate the \textbf{percent difference} (PD) in order to judge how well your experimental (\textbf{observed}) value $w_{E}$ is:
 \begin{equation}
     \text{percent difference } = 100 \times \left( \frac{w_{E} - w_{T}}{w_{T}} \right)
     \label{eq:00.percent.diff}
@@ -411,27 +415,27 @@ Does the scatter chart exhibit any clear pattern?
 %
 Spoiler alert: there appears to be a linear relation between the time and velocity values!
 
-A \textbf{linear relation} between an \textbf{independent variable} $t$ and a \textbf{dependent variable} $v$ can be stated as
+A \textbf{linear relation} between an \textbf{independent variable} $t$ and a \textbf{dependent variable} $v$ can be stated mathematically as
 \begin{equation}
     v = A t + B
 \end{equation}
-Here $A$ and $B$ are fixed constant numbers that parameterize the linear relation. The constant $A$ is known as the \textbf{slope}, and $B$ is known as the (vertical) \textbf{intercept}. Different values of $A$ and $B$ give different linear relations. Which values do you use?
+Here $A$ and $B$ are fixed constant numbers that parameterize the linear relation. The constant $A$ is known as the \textbf{slope}, and $B$ is known as the (vertical axis) \textbf{intercept}. Different values of $A$ and $B$ give different linear relations. Which values do you use?
 %
 \subsubsection{More about the slope}
 %
-The value of the slope $A$ dictates how fast/slow the dependent variable $v$ changes as the independent variable $t$ changes. That is, the slope is the rate of change of the dependent variable. Since the slope is constant, it follows that the \textbf{rate of change} in a linear relation is \textbf{constant}.
+The value of the slope $A$ dictates how fast/slow the dependent variable $v$ changes as the independent variable $t$ changes. That is, the slope is the rate of change of the dependent variable. Since the slope here is a constant, it follows that the \textbf{rate of change} in a linear relation is \textbf{constant}.
 
-If $v$ is a velocity quantity and $t$ is a time quantity, then the slope must be an acceleration quantity. Thus, if $v$ is measured in m/s, and $t$ is measured in s, then $A$ has units of m/s\textsuperscript{2}.
+If $v$ is a \textbf{velocity} quantity and $t$ is a \textbf{time} quantity, then the \textbf{slope} must be an \textbf{acceleration} quantity. Thus, if $v$ is measured in m/s, and $t$ is measured in s, then $A$ has units of m/s\textsuperscript{2}.
 %
 \subsubsection{More about the intercept}
 %
 The value of the intercept $B$ dictates the value of the dependent variable $v$ when the independent variable $t$ is zero. If $t$ is a time variable, then the intercept corresponds to the \textbf{initial value} of the dependent variable.
 
-If $v$ is a velocity quantity and $t$ is a time quantity, then the intercept must be a velocity quantity. Thus, if $v$ is measured in m/s, then $B$ has units of m/s also.
+If $v$ is a \textbf{velocity} quantity and $t$ is a \textbf{time} quantity, then the \textbf{intercept} must be a \textbf{velocity} quantity. Thus, if $v$ is measured in m/s, then $B$ has units of m/s also.
 %
 \subsubsection{Add a linear trend line to your chart}
 %
-There is a particular method to find the values for $A$ and $B$ that correspond to a linear relation that \textbf{best fits} the data set. We are not going to discuss this method; Google Sheets and Excel can do this for you.
+There is a particular method to find the values for $A$ and $B$ that correspond to a linear relation that \textbf{best fits} the data set. We are not going to discuss this method; Google Sheets and Excel can do this for you!
 
 The simplest thing to do is to add a \textbf{linear trend line} to your velocity versus time chart. After double clicking on the chart, and getting the \texttt{Chart editor} menu, go to
 \begin{equation}
@@ -441,7 +445,7 @@ and check the \texttt{Trendline} box. A new menu will appear below. The \textbf{
 \begin{equation}
     \texttt{10.9*x + 3.3}
 \end{equation}
-By default, Google Sheets uses \texttt{x} as the symbol for the independent variable. The numerical values for the slope and intercept of my trend line are 10.9 m/s\textsuperscript{2} and 3.3 m/s. In my case, Figure \ref{figure:00.velocity.fit} shows the velocity data and the best-fit line.
+By default, Google Sheets uses \texttt{x} as the symbol for the independent variable in the horizontal axis. The numerical values for the slope and intercept of my trend line are 10.9 m/s\textsuperscript{2} and 3.3 m/s. In my case, Figure~\ref{figure:00.velocity.fit} shows the velocity data and the best-fit line.
 %
 \subsubsection{Calculate the slope}
 %
@@ -449,7 +453,7 @@ You can calculate the value of the slope with the \texttt{SLOPE} function:
 \begin{equation}
     \texttt{=SLOPE(Velocity, Time)}
 \end{equation}
-Here \texttt{Velocity} and \texttt{Time} are appropriately-defined named ranges. Note that the order inside the function is very important: first the variable in the vertical axis, then the variable in the horizontal axis. A different order would yield a different value that does not correspond to the slope.
+Here \texttt{Velocity} and \texttt{Time} are appropriately-defined named ranges. Note that the order of the arguments inside the \texttt{SLOPE} function is very important: first the variable in the vertical axis, then the variable in the horizontal axis. A different order would yield a different value that does not correspond to the slope.
 
 Using this method to find the slope gives you a value that is consistent with the value in the chart, but also has more significant figures.
 %
@@ -459,11 +463,11 @@ You can also calculate the value of the intercept with the \texttt{INTERCEPT} fu
 \begin{equation}
     \texttt{=INTERCEPT(Velocity, Time)}
 \end{equation}
-Again, the order of the arguments inside the function is important.
+Again, the order of the arguments inside the \texttt{INTERCEPT} function is important.
 %
 \subsubsection{Compare to expected values}
 %
-There are expected ``theoretical'' values for this particular experiment. You can find them in Table \ref{table:00.theoretical.demo}. With these theoretical values, and the experimental values found above, you can calculate the percent difference for the slope and the intercept. In my case, Table \ref{table:00.velocity.results} summarizes my results.
+There are expected ``theoretical'' values for this particular experiment. You can find them in Table~\ref{table:00.theoretical.demo}. With these theoretical values, and the experimental values found above, you can calculate the percent difference for the slope and the intercept. In my case, Table~\ref{table:00.velocity.results} summarizes my results.
 %
 \begin{center}
     \fbox{\begin{minipage}{28em}
@@ -480,23 +484,23 @@ As mentioned above, my data consist of two files:
 \end{itemize}
 My results are in the form of tables and figures. Here are the \textbf{tables}:
 \begin{itemize}
-    \item Table \ref{table:00.baseline.descriptive} with the minimum, maximum, and quartiles for the baseline segment
-    \item Table \ref{table:00.baseline.means} with the Pythagorean means and the standard deviation for the baseline segment
-    \item Table \ref{table:00.baseline.chebyshev} with the first, second, and third Chebyshev intervals for the baseline segment
-    \item Table \ref{table:00.baseline.range} with the range, center, and error for the baseline segment
-    \item Table \ref{table:00.baseline.interval} with the error interval for the baseline segment
-    \item Table \ref{table:00.results} with results from the other two segments
-    \item Table \ref{table:00.velocity.results} with results for the velocity measurement
+    \item Table~\ref{table:00.baseline.descriptive} with the minimum, maximum, and quartiles for the baseline segment
+    \item Table~\ref{table:00.baseline.means} with the Pythagorean means and the standard deviation for the baseline segment
+    \item Table~\ref{table:00.baseline.chebyshev} with the first, second, and third Chebyshev intervals for the baseline segment
+    \item Table~\ref{table:00.baseline.range} with the range, center, and error for the baseline segment
+    \item Table~\ref{table:00.baseline.interval} with the error interval for the baseline segment
+    \item Table~\ref{table:00.results} with results from the other two segments
+    \item Table~\ref{table:00.velocity.results} with results for the velocity measurement
 \end{itemize}
 And here are the \textbf{figures}:
 \begin{itemize}
-    \item Figure \ref{figure:00.baseline.quartiles} with the quartiles for the baseline segment
-    \item Figure \ref{figure:00.baseline.center} with the range and center for the baseline segment
+    \item Figure~\ref{figure:00.baseline.quartiles} with the quartiles for the baseline segment
+    \item Figure~\ref{figure:00.baseline.center} with the range and center for the baseline segment
     \item Figures \ref{figure:00.baseline.chebyshev.1}, \ref{figure:00.baseline.chebyshev.2}, and \ref{figure:00.baseline.chebyshev.3} with three Chebyshev intervals for the baseline segment
-    \item Figure \ref{figure:00.baseline.interval} with the error interval for the baseline segment
-    \item Figure \ref{figure:00.velocity.fit} with the velocity data and best-fit line
+    \item Figure~\ref{figure:00.baseline.interval} with the error interval for the baseline segment
+    \item Figure~\ref{figure:00.velocity.fit} with the velocity data and best-fit line
 \end{itemize}
-Here are some comments of my results in Table \ref{table:00.results} for the weight measurement:
+Here are some comments of my results in Table~\ref{table:00.results} for the weight measurement:
 \begin{itemize}
     \item The baseline weight is non-zero. The three Pythagorean means, the median, and the center are all consistent with each other because they are close in magnitude.
     \item Each weight measurement is consistent also.
@@ -504,7 +508,7 @@ Here are some comments of my results in Table \ref{table:00.results} for the wei
     \item The standard deviation, range, and error for each of the three segments are close in magnitude. This suggest that the sensor is making the same amount of error on each of the three measurements.
     \item The relative uncertainty becomes smaller as the magnitude of the measurement becomes larger. That is, the $W_{B}$ measurement is most uncertain, and the $W_{2}$ measurement is least uncertain.
 \end{itemize}
-The final results for the weight values are in Table \ref{table:00.final}.
+The final results for the weight values are in Table~\ref{table:00.final}.
 %
 \subsection{Interactive charts}
 %
@@ -550,14 +554,14 @@ Although these have the same names as my files, they have different values. Also
 %         \item Range
 %         \item Central Error
 %     \end{itemize}
-%     See Table \ref{table.00.template.1} for a template.
+%     See Table~\ref{table.00.template.1} for a template.
 %     \item Since the baseline values are non-zero and relatively large, the results for Weight 1 and Weight 2 need to be adjusted. Using the observed arithmetic mean values as the ``raw observed'' values, calculate the ``true observed'' values:
 %     \begin{gather}
 %         \text{true observed weight 1} = \text{raw observed weight 1} - \text{baseline} \\
 %         \text{true observed weight 2} = \text{raw observed weight 2} - \text{baseline}
 %     \end{gather}
 %     \item If proper methods are followed, what should be the observed value of the baseline weight?
-%     \item For each of the three weight segments, provide a \textbf{table} with the percent difference between the expected value and the true observed value. See Table \ref{table.00.template.2} for a template.
+%     \item For each of the three weight segments, provide a \textbf{table} with the percent difference between the expected value and the true observed value. See Table~\ref{table.00.template.2} for a template.
 % \end{enumerate}
 % %
 % \paragraph{Part 2: Velocity}
@@ -573,7 +577,7 @@ Although these have the same names as my files, they have different values. Also
 %         \item expected value of intercept
 %         \item percent difference for intercept
 %     \end{itemize}
-%     See Table \ref{table.00.template.3} for a template.
+%     See Table~\ref{table.00.template.3} for a template.
 % \end{enumerate}
 % %
 % \newpage
