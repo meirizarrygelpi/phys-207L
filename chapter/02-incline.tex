@@ -12,18 +12,18 @@ If you ignore the effects of air resistance, the acceleration of an object that 
     v = m t + b
     \label{eq:02.v.linear}
 \end{equation}
-This relation describes a \textbf{linear shape}. In the previous experiment you learned that, for free-fall, the slope $m$ corresponds to the acceleration due to gravity $g$, and the intercept $b$ corresponds to the initial (vertical) velocity $v_{0}$. That is,
+Pictorially this relation describes a \textbf{linear shape}. In the previous experiment you learned that, for free-fall, the slope $m$ corresponds to the acceleration due to gravity $g$, and the intercept $b$ corresponds to the initial (vertical) velocity $v_{0}$. That is,
 \begin{equation}
     v = g t + v_{0}
 \end{equation}
 If the acceleration is a different constant value $a$, then you just replace $g$ with $a$.
 
-\textbf{Velocity} is the \textbf{rate of change of position with time}. If the velocity depends on time in a linear way (i.e. as in Equation \ref{eq:02.v.linear}), then the spatial position $d$ (distance to a fixed point) and time $t$ will obey a mathematical relation of the form
+\textbf{Velocity} is the \textbf{rate of change of position with time}. If the velocity depends on time in a linear way (i.e. as in Equation \ref{eq:02.v.linear}), then the spatial position $d$ (distance from a fixed point) and time $t$ will obey a mathematical relation of the form
 \begin{equation}
     d = A t^{2} + B t + C
     \label{eq:02.d.quadratic}
 \end{equation}
-This relation describes a \textbf{parabolic shape}. Here, $A$ must be a quantity with units of acceleration, $B$ must be a quantity with units of velocity, and $C$ must be a quantity with units of distance. Indeed, $A$ in Equation \ref{eq:02.d.quadratic} must be related to the slope $m$ in Equation \ref{eq:02.v.linear} via
+Pictorially this relation describes a \textbf{parabolic shape}. Here, $A$ must be a quantity with units of acceleration, $B$ must be a quantity with units of velocity, and $C$ must be a quantity with units of distance. Indeed, $A$ in Equation \ref{eq:02.d.quadratic} must be related to the slope $m$ in Equation \ref{eq:02.v.linear} via
 \begin{equation}
     A = \frac{1}{2} m
 \end{equation}
@@ -33,7 +33,7 @@ and $B$ in Equation \ref{eq:02.d.quadratic} must be related to the intercept $b$
 \end{equation}
 That is, the parameters determining $d$ in Equation \ref{eq:02.d.quadratic} determine the parameters in Equation \ref{eq:02.v.linear}. The interpretation of $C$ in Equation \ref{eq:02.d.quadratic} is as the value that $d$ takes when $t = 0$ (the initial distance).
 
-Motion with \textbf{constant acceleration} is not only restricted to free-fall. As you will observe from the data, it also describes motion along an inclined track. However, the value of the constant acceleration is not the acceleration due to gravity, but a fraction of it.
+Motion with \textbf{constant acceleration} is not only restricted to free-fall. As you will observe from the data, it also describes motion along an inclined track. However, the value of the constant acceleration is not the acceleration due to gravity ($g = $ 9.8 m/s\textsuperscript{2}), but a fraction of it.
 %
 \section{Experiment}
 %
@@ -53,11 +53,11 @@ You choose about \textbf{four points along the incline} and use a ruler to measu
 %
 \subsubsection{Calculate the differences in position}
 %
-You can take distinct positions and calculate the differences. For example, consider the two-box case and the first two measurements (label 1 and 2) in Table \ref{table:02.height.2}. The first two heights are $h_{1} = 8.9$ cm and $h_{2} = 11.7$ cm. The \textbf{difference} is
+You can take distinct positions and calculate the differences. For example, consider the two-box case and the first two measurements (label 1 and 2) in Table \ref{table:02.height.2}. The first two heights are $h_{1} = 8.9$~cm and $h_{2} = 11.7$~cm. The \textbf{difference} is
 \begin{equation}
     \Delta h = h_{2} - h_{1} = 2.8 \ \text{cm}
 \end{equation}
-Similarly, the first two positions along the incline are $d_{1} = 25$ cm and $d_{2} = 50$ cm. The \textbf{difference} is
+Similarly, the first two positions along the incline are $d_{1} = 25$~cm and $d_{2} = 50$~cm. The \textbf{difference} is
 \begin{equation}
     \Delta d = d_{2} - d_{1} = 25 \ \text{cm}
 \end{equation}
@@ -120,9 +120,9 @@ There are many checks you can do to confirm that the data corresponds to motion 
 %
 This check involves comparing the values of
 \begin{enumerate}
-    \item $2A$ with $A$ the quadratic coefficient in the position fit,
-    \item the value of the slope in the velocity fit,
-    \item and the average value from the acceleration data.
+    \item $2A$ with $A$ the quadratic coefficient in the \textbf{position fit},
+    \item the value of the slope in the \textbf{velocity fit},
+    \item and the average value from the \textbf{acceleration data}.
 \end{enumerate}
 These three values should be close, and should be the same across the three runs with the same height. You can see my results in Table \ref{table:02.check.a}.
 %
@@ -136,14 +136,14 @@ Equivalently, you can flip this equation and use it to estimate the value of $g$
 \begin{equation}
     g = \frac{a}{\sin(\theta)}
 \end{equation}
-Since you have three estimates for the acceleration (see previous check), for each run, you can calculate three estimates for the acceleration due to gravity. The results should be close to the accepted value of 9.80 m/s\textsuperscript{2}. You can see my results in Table \ref{table:02.check.g}.
+Since you have three estimates for the acceleration (see previous check), for each run, you can calculate three estimates for the acceleration due to gravity. The results should be close to the accepted value of 9.8 m/s\textsuperscript{2}. You can see my results in Table \ref{table:02.check.g}.
 %
 \subsubsection{Check consistency of initial velocity}
 %
 The initial velocity should be consistent also. That is, compare the values of
 \begin{enumerate}
-    \item $B$ the linear coefficient in the position fit,
-    \item and the value of the intercept in the velocity fit.
+    \item $B$ the linear coefficient in the \textbf{position fit},
+    \item and the value of the intercept in the \textbf{velocity fit}.
 \end{enumerate}
 The specific value will be different for every run (it depends on how you launched the cart), but for a given run, the two values should be close. You can see my results in Table \ref{table:02.check.v0}.
 %
@@ -517,7 +517,7 @@ You should have six runs with three for the one-box case, and three for the two-
         6 & 0.055 & \textminus 9.529 & \textminus 9.493 & \textminus 9.018 \\
         \hline
     \end{tabular}
-    \caption{Checks for constant acceleration: agreement with $g = -9.80$ m/s\textsuperscript{2}. All values in the last three columns are in units of m/s\textsuperscript{2}.}
+    \caption{Checks for constant acceleration: agreement with $g = -9.8$ m/s\textsuperscript{2}. All values in the last three columns are in units of m/s\textsuperscript{2}.}
     \label{table:02.check.g}
 \end{table}
 %
