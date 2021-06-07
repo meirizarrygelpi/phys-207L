@@ -7,9 +7,9 @@ In this experiment you will learn about error analysis and provide an estimate f
 %
 \section{Preliminary}
 %
-Ignoring the effects of air resistance, when an object is dropped and falls from a given height, its velocity is proportional to the amount of travel time. The slope in the linear relation corresponds to the free-fall acceleration. Since this acceleration is due to gravity, its value is usually denoted by $g$. On Earth, near sea level, the value of $g$ is 9.80 m/s\textsuperscript{2}.
+Ignoring the effects of air resistance, when an object is dropped and falls from a given height, its velocity is proportional to the amount of travel time. The slope in the linear relation corresponds to the \textbf{free-fall acceleration} value. Since this acceleration is due to gravity, its value is usually denoted by $g$. On Earth, near sea level, the value of $g$ is 9.8 m/s\textsuperscript{2}.
 
-Here velocity is measured in meter per second (m/s), and time is measured in second (s). A linear relation between velocity $v$ and time $t$ has the mathematical form
+Usually velocity is measured in meter per second (m/s), and time is measured in second (s). A linear relation between velocity $v$ and time $t$ has the mathematical form
 \begin{equation}
     v = A t + B
 \end{equation}
@@ -49,7 +49,7 @@ You can combine the first 5 runs with the latter 25 runs and make a 30-run aggre
 %
 \subsection{Central 20 Runs} \label{sec:01.central.20}
 %
-You can take the 30-run aggregate, sort the values in either increasing or decreasing order, and then drop the \textbf{smallest} 5 values, and also the \textbf{largest} 5 values. After doing this you remain with \textbf{20 values}, corresponding to the 20 runs that are most ``central''. That is, the 20 values that are neither the smallest nor the largest. Note that 20 out of 30 is the same as 2/3 of the data set (66\%).
+You can take the 30-run aggregate, sort the values in either increasing or decreasing order, and then drop the \textbf{smallest} 5 values, and also the \textbf{largest} 5 values. After doing this you remain with \textbf{20 values}, corresponding to the 20 runs that are most ``central''. That is, the 20 values that are neither the smallest nor the largest. Note that 20 out of 30 is the same as 2/3 of the data set (67\%).
 
 Here is how to sort a column with Google Sheets. If \texttt{Aggregate30} is the name of the named range with the 30 slope values, then, in a separate sheet use
 \begin{equation}
@@ -91,7 +91,7 @@ In Table \ref{table:01.describe.5} and Table \ref{table:01.describe.25}, I descr
 
 After combining all the runs into the 30-run aggregate, you can consider other quantities like the percentiles. In Table \ref{table:01.describe.30} you can find the three percentiles, as well as the previous quantities that were also found in the first two parts. The boundaries of the error interval for the 30-run aggregate are found in Table \ref{table:01.error.30}. Note that the established value for the slope, 9.8067 m/s\textsuperscript{2} is inside of the error interval.
 
-The minimum slope for the 30-run aggregate is quite small and could be an outlier. One way to deal with outliers is to restrict to a subset of the data. To be clear: You do not get to choose which values to keep or which values to drop based on their proximity to the expected value. That would be cheating. It would introduce bias to your data. Besides, in most experiments, you do not know the expected value. Instead you can restrict to a subset of the data by following an explicit rule intrinsic to the data.
+The minimum slope for the 30-run aggregate is quite small and could be an outlier. One way to deal with outliers is to restrict to a subset of the data. To be clear: In science you do not get to choose which values to keep or which values to drop based on their proximity to the expected value. That would be cheating. It would introduce bias to your data. Besides, in most experiments, you do not know the expected value. Instead you can restrict to a subset of the data by following an explicit rule intrinsic to the data.
 
 In Table \ref{table:01.describe.20.center} you can find the statistics for the subset of the data that correspond to the 2/3 that is in the middle: neither the smallest nor the largest. To keep this fair, you need to drop the same amount of small values as you drop large values. In my case I calculated again the same quantities in Table \ref{table:01.describe.30} for the 30-run aggregate, but you do not have to find everything. Just the minimum, maximum, average, and error. Note that the error value for the central 20 runs is smaller than the error for the 30-run average. For the central 20 runs, the expected value still falls inside the error interval.
 
@@ -389,11 +389,11 @@ Your data should consist of 5 initial pairs of slope and intercept values, plus 
     \begin{tabular}{l|r|r|r|r}
         \textbf{Name} & \textbf{Error} (m/s\textsuperscript{2}) & \textbf{Experimental} (m/s\textsuperscript{2}) & \textbf{Theoretical} (m/s\textsuperscript{2}) & \textbf{P.D.} (\%) \\
         \hline
-        First 5 & 0.2283 & 9.5721 & 9.8 & \textminus 2.33 \\
-        Latter 25 & 0.1528 & 9.7202 & 9.8 & \textminus 0.81 \\
-        Aggregate 30 & 0.2679 & 9.6955 & 9.8 & \textminus 1.07 \\
-        Center 20 & 0.0989 & 9.7251 & 9.8 & \textminus 0.76 \\
-        Closest 20 & 0.0834 & 9.7355 & 9.8 & \textminus 0.66 \\
+        First 5 & 0.2283 & 9.5721 & 9.8067 & \textminus 2.33 \\
+        Latter 25 & 0.1528 & 9.7202 & 9.8067 & \textminus 0.81 \\
+        Aggregate 30 & 0.2679 & 9.6955 & 9.8067 & \textminus 1.07 \\
+        Center 20 & 0.0989 & 9.7251 & 9.8067 & \textminus 0.76 \\
+        Closest 20 & 0.0834 & 9.7355 & 9.8067 & \textminus 0.66 \\
         \hline
     \end{tabular}
     \caption{Summary of results and percent differences}
