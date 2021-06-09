@@ -38,7 +38,7 @@ Or in other words:
 \end{equation}
 That is, for this back-and-forth motion, the acceleration is proportional to the amount of distance that the spring is stretched or compressed. Note that the slope is negative. If $k$ is in N/m, and $m$ is in kg, then $k/m$ will be in N / (kg m), or equivalently:
 \begin{equation}
-    1 \frac{\text{N}}{\text{kg m}} = 1 \frac{1}{\text{s}^{2}}
+    1 \ \frac{\text{N}}{\text{kg m}} = 1 \ \frac{1}{\text{s}^{2}}
 \end{equation}
 Hence, the slope of the $a$ versus $x$ relation should have units of inverse square time. For convenience, you can introduce
 \begin{equation}
@@ -51,7 +51,7 @@ such that
 \end{equation}
 The physical meaning of $\omega$ will become clear later.
 %
-\subsection{Sine and Cosine}
+\subsection{Sine and cosine}
 %
 The \textbf{sine} and \textbf{cosine} functions are very important (and relevant) for simple harmonic motion. These functions are familiar from trigonometry where they are used to express the ratio of lengths in a right triangle.
 
@@ -61,7 +61,7 @@ Figure \ref{figure:11.sin.cos} shows the shape of the cosine and sine functions.
 \end{equation}
 The symbol for radians is rad. For all practical purposes, a radian is equivalent to a pure number without units.
 %
-\subsection{Sinusoidal Motion}
+\subsection{Sinusoidal motion}
 %
 When you look at the position of the object as it changes with time, you will notice a pattern similar to a sine or cosine function. This suggest a \textbf{sinusoidal fit} for position $x$ as a function of time $t$:
 \begin{equation}
@@ -101,15 +101,15 @@ That is, you expect
 \begin{align}
     A_{F} = kA_{x} && B_{F} = B_{x} && \vert C_{F} - C_{x} \vert = \pi && D_{F} = -kD_{x}
 \end{align}
-Since force and position are being measured by different sensors, these relations are non-trivial.
+Since force and position are being measured by different sensors, these relations are non-trivial and serve as consistency checks.
 %
-\subsection{Period of Oscillation and Angular Frequency}
+\subsection{Period of oscillation and angular frequency}
 %
 For a mass $m$ attached to a spring with spring constant $k$, the \textbf{period of oscillation} is given by
 \begin{equation}
     T = 2\pi \sqrt{\frac{m}{k}}
 \end{equation}
-The period is the time it takes for the mass to do one full cycle. Related to the period is the \textbf{angular frequency} $\omega$:
+The period is the time it takes for the mass to do \textbf{one full cycle}. Related to the period is the \textbf{angular frequency} $\omega$:
 \begin{equation}
     \omega = \frac{2 \pi}{T} = \sqrt{\frac{k}{m}}
     \label{eq.11.omega}
@@ -128,9 +128,9 @@ You used four combinations of mass and spring constant, as stated in Table \ref{
 %
 There are many aspects of simple harmonic motion that can be verified with this experiment.
 %
-\subsection{Force and Position}
+\subsection{Force and position}
 %
-You can verify \textbf{Hooke's law}, equation (\ref{eq.11.hooke}), by making a scatter chart with \textbf{position} in the horizontal axis, and \textbf{force} in the vertical axis. The shape of this chart should be a downward line, as in Figure \ref{figure.11.hooke}. You can find the slope with the \texttt{SLOPE} function. If position is in column \texttt{X} with the first value in row \texttt{6}, and force is in column \texttt{Y}, with first value in row \texttt{6}; then the command is
+You can verify \textbf{Hooke's law}, equation (\ref{eq.11.hooke}), by making a \textbf{scatter chart} with \textbf{position} in the horizontal axis, and \textbf{force} in the vertical axis. The shape of this chart should be a downward line, as in Figure \ref{figure.11.hooke}. You can find the slope with the \texttt{SLOPE} function. If position is in column \texttt{X} with the first value in row \texttt{6}, and force is in column \texttt{Y}, with first value in row \texttt{6}; then the command is
 \begin{equation}
     \texttt{=SLOPE(Y6:Y, X6:X)}
 \end{equation}
@@ -140,9 +140,9 @@ The linear behavior confirms Hooke's law. The slope of the linear fit correspond
 \end{equation}
 Note that position and force data come from \textbf{different} sensors.
 %
-\subsection{Force and Acceleration}
+\subsection{Force and acceleration}
 %
-You can verify \textbf{Newton's second law of motion} by making a scatter chart with \textbf{acceleration} in the horizontal axis, and \textbf{force} in the vertical axis. The shape of this chart should be an upward line, as in Figure \ref{figure.11.newton}. You can find the slope with the \texttt{SLOPE} function. The linear behavior confirms Newton's second law, and the value of the slope is \textbf{mass}. You can use this slope as an indirect measurement of the amount of mass hanging from the spring:
+You can verify \textbf{Newton's second law of motion} by making a \textbf{scatter chart} with \textbf{acceleration} in the horizontal axis, and \textbf{force} in the vertical axis. The shape of this chart should be an upward line, as in Figure \ref{figure.11.newton}. You can find the slope with the \texttt{SLOPE} function. The linear behavior confirms Newton's second law, and the value of the slope is \textbf{mass}. You can use this slope as an indirect measurement of the amount of mass hanging from the spring:
 \begin{equation}
     m_{\text{obs}} = \text{slope of force versus acceleration linear fit}
 \end{equation}
@@ -153,7 +153,7 @@ Together with the measurement of the spring constant from the force versus posit
     \omega_{1} = \sqrt{\frac{k_{\text{obs}}}{m_{\text{obs}}}}
 \end{equation}
 %
-\subsection{Acceleration and Position}
+\subsection{Acceleration and position}
 %
 Combining Hooke's law with Newton's second law of motion gives equation (\ref{eq.11.ax}). Using the definition of $\omega$ in equation (\ref{eq.11.omega}), we find that indeed,
 \begin{equation}
@@ -164,7 +164,7 @@ That is, for simple harmonic motion, the acceleration is proportional to the pos
     \omega_{2} = \sqrt{- (\text{slope of acceleration versus position})}
 \end{equation}
 %
-\subsection{Common Angular Frequency}
+\subsection{Shared angular frequency}
 %
 From the LabQuest device, you obtained the parameters for the sinusoidal fit for both position and force. Both the $B_{x}$ parameter in the position fit, and the $B_{F}$ parameter in the force fit should correspond to the angular frequency of the simple harmonic motion. Hence, the $B_{x}$ parameter in the position fit provides another experimental estimate of the angular frequency:
 \begin{equation}
@@ -178,7 +178,7 @@ Note that, since the data for position and force comes from different sensors, t
 
 In principle you can perform a sinusoidal fit on velocity and acceleration too. However, the parameters of these fits are not independent. Indeed, theoretically, they depend on the parameters for the position fit as stated in equations (\ref{eq.11.v}) and (\ref{eq.11.a}).
 %
-\subsection{Velocity and Position}
+\subsection{Velocity and position}
 %
 A chart with velocity and position is called a \textbf{phase space} chart. For this particular experiment with simple harmonic motion, the velocity and position data yield an \textbf{elliptical shape} (a closed orbit), as in Figure \ref{figure.11.phase}. Now you know!
 %
